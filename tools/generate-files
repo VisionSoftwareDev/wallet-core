@@ -20,7 +20,8 @@ then
     if  [ ! -d $PREFIX ] || \
         [ ! -d $PREFIX/include ] || \
         [ ! -f $PREFIX/bin/protoc ] || \
-        [ ! -f $PREFIX/bin/protoc-gen-c-typedef ]
+        [ ! -f $PREFIX/bin/protoc-gen-c-typedef ] || \
+        [ ! -f $PREFIX/bin/protoc-gen-javalite ]
     then
         echo $PREFIX does not exist or not complete, fallback to /usr/local
         PREFIX=/usr/local
@@ -51,9 +52,9 @@ codegen/bin/codegen
 
 # Generate Java, C++ and Swift Protobuf files
 if [ -x "$(command -v protoc-gen-swift)" ]; then
-    "$PROTOC" -I=$PREFIX/include -I=src/proto --cpp_out=src/proto --java_out=jni/java --swift_out=swift/Sources/Generated/Protobuf --swift_opt=Visibility=Public src/proto/*.proto
+    "$PROTOC" -I=$PREFIX/include -I=src/proto --cpp_out=src/proto --javalite_out=jni/java --swift_out=swift/Sources/Generated/Protobuf --swift_opt=Visibility=Public src/proto/*.proto
 else
-    "$PROTOC" -I=$PREFIX/include -I=src/proto --cpp_out=src/proto --java_out=jni/java src/proto/*.proto
+    "$PROTOC" -I=$PREFIX/include -I=src/proto --cpp_out=src/proto --javalite_out=jni/java src/proto/*.proto
 fi
 
 # Generate internal message protocol Protobuf files -- not every time
