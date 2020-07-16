@@ -51,6 +51,7 @@
 #include "Waves/Entry.h"
 #include "Zcash/Entry.h"
 #include "Zilliqa/Entry.h"
+#include "Elrond/Entry.h"
 // end_of_coin_includes_marker_do_not_modify
 
 using namespace TW;
@@ -100,6 +101,7 @@ void setupDispatchers() {
         new Waves::Entry(),
         new Zcash::Entry(),
         new Zilliqa::Entry(),
+        new Elrond::Entry(),
     }; // end_of_coin_entries_marker_do_not_modify
 
     dispatchMap.clear();
@@ -109,8 +111,10 @@ void setupDispatchers() {
         for (auto c : dispCoins) {
             assert(dispatchMap.find(c) == dispatchMap.end()); // each coin must appear only once
             dispatchMap[c] = d;
-            auto setResult = coinTypes.emplace(c);
-            assert(setResult.second == true); // each coin must appear only once
+            if (coinTypes.emplace(c).second != true) {
+                // each coin must appear only once
+                abort();
+            };
         }
     }
     return;
@@ -147,7 +151,7 @@ bool TW::validateAddress(TWCoinType coin, const std::string& string) {
     return dispatcher->validateAddress(coin, string, p2pkh, p2sh, hrp);
 }
 
-std::string TW::normalizeAddress(TWCoinType coin, const std::string &address) {
+std::string TW::normalizeAddress(TWCoinType coin, const std::string& address) {
     if (!TW::validateAddress(coin, address)) {
         // invalid address, not normalizing
         return "";
@@ -190,6 +194,18 @@ bool TW::supportsJSONSigning(TWCoinType coinType) {
     auto dispatcher = coinDispatcher(coinType);
     assert(dispatcher != nullptr);
     return dispatcher->supportsJSONSigning();
+}
+
+void TW::anyCoinEncode(TWCoinType coinType, const Data& dataIn, Data& dataOut) {
+    auto dispatcher = coinDispatcher(coinType);
+    assert(dispatcher != nullptr);
+    dispatcher->encodeRawTx(coinType, dataIn, dataOut);
+}
+
+void TW::anyCoinDecode(TWCoinType coinType, const Data& dataIn, Data& dataOut) {
+    auto dispatcher = coinDispatcher(coinType);
+    assert(dispatcher != nullptr);
+    dispatcher->decodeRawTx(coinType, dataIn, dataOut);
 }
 
 void TW::anyCoinPlan(TWCoinType coinType, const Data& dataIn, Data& dataOut) {

@@ -101,6 +101,34 @@
         }
     },
     {
+        "id": "bitcoingold",
+        "name": "Bitcoin Gold",
+        "symbol": "BTG",
+        "decimals": 8,
+        "blockchain": "Bitcoin",
+        "derivationPath": "m/84'/156'/0'/0/0",
+        "curve": "secp256k1",
+        "publicKeyType": "secp256k1",
+        "p2pkhPrefix": 38,
+        "p2shPrefix": 23,
+        "hrp": "btg",
+        "publicKeyHasher": "sha256ripemd",
+        "base58Hasher": "sha256d",
+        "xpub": "zpub",
+        "xprv": "zprv",
+        "explorer": {
+            "url": "https://explorer.bitcoingold.org/insight",
+            "txPath": "/tx/",
+            "accountPath": "/address/"
+        },
+        "info": {
+            "url": "https://bitcoingold.org",
+            "client": "https://github.com/trezor/blockbook",
+            "clientPublic": "",
+            "clientDocs": "https://github.com/trezor/blockbook/blob/master/docs/api.md"
+        }
+    },
+    {
         "id": "callisto",
         "name": "Callisto",
         "symbol": "CLO",
@@ -878,10 +906,10 @@
         "symbol": "IOTX",
         "decimals": 18,
         "blockchain": "IoTeX",
-        "hrp": "io",
         "derivationPath": "m/44'/304'/0'/0/0",
         "curve": "secp256k1",
         "publicKeyType": "secp256k1Extended",
+        "hrp": "io",
         "explorer": {
             "url": "https://iotexscan.io",
             "txPath": "/action/",
@@ -1091,10 +1119,10 @@
         "symbol": "ONE",
         "decimals": 18,
         "blockchain": "Harmony",
-        "hrp": "one",
         "derivationPath": "m/44'/1023'/0'/0/0",
         "curve": "secp256k1",
         "publicKeyType": "secp256k1Extended",
+        "hrp": "one",
         "explorer": {
             "url": "https://explorer.harmony.one",
             "txPath": "/#/tx/",
@@ -1329,6 +1357,52 @@
             "client": "https://github.com/filecoin-project/lotus",
             "clientPublic": "",
             "clientDocs": "https://docs.lotu.sh"
+        }
+    },
+    {
+        "id": "elrond",
+        "name": "Elrond",
+        "symbol": "ERD",
+        "decimals": 18,
+        "blockchain": "ElrondNetwork",
+        "derivationPath": "m/44'/508'/0'/0'/0'",
+        "curve": "ed25519",
+        "publicKeyType": "ed25519",
+        "hrp": "erd",
+        "explorer": {
+            "url": "https://explorer.elrond.com",
+            "txPath": "/transactions/",
+            "accountPath": "/address/"
+        },
+        "info": {
+            "url": "https://elrond.com/",
+            "client": "https://github.com/ElrondNetwork/elrond-go",
+            "clientPublic": "https://api.elrond.com",
+            "clientDocs": "https://docs.elrond.com"
+        }
+    },
+    {
+        "id": "band",
+        "name": "BandChain",
+        "symbol": "BAND",
+        "decimals": 6,
+        "blockchain": "Cosmos",
+        "derivationPath": "m/44'/494'/0'/0/0",
+        "curve": "secp256k1",
+        "publicKeyType": "secp256k1",
+        "hrp": "band",
+        "explorer": {
+            "url": "https://scan-wenchang-testnet2.bandchain.org/",
+            "txPath": "/tx/",
+            "accountPath": "/account/",
+            "sampleTx": "473264551D3063A9EC64EC251C61BE92DDDFCF6CC46D026D1E574D83D5447173",
+            "sampleAccount": "band12nmsm9khdsv0tywge43q3zwj8kkj3hvup9rltp"
+        },
+        "info": {
+            "url": "https://bandprotocol.com/",
+            "client": "https://github.com/bandprotocol/bandchain",
+            "clientPublic": "https://api-wt2-lb.bandchain.org",
+            "clientDocs": "https://docs.bandchain.org/"
         }
     }
 ]

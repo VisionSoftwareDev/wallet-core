@@ -34,6 +34,9 @@ class CoinAddressDerivationTests: XCTestCase {
                 case .bitcoinCash:
                     let expectedResult = "bitcoincash:qpzl3jxkzgvfd9flnd26leud5duv795fnv7vuaha70"
                     AssetCoinDerivation(coin, expectedResult, derivedAddress, address)
+                case .bitcoinGold:
+                    let expectedResult = "btg1qwz9sed0k4neu6ycrudzkca6cnqe3zweq35hvtg"
+                    AssetCoinDerivation(coin, expectedResult, derivedAddress, address)
                 case .callisto:
                     let expectedResult = "0x3E6FFC80745E6669135a76F4A7ce6BCF02436e04"
                     AssetCoinDerivation(coin, expectedResult, derivedAddress, address)
@@ -181,6 +184,9 @@ class CoinAddressDerivationTests: XCTestCase {
                 case .kava:
                     let expectedResult = "kava1drpa0x9ptz0fql3frv562rcrhj2nstuz3pas87"
                     AssetCoinDerivation(coin, expectedResult, derivedAddress, address)
+                case .bandChain:
+                    let expectedResult = "band1624hqgend0s3d94z68fyka2y5jak6vd7u0l50r"
+                    AssetCoinDerivation(coin, expectedResult, derivedAddress, address)
                 case .cardano:
                     let expectedResult = "addr1snpa4z7ntyfszv7ckquprdw75w4qjqh0qmya9jtkpxxlzxghlqyvv7l0yjamh8fxraw06p3ua8sj2g2gv98v4849s43t9g2999kquuu5egnprk"
                     AssetCoinDerivation(coin, expectedResult, derivedAddress, address)
@@ -189,6 +195,9 @@ class CoinAddressDerivationTests: XCTestCase {
                     AssetCoinDerivation(coin, expectedResult, derivedAddress, address)
                 case .filecoin:
                     let expectedResult = "f1zzykebxldfcakj5wdb5n3n7priul522fnmjzori"
+                    AssetCoinDerivation(coin, expectedResult, derivedAddress, address)
+                case .elrond:
+                    let expectedResult = "erd1jfcy8aeru6vlx4fe6h3pc3vlpe2cnnur5zetxdhp879yagq7vqvs8na4f8"
                     AssetCoinDerivation(coin, expectedResult, derivedAddress, address)
                 @unknown default:
                     fatalError()
