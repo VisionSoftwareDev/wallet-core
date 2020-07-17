@@ -15,6 +15,7 @@
 #include "../Hash.h"
 #include "../HexCoding.h"
 #include "../Zcash/Transaction.h"
+#include "../Ghost/Transaction.h"
 #include "../Groestlcoin/Transaction.h"
 
 using namespace TW;
@@ -293,3 +294,4 @@ Data TransactionSigner<Transaction, TransactionBuilder>::scriptForScriptHash(con
 template class TW::Bitcoin::TransactionSigner<Bitcoin::Transaction, Bitcoin::TransactionBuilder>;
 template class TW::Bitcoin::TransactionSigner<Zcash::Transaction, Zcash::TransactionBuilder>;
 template class TW::Bitcoin::TransactionSigner<Groestlcoin::Transaction, Bitcoin::TransactionBuilder>;
+template class TW::Bitcoin::TransactionSigner<Ghost::Transaction, Bitcoin::TransactionBuilder>;

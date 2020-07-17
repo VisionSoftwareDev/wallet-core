@@ -55,6 +55,9 @@ class CoinAddressDerivationTests: XCTestCase {
                 case .ethereumClassic:
                     let expectedResult = "0x078bA3228F3E6C08bEEac9A005de0b7e7089aD1c"
                     AssetCoinDerivation(coin, expectedResult, derivedAddress, address)
+                case .ghost:
+                    let expectedResult = "GcHrJNaA7NVt14Q9QXnjVPy81tz6GeBsX4"
+                    AssetCoinDerivation(coin, expectedResult, derivedAddress, address)
                 case .goChain:
                     let expectedResult = "0x5940ce4A14210d4Ccd0ac206CE92F21828016aC2"
                     AssetCoinDerivation(coin, expectedResult, derivedAddress, address)

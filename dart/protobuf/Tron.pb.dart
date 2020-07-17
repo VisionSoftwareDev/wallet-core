@@ -127,7 +127,7 @@ class TransferTRC20Contract extends $pb.GeneratedMessage {
     ..aOS(1, 'contractAddress')
     ..aOS(2, 'ownerAddress')
     ..aOS(3, 'toAddress')
-    ..aInt64(4, 'amount')
+    ..a<$core.List<$core.int>>(4, 'amount', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
@@ -174,9 +174,9 @@ class TransferTRC20Contract extends $pb.GeneratedMessage {
   void clearToAddress() => clearField(3);
 
   @$pb.TagNumber(4)
-  $fixnum.Int64 get amount => $_getI64(3);
+  $core.List<$core.int> get amount => $_getN(3);
   @$pb.TagNumber(4)
-  set amount($fixnum.Int64 v) { $_setInt64(3, v); }
+  set amount($core.List<$core.int> v) { $_setBytes(3, v); }
   @$pb.TagNumber(4)
   $core.bool hasAmount() => $_has(3);
   @$pb.TagNumber(4)

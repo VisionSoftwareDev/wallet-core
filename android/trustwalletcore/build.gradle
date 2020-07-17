@@ -4,7 +4,7 @@ group='com.github.trustwallet'
 
 android {
     compileSdkVersion 28
-    ndkVersion '21.2.6472646'
+    ndkVersion '21.3.6528147'
     defaultConfig {
         minSdkVersion 23
         targetSdkVersion 28
