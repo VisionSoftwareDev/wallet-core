@@ -6,21 +6,20 @@
 
 #include "Entry.h"
 
-#include "Address.h"
-#include "../Bitcoin/SegwitAddress.h"
 #include "Signer.h"
+#include "../Bitcoin/Address.h"
 
 using namespace TW::Ghost;
 using namespace std;
 
 bool Entry::validateAddress(TWCoinType coin, const string& address, TW::byte p2pkh, TW::byte p2sh,
                             const char* hrp) const {
-    return Address::isValid(address, {{p2pkh}, {p2sh}});
+    return TW::Bitcoin::Address::isValid(address, {{p2pkh}, {p2sh}});
 }
 
 string Entry::deriveAddress(TWCoinType coin, const PublicKey& publicKey, TW::byte p2pkh,
                             const char* hrp) const {
-    return Address(publicKey, p2pkh).string();
+    return TW::Bitcoin::Address(publicKey, p2pkh).string();
 }
 
 void Entry::sign(TWCoinType coin, const TW::Data& dataIn, TW::Data& dataOut) const {
