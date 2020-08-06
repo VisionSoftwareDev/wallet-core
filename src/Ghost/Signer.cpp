@@ -7,8 +7,8 @@
 #include "Signer.h"
 #include "Bitcoin/TransactionBuilder.h"
 #include "Bitcoin/TransactionSigner.h"
-#include "Hash.h"
 #include "Data.h"
+#include "Hash.h"
 #include "HexCoding.h"
 #include "Transaction.h"
 
@@ -30,6 +30,7 @@ SigningOutput Signer::sign(const SigningInput& input) noexcept {
         output.set_error(result.error());
         return output;
     }
+
     const auto& tx = result.payload();
     *output.mutable_transaction() = tx.proto();
 
@@ -42,7 +43,7 @@ SigningOutput Signer::sign(const SigningInput& input) noexcept {
         txHashData.clear();
         tx.encode(txHashData, Transaction::SegwitFormatMode::NonSegwit);
     }
-    auto txHash = Hash::sha256(txHashData.data(), txHashData.size());
+    auto txHash = Hash::sha256d(txHashData.data(), txHashData.size());
     std::reverse(txHash.begin(), txHash.end());
     output.set_transaction_id(hex(txHash));
     return output;
