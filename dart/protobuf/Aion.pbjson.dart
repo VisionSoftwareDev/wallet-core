@@ -15,6 +15,7 @@ const SigningInput$json = const {
     const {'1': 'amount', '3': 5, '4': 1, '5': 12, '10': 'amount'},
     const {'1': 'payload', '3': 6, '4': 1, '5': 12, '10': 'payload'},
     const {'1': 'private_key', '3': 7, '4': 1, '5': 12, '10': 'privateKey'},
+    const {'1': 'timestamp', '3': 8, '4': 1, '5': 4, '10': 'timestamp'},
   ],
 };
 

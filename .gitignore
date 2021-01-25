@@ -8,6 +8,7 @@ xcode/
 cmake-build-debug/
 .cquery_cache/
 .cxx/
+.cache/
 
 # Dependencies
 node_modules
@@ -50,3 +51,4 @@ samples/cpp/Makefile
 samples/cpp/*.cmake
 # built binary
 samples/cpp/sample
+dart/

@@ -68,7 +68,7 @@ const Staking$json = const {
 const Staking_Bond$json = const {
   '1': 'Bond',
   '2': const [
-    const {'1': 'validator', '3': 1, '4': 1, '5': 9, '10': 'validator'},
+    const {'1': 'controller', '3': 1, '4': 1, '5': 9, '10': 'controller'},
     const {'1': 'value', '3': 2, '4': 1, '5': 12, '10': 'value'},
     const {'1': 'reward_destination', '3': 3, '4': 1, '5': 14, '6': '.TW.Polkadot.Proto.RewardDestination', '10': 'rewardDestination'},
   ],
@@ -90,6 +90,9 @@ const Staking_Unbond$json = const {
 
 const Staking_WithdrawUnbonded$json = const {
   '1': 'WithdrawUnbonded',
+  '2': const [
+    const {'1': 'slashing_spans', '3': 1, '4': 1, '5': 5, '10': 'slashingSpans'},
+  ],
 };
 
 const Staking_Nominate$json = const {
@@ -110,11 +113,11 @@ const SigningInput$json = const {
     const {'1': 'genesis_hash', '3': 2, '4': 1, '5': 12, '10': 'genesisHash'},
     const {'1': 'nonce', '3': 3, '4': 1, '5': 4, '10': 'nonce'},
     const {'1': 'spec_version', '3': 4, '4': 1, '5': 13, '10': 'specVersion'},
-    const {'1': 'tip', '3': 5, '4': 1, '5': 12, '10': 'tip'},
-    const {'1': 'era', '3': 6, '4': 1, '5': 11, '6': '.TW.Polkadot.Proto.Era', '10': 'era'},
-    const {'1': 'private_key', '3': 7, '4': 1, '5': 12, '10': 'privateKey'},
-    const {'1': 'network', '3': 8, '4': 1, '5': 14, '6': '.TW.Polkadot.Proto.Network', '10': 'network'},
-    const {'1': 'extrinsic_version', '3': 9, '4': 1, '5': 13, '10': 'extrinsicVersion'},
+    const {'1': 'transaction_version', '3': 5, '4': 1, '5': 13, '10': 'transactionVersion'},
+    const {'1': 'tip', '3': 6, '4': 1, '5': 12, '10': 'tip'},
+    const {'1': 'era', '3': 7, '4': 1, '5': 11, '6': '.TW.Polkadot.Proto.Era', '10': 'era'},
+    const {'1': 'private_key', '3': 8, '4': 1, '5': 12, '10': 'privateKey'},
+    const {'1': 'network', '3': 9, '4': 1, '5': 14, '6': '.TW.Polkadot.Proto.Network', '10': 'network'},
     const {'1': 'balance_call', '3': 10, '4': 1, '5': 11, '6': '.TW.Polkadot.Proto.Balance', '9': 0, '10': 'balanceCall'},
     const {'1': 'staking_call', '3': 11, '4': 1, '5': 11, '6': '.TW.Polkadot.Proto.Staking', '9': 0, '10': 'stakingCall'},
   ],

@@ -264,12 +264,12 @@ class SigningInput extends $pb.GeneratedMessage {
     ..aInt64(3, 'byteFee')
     ..aOS(4, 'toAddress')
     ..aOS(5, 'changeAddress')
-    ..p<$core.List<$core.int>>(10, 'privateKey', $pb.PbFieldType.PY)
-    ..m<$core.String, $core.List<$core.int>>(11, 'scripts', entryClassName: 'SigningInput.ScriptsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OY, packageName: const $pb.PackageName('TW.Bitcoin.Proto'))
-    ..pc<UnspentTransaction>(12, 'utxo', $pb.PbFieldType.PM, subBuilder: UnspentTransaction.create)
-    ..aOB(13, 'useMaxAmount')
-    ..a<$core.int>(14, 'coinType', $pb.PbFieldType.OU3)
-    ..aOM<TransactionPlan>(15, 'plan', subBuilder: TransactionPlan.create)
+    ..p<$core.List<$core.int>>(6, 'privateKey', $pb.PbFieldType.PY)
+    ..m<$core.String, $core.List<$core.int>>(7, 'scripts', entryClassName: 'SigningInput.ScriptsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OY, packageName: const $pb.PackageName('TW.Bitcoin.Proto'))
+    ..pc<UnspentTransaction>(8, 'utxo', $pb.PbFieldType.PM, subBuilder: UnspentTransaction.create)
+    ..aOB(9, 'useMaxAmount')
+    ..a<$core.int>(10, 'coinType', $pb.PbFieldType.OU3)
+    ..aOM<TransactionPlan>(11, 'plan', subBuilder: TransactionPlan.create)
     ..hasRequiredFields = false
   ;
 
@@ -333,42 +333,42 @@ class SigningInput extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearChangeAddress() => clearField(5);
 
-  @$pb.TagNumber(10)
+  @$pb.TagNumber(6)
   $core.List<$core.List<$core.int>> get privateKey => $_getList(5);
 
-  @$pb.TagNumber(11)
+  @$pb.TagNumber(7)
   $core.Map<$core.String, $core.List<$core.int>> get scripts => $_getMap(6);
 
-  @$pb.TagNumber(12)
+  @$pb.TagNumber(8)
   $core.List<UnspentTransaction> get utxo => $_getList(7);
 
-  @$pb.TagNumber(13)
+  @$pb.TagNumber(9)
   $core.bool get useMaxAmount => $_getBF(8);
-  @$pb.TagNumber(13)
+  @$pb.TagNumber(9)
   set useMaxAmount($core.bool v) { $_setBool(8, v); }
-  @$pb.TagNumber(13)
+  @$pb.TagNumber(9)
   $core.bool hasUseMaxAmount() => $_has(8);
-  @$pb.TagNumber(13)
-  void clearUseMaxAmount() => clearField(13);
+  @$pb.TagNumber(9)
+  void clearUseMaxAmount() => clearField(9);
 
-  @$pb.TagNumber(14)
+  @$pb.TagNumber(10)
   $core.int get coinType => $_getIZ(9);
-  @$pb.TagNumber(14)
+  @$pb.TagNumber(10)
   set coinType($core.int v) { $_setUnsignedInt32(9, v); }
-  @$pb.TagNumber(14)
+  @$pb.TagNumber(10)
   $core.bool hasCoinType() => $_has(9);
-  @$pb.TagNumber(14)
-  void clearCoinType() => clearField(14);
+  @$pb.TagNumber(10)
+  void clearCoinType() => clearField(10);
 
-  @$pb.TagNumber(15)
+  @$pb.TagNumber(11)
   TransactionPlan get plan => $_getN(10);
-  @$pb.TagNumber(15)
-  set plan(TransactionPlan v) { setField(15, v); }
-  @$pb.TagNumber(15)
+  @$pb.TagNumber(11)
+  set plan(TransactionPlan v) { setField(11, v); }
+  @$pb.TagNumber(11)
   $core.bool hasPlan() => $_has(10);
-  @$pb.TagNumber(15)
-  void clearPlan() => clearField(15);
-  @$pb.TagNumber(15)
+  @$pb.TagNumber(11)
+  void clearPlan() => clearField(11);
+  @$pb.TagNumber(11)
   TransactionPlan ensurePlan() => $_ensure(10);
 }
 
@@ -380,6 +380,7 @@ class TransactionPlan extends $pb.GeneratedMessage {
     ..aInt64(4, 'change')
     ..pc<UnspentTransaction>(5, 'utxos', $pb.PbFieldType.PM, subBuilder: UnspentTransaction.create)
     ..a<$core.List<$core.int>>(6, 'branchId', $pb.PbFieldType.OY)
+    ..aOS(7, 'error')
     ..hasRequiredFields = false
   ;
 
@@ -445,6 +446,15 @@ class TransactionPlan extends $pb.GeneratedMessage {
   $core.bool hasBranchId() => $_has(5);
   @$pb.TagNumber(6)
   void clearBranchId() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get error => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set error($core.String v) { $_setString(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasError() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearError() => clearField(7);
 }
 
 class SigningOutput extends $pb.GeneratedMessage {

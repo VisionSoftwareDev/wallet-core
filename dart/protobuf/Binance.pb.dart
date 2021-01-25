@@ -970,6 +970,429 @@ class RefundHTLTOrder extends $pb.GeneratedMessage {
   void clearSwapId() => clearField(2);
 }
 
+class TransferOut extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransferOut', package: const $pb.PackageName('TW.Binance.Proto'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, 'from', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, 'to', $pb.PbFieldType.OY)
+    ..aOM<SendOrder_Token>(3, 'amount', subBuilder: SendOrder_Token.create)
+    ..aInt64(4, 'expireTime')
+    ..hasRequiredFields = false
+  ;
+
+  TransferOut._() : super();
+  factory TransferOut() => create();
+  factory TransferOut.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TransferOut.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  TransferOut clone() => TransferOut()..mergeFromMessage(this);
+  TransferOut copyWith(void Function(TransferOut) updates) => super.copyWith((message) => updates(message as TransferOut));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static TransferOut create() => TransferOut._();
+  TransferOut createEmptyInstance() => create();
+  static $pb.PbList<TransferOut> createRepeated() => $pb.PbList<TransferOut>();
+  @$core.pragma('dart2js:noInline')
+  static TransferOut getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransferOut>(create);
+  static TransferOut _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.int> get from => $_getN(0);
+  @$pb.TagNumber(1)
+  set from($core.List<$core.int> v) { $_setBytes(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasFrom() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFrom() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.int> get to => $_getN(1);
+  @$pb.TagNumber(2)
+  set to($core.List<$core.int> v) { $_setBytes(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasTo() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTo() => clearField(2);
+
+  @$pb.TagNumber(3)
+  SendOrder_Token get amount => $_getN(2);
+  @$pb.TagNumber(3)
+  set amount(SendOrder_Token v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasAmount() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearAmount() => clearField(3);
+  @$pb.TagNumber(3)
+  SendOrder_Token ensureAmount() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get expireTime => $_getI64(3);
+  @$pb.TagNumber(4)
+  set expireTime($fixnum.Int64 v) { $_setInt64(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasExpireTime() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearExpireTime() => clearField(4);
+}
+
+class SideChainDelegate extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SideChainDelegate', package: const $pb.PackageName('TW.Binance.Proto'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, 'delegatorAddr', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, 'validatorAddr', $pb.PbFieldType.OY)
+    ..aOM<SendOrder_Token>(3, 'delegation', subBuilder: SendOrder_Token.create)
+    ..aOS(4, 'chainId')
+    ..hasRequiredFields = false
+  ;
+
+  SideChainDelegate._() : super();
+  factory SideChainDelegate() => create();
+  factory SideChainDelegate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SideChainDelegate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  SideChainDelegate clone() => SideChainDelegate()..mergeFromMessage(this);
+  SideChainDelegate copyWith(void Function(SideChainDelegate) updates) => super.copyWith((message) => updates(message as SideChainDelegate));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SideChainDelegate create() => SideChainDelegate._();
+  SideChainDelegate createEmptyInstance() => create();
+  static $pb.PbList<SideChainDelegate> createRepeated() => $pb.PbList<SideChainDelegate>();
+  @$core.pragma('dart2js:noInline')
+  static SideChainDelegate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SideChainDelegate>(create);
+  static SideChainDelegate _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.int> get delegatorAddr => $_getN(0);
+  @$pb.TagNumber(1)
+  set delegatorAddr($core.List<$core.int> v) { $_setBytes(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasDelegatorAddr() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDelegatorAddr() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.int> get validatorAddr => $_getN(1);
+  @$pb.TagNumber(2)
+  set validatorAddr($core.List<$core.int> v) { $_setBytes(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasValidatorAddr() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearValidatorAddr() => clearField(2);
+
+  @$pb.TagNumber(3)
+  SendOrder_Token get delegation => $_getN(2);
+  @$pb.TagNumber(3)
+  set delegation(SendOrder_Token v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasDelegation() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearDelegation() => clearField(3);
+  @$pb.TagNumber(3)
+  SendOrder_Token ensureDelegation() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $core.String get chainId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set chainId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasChainId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearChainId() => clearField(4);
+}
+
+class SideChainRedelegate extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SideChainRedelegate', package: const $pb.PackageName('TW.Binance.Proto'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, 'delegatorAddr', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, 'validatorSrcAddr', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(3, 'validatorDstAddr', $pb.PbFieldType.OY)
+    ..aOM<SendOrder_Token>(4, 'amount', subBuilder: SendOrder_Token.create)
+    ..aOS(5, 'chainId')
+    ..hasRequiredFields = false
+  ;
+
+  SideChainRedelegate._() : super();
+  factory SideChainRedelegate() => create();
+  factory SideChainRedelegate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SideChainRedelegate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  SideChainRedelegate clone() => SideChainRedelegate()..mergeFromMessage(this);
+  SideChainRedelegate copyWith(void Function(SideChainRedelegate) updates) => super.copyWith((message) => updates(message as SideChainRedelegate));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SideChainRedelegate create() => SideChainRedelegate._();
+  SideChainRedelegate createEmptyInstance() => create();
+  static $pb.PbList<SideChainRedelegate> createRepeated() => $pb.PbList<SideChainRedelegate>();
+  @$core.pragma('dart2js:noInline')
+  static SideChainRedelegate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SideChainRedelegate>(create);
+  static SideChainRedelegate _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.int> get delegatorAddr => $_getN(0);
+  @$pb.TagNumber(1)
+  set delegatorAddr($core.List<$core.int> v) { $_setBytes(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasDelegatorAddr() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDelegatorAddr() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.int> get validatorSrcAddr => $_getN(1);
+  @$pb.TagNumber(2)
+  set validatorSrcAddr($core.List<$core.int> v) { $_setBytes(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasValidatorSrcAddr() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearValidatorSrcAddr() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.List<$core.int> get validatorDstAddr => $_getN(2);
+  @$pb.TagNumber(3)
+  set validatorDstAddr($core.List<$core.int> v) { $_setBytes(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasValidatorDstAddr() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearValidatorDstAddr() => clearField(3);
+
+  @$pb.TagNumber(4)
+  SendOrder_Token get amount => $_getN(3);
+  @$pb.TagNumber(4)
+  set amount(SendOrder_Token v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasAmount() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearAmount() => clearField(4);
+  @$pb.TagNumber(4)
+  SendOrder_Token ensureAmount() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $core.String get chainId => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set chainId($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasChainId() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearChainId() => clearField(5);
+}
+
+class SideChainUndelegate extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SideChainUndelegate', package: const $pb.PackageName('TW.Binance.Proto'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, 'delegatorAddr', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, 'validatorAddr', $pb.PbFieldType.OY)
+    ..aOM<SendOrder_Token>(3, 'amount', subBuilder: SendOrder_Token.create)
+    ..aOS(4, 'chainId')
+    ..hasRequiredFields = false
+  ;
+
+  SideChainUndelegate._() : super();
+  factory SideChainUndelegate() => create();
+  factory SideChainUndelegate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SideChainUndelegate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  SideChainUndelegate clone() => SideChainUndelegate()..mergeFromMessage(this);
+  SideChainUndelegate copyWith(void Function(SideChainUndelegate) updates) => super.copyWith((message) => updates(message as SideChainUndelegate));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SideChainUndelegate create() => SideChainUndelegate._();
+  SideChainUndelegate createEmptyInstance() => create();
+  static $pb.PbList<SideChainUndelegate> createRepeated() => $pb.PbList<SideChainUndelegate>();
+  @$core.pragma('dart2js:noInline')
+  static SideChainUndelegate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SideChainUndelegate>(create);
+  static SideChainUndelegate _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.int> get delegatorAddr => $_getN(0);
+  @$pb.TagNumber(1)
+  set delegatorAddr($core.List<$core.int> v) { $_setBytes(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasDelegatorAddr() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDelegatorAddr() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.int> get validatorAddr => $_getN(1);
+  @$pb.TagNumber(2)
+  set validatorAddr($core.List<$core.int> v) { $_setBytes(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasValidatorAddr() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearValidatorAddr() => clearField(2);
+
+  @$pb.TagNumber(3)
+  SendOrder_Token get amount => $_getN(2);
+  @$pb.TagNumber(3)
+  set amount(SendOrder_Token v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasAmount() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearAmount() => clearField(3);
+  @$pb.TagNumber(3)
+  SendOrder_Token ensureAmount() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $core.String get chainId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set chainId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasChainId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearChainId() => clearField(4);
+}
+
+class TimeLockOrder extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TimeLockOrder', package: const $pb.PackageName('TW.Binance.Proto'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, 'fromAddress', $pb.PbFieldType.OY)
+    ..aOS(2, 'description')
+    ..pc<SendOrder_Token>(3, 'amount', $pb.PbFieldType.PM, subBuilder: SendOrder_Token.create)
+    ..aInt64(4, 'lockTime')
+    ..hasRequiredFields = false
+  ;
+
+  TimeLockOrder._() : super();
+  factory TimeLockOrder() => create();
+  factory TimeLockOrder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TimeLockOrder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  TimeLockOrder clone() => TimeLockOrder()..mergeFromMessage(this);
+  TimeLockOrder copyWith(void Function(TimeLockOrder) updates) => super.copyWith((message) => updates(message as TimeLockOrder));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static TimeLockOrder create() => TimeLockOrder._();
+  TimeLockOrder createEmptyInstance() => create();
+  static $pb.PbList<TimeLockOrder> createRepeated() => $pb.PbList<TimeLockOrder>();
+  @$core.pragma('dart2js:noInline')
+  static TimeLockOrder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TimeLockOrder>(create);
+  static TimeLockOrder _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.int> get fromAddress => $_getN(0);
+  @$pb.TagNumber(1)
+  set fromAddress($core.List<$core.int> v) { $_setBytes(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasFromAddress() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFromAddress() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get description => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set description($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasDescription() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDescription() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.List<SendOrder_Token> get amount => $_getList(2);
+
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get lockTime => $_getI64(3);
+  @$pb.TagNumber(4)
+  set lockTime($fixnum.Int64 v) { $_setInt64(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasLockTime() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearLockTime() => clearField(4);
+}
+
+class TimeRelockOrder extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TimeRelockOrder', package: const $pb.PackageName('TW.Binance.Proto'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, 'fromAddress', $pb.PbFieldType.OY)
+    ..aInt64(2, 'id')
+    ..aOS(3, 'description')
+    ..pc<SendOrder_Token>(4, 'amount', $pb.PbFieldType.PM, subBuilder: SendOrder_Token.create)
+    ..aInt64(5, 'lockTime')
+    ..hasRequiredFields = false
+  ;
+
+  TimeRelockOrder._() : super();
+  factory TimeRelockOrder() => create();
+  factory TimeRelockOrder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TimeRelockOrder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  TimeRelockOrder clone() => TimeRelockOrder()..mergeFromMessage(this);
+  TimeRelockOrder copyWith(void Function(TimeRelockOrder) updates) => super.copyWith((message) => updates(message as TimeRelockOrder));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static TimeRelockOrder create() => TimeRelockOrder._();
+  TimeRelockOrder createEmptyInstance() => create();
+  static $pb.PbList<TimeRelockOrder> createRepeated() => $pb.PbList<TimeRelockOrder>();
+  @$core.pragma('dart2js:noInline')
+  static TimeRelockOrder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TimeRelockOrder>(create);
+  static TimeRelockOrder _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.int> get fromAddress => $_getN(0);
+  @$pb.TagNumber(1)
+  set fromAddress($core.List<$core.int> v) { $_setBytes(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasFromAddress() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFromAddress() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get id => $_getI64(1);
+  @$pb.TagNumber(2)
+  set id($fixnum.Int64 v) { $_setInt64(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get description => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set description($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasDescription() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearDescription() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.List<SendOrder_Token> get amount => $_getList(3);
+
+  @$pb.TagNumber(5)
+  $fixnum.Int64 get lockTime => $_getI64(4);
+  @$pb.TagNumber(5)
+  set lockTime($fixnum.Int64 v) { $_setInt64(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasLockTime() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearLockTime() => clearField(5);
+}
+
+class TimeUnlockOrder extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TimeUnlockOrder', package: const $pb.PackageName('TW.Binance.Proto'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, 'fromAddress', $pb.PbFieldType.OY)
+    ..aInt64(2, 'id')
+    ..hasRequiredFields = false
+  ;
+
+  TimeUnlockOrder._() : super();
+  factory TimeUnlockOrder() => create();
+  factory TimeUnlockOrder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TimeUnlockOrder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  TimeUnlockOrder clone() => TimeUnlockOrder()..mergeFromMessage(this);
+  TimeUnlockOrder copyWith(void Function(TimeUnlockOrder) updates) => super.copyWith((message) => updates(message as TimeUnlockOrder));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static TimeUnlockOrder create() => TimeUnlockOrder._();
+  TimeUnlockOrder createEmptyInstance() => create();
+  static $pb.PbList<TimeUnlockOrder> createRepeated() => $pb.PbList<TimeUnlockOrder>();
+  @$core.pragma('dart2js:noInline')
+  static TimeUnlockOrder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TimeUnlockOrder>(create);
+  static TimeUnlockOrder _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.int> get fromAddress => $_getN(0);
+  @$pb.TagNumber(1)
+  set fromAddress($core.List<$core.int> v) { $_setBytes(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasFromAddress() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFromAddress() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get id => $_getI64(1);
+  @$pb.TagNumber(2)
+  set id($fixnum.Int64 v) { $_setInt64(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearId() => clearField(2);
+}
+
 enum SigningInput_OrderOneof {
   tradeOrder, 
   cancelTradeOrder, 
@@ -983,6 +1406,13 @@ enum SigningInput_OrderOneof {
   issueOrder, 
   mintOrder, 
   burnOrder, 
+  transferOutOrder, 
+  sideDelegateOrder, 
+  sideRedelegateOrder, 
+  sideUndelegateOrder, 
+  timeLockOrder, 
+  timeRelockOrder, 
+  timeUnlockOrder, 
   notSet
 }
 
@@ -1000,10 +1430,17 @@ class SigningInput extends $pb.GeneratedMessage {
     17 : SigningInput_OrderOneof.issueOrder,
     18 : SigningInput_OrderOneof.mintOrder,
     19 : SigningInput_OrderOneof.burnOrder,
+    20 : SigningInput_OrderOneof.transferOutOrder,
+    21 : SigningInput_OrderOneof.sideDelegateOrder,
+    22 : SigningInput_OrderOneof.sideRedelegateOrder,
+    23 : SigningInput_OrderOneof.sideUndelegateOrder,
+    24 : SigningInput_OrderOneof.timeLockOrder,
+    25 : SigningInput_OrderOneof.timeRelockOrder,
+    26 : SigningInput_OrderOneof.timeUnlockOrder,
     0 : SigningInput_OrderOneof.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SigningInput', package: const $pb.PackageName('TW.Binance.Proto'), createEmptyInstance: create)
-    ..oo(0, [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19])
+    ..oo(0, [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
     ..aOS(1, 'chainId')
     ..aInt64(2, 'accountNumber')
     ..aInt64(3, 'sequence')
@@ -1022,6 +1459,13 @@ class SigningInput extends $pb.GeneratedMessage {
     ..aOM<TokenIssueOrder>(17, 'issueOrder', subBuilder: TokenIssueOrder.create)
     ..aOM<TokenMintOrder>(18, 'mintOrder', subBuilder: TokenMintOrder.create)
     ..aOM<TokenBurnOrder>(19, 'burnOrder', subBuilder: TokenBurnOrder.create)
+    ..aOM<TransferOut>(20, 'transferOutOrder', subBuilder: TransferOut.create)
+    ..aOM<SideChainDelegate>(21, 'sideDelegateOrder', subBuilder: SideChainDelegate.create)
+    ..aOM<SideChainRedelegate>(22, 'sideRedelegateOrder', subBuilder: SideChainRedelegate.create)
+    ..aOM<SideChainUndelegate>(23, 'sideUndelegateOrder', subBuilder: SideChainUndelegate.create)
+    ..aOM<TimeLockOrder>(24, 'timeLockOrder', subBuilder: TimeLockOrder.create)
+    ..aOM<TimeRelockOrder>(25, 'timeRelockOrder', subBuilder: TimeRelockOrder.create)
+    ..aOM<TimeUnlockOrder>(26, 'timeUnlockOrder', subBuilder: TimeUnlockOrder.create)
     ..hasRequiredFields = false
   ;
 
@@ -1228,6 +1672,83 @@ class SigningInput extends $pb.GeneratedMessage {
   void clearBurnOrder() => clearField(19);
   @$pb.TagNumber(19)
   TokenBurnOrder ensureBurnOrder() => $_ensure(17);
+
+  @$pb.TagNumber(20)
+  TransferOut get transferOutOrder => $_getN(18);
+  @$pb.TagNumber(20)
+  set transferOutOrder(TransferOut v) { setField(20, v); }
+  @$pb.TagNumber(20)
+  $core.bool hasTransferOutOrder() => $_has(18);
+  @$pb.TagNumber(20)
+  void clearTransferOutOrder() => clearField(20);
+  @$pb.TagNumber(20)
+  TransferOut ensureTransferOutOrder() => $_ensure(18);
+
+  @$pb.TagNumber(21)
+  SideChainDelegate get sideDelegateOrder => $_getN(19);
+  @$pb.TagNumber(21)
+  set sideDelegateOrder(SideChainDelegate v) { setField(21, v); }
+  @$pb.TagNumber(21)
+  $core.bool hasSideDelegateOrder() => $_has(19);
+  @$pb.TagNumber(21)
+  void clearSideDelegateOrder() => clearField(21);
+  @$pb.TagNumber(21)
+  SideChainDelegate ensureSideDelegateOrder() => $_ensure(19);
+
+  @$pb.TagNumber(22)
+  SideChainRedelegate get sideRedelegateOrder => $_getN(20);
+  @$pb.TagNumber(22)
+  set sideRedelegateOrder(SideChainRedelegate v) { setField(22, v); }
+  @$pb.TagNumber(22)
+  $core.bool hasSideRedelegateOrder() => $_has(20);
+  @$pb.TagNumber(22)
+  void clearSideRedelegateOrder() => clearField(22);
+  @$pb.TagNumber(22)
+  SideChainRedelegate ensureSideRedelegateOrder() => $_ensure(20);
+
+  @$pb.TagNumber(23)
+  SideChainUndelegate get sideUndelegateOrder => $_getN(21);
+  @$pb.TagNumber(23)
+  set sideUndelegateOrder(SideChainUndelegate v) { setField(23, v); }
+  @$pb.TagNumber(23)
+  $core.bool hasSideUndelegateOrder() => $_has(21);
+  @$pb.TagNumber(23)
+  void clearSideUndelegateOrder() => clearField(23);
+  @$pb.TagNumber(23)
+  SideChainUndelegate ensureSideUndelegateOrder() => $_ensure(21);
+
+  @$pb.TagNumber(24)
+  TimeLockOrder get timeLockOrder => $_getN(22);
+  @$pb.TagNumber(24)
+  set timeLockOrder(TimeLockOrder v) { setField(24, v); }
+  @$pb.TagNumber(24)
+  $core.bool hasTimeLockOrder() => $_has(22);
+  @$pb.TagNumber(24)
+  void clearTimeLockOrder() => clearField(24);
+  @$pb.TagNumber(24)
+  TimeLockOrder ensureTimeLockOrder() => $_ensure(22);
+
+  @$pb.TagNumber(25)
+  TimeRelockOrder get timeRelockOrder => $_getN(23);
+  @$pb.TagNumber(25)
+  set timeRelockOrder(TimeRelockOrder v) { setField(25, v); }
+  @$pb.TagNumber(25)
+  $core.bool hasTimeRelockOrder() => $_has(23);
+  @$pb.TagNumber(25)
+  void clearTimeRelockOrder() => clearField(25);
+  @$pb.TagNumber(25)
+  TimeRelockOrder ensureTimeRelockOrder() => $_ensure(23);
+
+  @$pb.TagNumber(26)
+  TimeUnlockOrder get timeUnlockOrder => $_getN(24);
+  @$pb.TagNumber(26)
+  set timeUnlockOrder(TimeUnlockOrder v) { setField(26, v); }
+  @$pb.TagNumber(26)
+  $core.bool hasTimeUnlockOrder() => $_has(24);
+  @$pb.TagNumber(26)
+  void clearTimeUnlockOrder() => clearField(26);
+  @$pb.TagNumber(26)
+  TimeUnlockOrder ensureTimeUnlockOrder() => $_ensure(24);
 }
 
 class SigningOutput extends $pb.GeneratedMessage {

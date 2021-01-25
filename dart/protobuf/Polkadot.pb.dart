@@ -144,7 +144,7 @@ class Balance extends $pb.GeneratedMessage {
 
 class Staking_Bond extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Staking.Bond', package: const $pb.PackageName('TW.Polkadot.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'validator')
+    ..aOS(1, 'controller')
     ..a<$core.List<$core.int>>(2, 'value', $pb.PbFieldType.OY)
     ..e<RewardDestination>(3, 'rewardDestination', $pb.PbFieldType.OE, defaultOrMaker: RewardDestination.STAKED, valueOf: RewardDestination.valueOf, enumValues: RewardDestination.values)
     ..hasRequiredFields = false
@@ -166,13 +166,13 @@ class Staking_Bond extends $pb.GeneratedMessage {
   static Staking_Bond _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get validator => $_getSZ(0);
+  $core.String get controller => $_getSZ(0);
   @$pb.TagNumber(1)
-  set validator($core.String v) { $_setString(0, v); }
+  set controller($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasValidator() => $_has(0);
+  $core.bool hasController() => $_has(0);
   @$pb.TagNumber(1)
-  void clearValidator() => clearField(1);
+  void clearController() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.List<$core.int> get value => $_getN(1);
@@ -257,6 +257,7 @@ class Staking_Unbond extends $pb.GeneratedMessage {
 
 class Staking_WithdrawUnbonded extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Staking.WithdrawUnbonded', package: const $pb.PackageName('TW.Polkadot.Proto'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'slashingSpans', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -274,6 +275,15 @@ class Staking_WithdrawUnbonded extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Staking_WithdrawUnbonded getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Staking_WithdrawUnbonded>(create);
   static Staking_WithdrawUnbonded _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get slashingSpans => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set slashingSpans($core.int v) { $_setSignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSlashingSpans() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSlashingSpans() => clearField(1);
 }
 
 class Staking_Nominate extends $pb.GeneratedMessage {
@@ -456,11 +466,11 @@ class SigningInput extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(2, 'genesisHash', $pb.PbFieldType.OY)
     ..a<$fixnum.Int64>(3, 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$core.int>(4, 'specVersion', $pb.PbFieldType.OU3)
-    ..a<$core.List<$core.int>>(5, 'tip', $pb.PbFieldType.OY)
-    ..aOM<Era>(6, 'era', subBuilder: Era.create)
-    ..a<$core.List<$core.int>>(7, 'privateKey', $pb.PbFieldType.OY)
-    ..e<Network>(8, 'network', $pb.PbFieldType.OE, defaultOrMaker: Network.POLKADOT, valueOf: Network.valueOf, enumValues: Network.values)
-    ..a<$core.int>(9, 'extrinsicVersion', $pb.PbFieldType.OU3)
+    ..a<$core.int>(5, 'transactionVersion', $pb.PbFieldType.OU3)
+    ..a<$core.List<$core.int>>(6, 'tip', $pb.PbFieldType.OY)
+    ..aOM<Era>(7, 'era', subBuilder: Era.create)
+    ..a<$core.List<$core.int>>(8, 'privateKey', $pb.PbFieldType.OY)
+    ..e<Network>(9, 'network', $pb.PbFieldType.OE, defaultOrMaker: Network.POLKADOT, valueOf: Network.valueOf, enumValues: Network.values)
     ..aOM<Balance>(10, 'balanceCall', subBuilder: Balance.create)
     ..aOM<Staking>(11, 'stakingCall', subBuilder: Staking.create)
     ..hasRequiredFields = false
@@ -521,51 +531,51 @@ class SigningInput extends $pb.GeneratedMessage {
   void clearSpecVersion() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.List<$core.int> get tip => $_getN(4);
+  $core.int get transactionVersion => $_getIZ(4);
   @$pb.TagNumber(5)
-  set tip($core.List<$core.int> v) { $_setBytes(4, v); }
+  set transactionVersion($core.int v) { $_setUnsignedInt32(4, v); }
   @$pb.TagNumber(5)
-  $core.bool hasTip() => $_has(4);
+  $core.bool hasTransactionVersion() => $_has(4);
   @$pb.TagNumber(5)
-  void clearTip() => clearField(5);
+  void clearTransactionVersion() => clearField(5);
 
   @$pb.TagNumber(6)
-  Era get era => $_getN(5);
+  $core.List<$core.int> get tip => $_getN(5);
   @$pb.TagNumber(6)
-  set era(Era v) { setField(6, v); }
+  set tip($core.List<$core.int> v) { $_setBytes(5, v); }
   @$pb.TagNumber(6)
-  $core.bool hasEra() => $_has(5);
+  $core.bool hasTip() => $_has(5);
   @$pb.TagNumber(6)
-  void clearEra() => clearField(6);
-  @$pb.TagNumber(6)
-  Era ensureEra() => $_ensure(5);
+  void clearTip() => clearField(6);
 
   @$pb.TagNumber(7)
-  $core.List<$core.int> get privateKey => $_getN(6);
+  Era get era => $_getN(6);
   @$pb.TagNumber(7)
-  set privateKey($core.List<$core.int> v) { $_setBytes(6, v); }
+  set era(Era v) { setField(7, v); }
   @$pb.TagNumber(7)
-  $core.bool hasPrivateKey() => $_has(6);
+  $core.bool hasEra() => $_has(6);
   @$pb.TagNumber(7)
-  void clearPrivateKey() => clearField(7);
+  void clearEra() => clearField(7);
+  @$pb.TagNumber(7)
+  Era ensureEra() => $_ensure(6);
 
   @$pb.TagNumber(8)
-  Network get network => $_getN(7);
+  $core.List<$core.int> get privateKey => $_getN(7);
   @$pb.TagNumber(8)
-  set network(Network v) { setField(8, v); }
+  set privateKey($core.List<$core.int> v) { $_setBytes(7, v); }
   @$pb.TagNumber(8)
-  $core.bool hasNetwork() => $_has(7);
+  $core.bool hasPrivateKey() => $_has(7);
   @$pb.TagNumber(8)
-  void clearNetwork() => clearField(8);
+  void clearPrivateKey() => clearField(8);
 
   @$pb.TagNumber(9)
-  $core.int get extrinsicVersion => $_getIZ(8);
+  Network get network => $_getN(8);
   @$pb.TagNumber(9)
-  set extrinsicVersion($core.int v) { $_setUnsignedInt32(8, v); }
+  set network(Network v) { setField(9, v); }
   @$pb.TagNumber(9)
-  $core.bool hasExtrinsicVersion() => $_has(8);
+  $core.bool hasNetwork() => $_has(8);
   @$pb.TagNumber(9)
-  void clearExtrinsicVersion() => clearField(9);
+  void clearNetwork() => clearField(9);
 
   @$pb.TagNumber(10)
   Balance get balanceCall => $_getN(9);

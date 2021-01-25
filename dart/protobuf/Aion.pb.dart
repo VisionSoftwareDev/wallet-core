@@ -7,6 +7,7 @@
 
 import 'dart:core' as $core;
 
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class SigningInput extends $pb.GeneratedMessage {
@@ -18,6 +19,7 @@ class SigningInput extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(5, 'amount', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(6, 'payload', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(7, 'privateKey', $pb.PbFieldType.OY)
+    ..a<$fixnum.Int64>(8, 'timestamp', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
@@ -98,6 +100,15 @@ class SigningInput extends $pb.GeneratedMessage {
   $core.bool hasPrivateKey() => $_has(6);
   @$pb.TagNumber(7)
   void clearPrivateKey() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $fixnum.Int64 get timestamp => $_getI64(7);
+  @$pb.TagNumber(8)
+  set timestamp($fixnum.Int64 v) { $_setInt64(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasTimestamp() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearTimestamp() => clearField(8);
 }
 
 class SigningOutput extends $pb.GeneratedMessage {

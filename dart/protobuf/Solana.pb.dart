@@ -164,30 +164,242 @@ class WithdrawStake extends $pb.GeneratedMessage {
   void clearValue() => clearField(2);
 }
 
+class CreateTokenAccount extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTokenAccount', package: const $pb.PackageName('TW.Solana.Proto'), createEmptyInstance: create)
+    ..aOS(1, 'mainAddress')
+    ..aOS(2, 'tokenMintAddress')
+    ..aOS(3, 'tokenAddress')
+    ..hasRequiredFields = false
+  ;
+
+  CreateTokenAccount._() : super();
+  factory CreateTokenAccount() => create();
+  factory CreateTokenAccount.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateTokenAccount.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  CreateTokenAccount clone() => CreateTokenAccount()..mergeFromMessage(this);
+  CreateTokenAccount copyWith(void Function(CreateTokenAccount) updates) => super.copyWith((message) => updates(message as CreateTokenAccount));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CreateTokenAccount create() => CreateTokenAccount._();
+  CreateTokenAccount createEmptyInstance() => create();
+  static $pb.PbList<CreateTokenAccount> createRepeated() => $pb.PbList<CreateTokenAccount>();
+  @$core.pragma('dart2js:noInline')
+  static CreateTokenAccount getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateTokenAccount>(create);
+  static CreateTokenAccount _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get mainAddress => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set mainAddress($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasMainAddress() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMainAddress() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get tokenMintAddress => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set tokenMintAddress($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasTokenMintAddress() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTokenMintAddress() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get tokenAddress => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set tokenAddress($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasTokenAddress() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearTokenAddress() => clearField(3);
+}
+
+class TokenTransfer extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TokenTransfer', package: const $pb.PackageName('TW.Solana.Proto'), createEmptyInstance: create)
+    ..aOS(1, 'tokenMintAddress')
+    ..aOS(2, 'senderTokenAddress')
+    ..aOS(3, 'recipientTokenAddress')
+    ..a<$fixnum.Int64>(4, 'amount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$core.int>(5, 'decimals', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  TokenTransfer._() : super();
+  factory TokenTransfer() => create();
+  factory TokenTransfer.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TokenTransfer.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  TokenTransfer clone() => TokenTransfer()..mergeFromMessage(this);
+  TokenTransfer copyWith(void Function(TokenTransfer) updates) => super.copyWith((message) => updates(message as TokenTransfer));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static TokenTransfer create() => TokenTransfer._();
+  TokenTransfer createEmptyInstance() => create();
+  static $pb.PbList<TokenTransfer> createRepeated() => $pb.PbList<TokenTransfer>();
+  @$core.pragma('dart2js:noInline')
+  static TokenTransfer getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TokenTransfer>(create);
+  static TokenTransfer _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get tokenMintAddress => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set tokenMintAddress($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasTokenMintAddress() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTokenMintAddress() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get senderTokenAddress => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set senderTokenAddress($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasSenderTokenAddress() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSenderTokenAddress() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get recipientTokenAddress => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set recipientTokenAddress($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasRecipientTokenAddress() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearRecipientTokenAddress() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get amount => $_getI64(3);
+  @$pb.TagNumber(4)
+  set amount($fixnum.Int64 v) { $_setInt64(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasAmount() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearAmount() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.int get decimals => $_getIZ(4);
+  @$pb.TagNumber(5)
+  set decimals($core.int v) { $_setUnsignedInt32(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasDecimals() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearDecimals() => clearField(5);
+}
+
+class CreateAndTransferToken extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateAndTransferToken', package: const $pb.PackageName('TW.Solana.Proto'), createEmptyInstance: create)
+    ..aOS(1, 'recipientMainAddress')
+    ..aOS(2, 'tokenMintAddress')
+    ..aOS(3, 'recipientTokenAddress')
+    ..aOS(4, 'senderTokenAddress')
+    ..a<$fixnum.Int64>(5, 'amount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$core.int>(6, 'decimals', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  CreateAndTransferToken._() : super();
+  factory CreateAndTransferToken() => create();
+  factory CreateAndTransferToken.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateAndTransferToken.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  CreateAndTransferToken clone() => CreateAndTransferToken()..mergeFromMessage(this);
+  CreateAndTransferToken copyWith(void Function(CreateAndTransferToken) updates) => super.copyWith((message) => updates(message as CreateAndTransferToken));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CreateAndTransferToken create() => CreateAndTransferToken._();
+  CreateAndTransferToken createEmptyInstance() => create();
+  static $pb.PbList<CreateAndTransferToken> createRepeated() => $pb.PbList<CreateAndTransferToken>();
+  @$core.pragma('dart2js:noInline')
+  static CreateAndTransferToken getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateAndTransferToken>(create);
+  static CreateAndTransferToken _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get recipientMainAddress => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set recipientMainAddress($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasRecipientMainAddress() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRecipientMainAddress() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get tokenMintAddress => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set tokenMintAddress($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasTokenMintAddress() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTokenMintAddress() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get recipientTokenAddress => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set recipientTokenAddress($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasRecipientTokenAddress() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearRecipientTokenAddress() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get senderTokenAddress => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set senderTokenAddress($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasSenderTokenAddress() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSenderTokenAddress() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $fixnum.Int64 get amount => $_getI64(4);
+  @$pb.TagNumber(5)
+  set amount($fixnum.Int64 v) { $_setInt64(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasAmount() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearAmount() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.int get decimals => $_getIZ(5);
+  @$pb.TagNumber(6)
+  set decimals($core.int v) { $_setUnsignedInt32(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasDecimals() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearDecimals() => clearField(6);
+}
+
 enum SigningInput_TransactionType {
   transferTransaction, 
   stakeTransaction, 
   deactivateStakeTransaction, 
   withdrawTransaction, 
+  createTokenAccountTransaction, 
+  tokenTransferTransaction, 
+  createAndTransferTokenTransaction, 
   notSet
 }
 
 class SigningInput extends $pb.GeneratedMessage {
   static const $core.Map<$core.int, SigningInput_TransactionType> _SigningInput_TransactionTypeByTag = {
-    1 : SigningInput_TransactionType.transferTransaction,
-    2 : SigningInput_TransactionType.stakeTransaction,
-    3 : SigningInput_TransactionType.deactivateStakeTransaction,
-    4 : SigningInput_TransactionType.withdrawTransaction,
+    3 : SigningInput_TransactionType.transferTransaction,
+    4 : SigningInput_TransactionType.stakeTransaction,
+    5 : SigningInput_TransactionType.deactivateStakeTransaction,
+    6 : SigningInput_TransactionType.withdrawTransaction,
+    7 : SigningInput_TransactionType.createTokenAccountTransaction,
+    8 : SigningInput_TransactionType.tokenTransferTransaction,
+    9 : SigningInput_TransactionType.createAndTransferTokenTransaction,
     0 : SigningInput_TransactionType.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SigningInput', package: const $pb.PackageName('TW.Solana.Proto'), createEmptyInstance: create)
-    ..oo(0, [1, 2, 3, 4])
-    ..aOM<Transfer>(1, 'transferTransaction', subBuilder: Transfer.create)
-    ..aOM<Stake>(2, 'stakeTransaction', subBuilder: Stake.create)
-    ..aOM<DeactivateStake>(3, 'deactivateStakeTransaction', subBuilder: DeactivateStake.create)
-    ..aOM<WithdrawStake>(4, 'withdrawTransaction', subBuilder: WithdrawStake.create)
-    ..a<$core.List<$core.int>>(5, 'privateKey', $pb.PbFieldType.OY)
-    ..aOS(6, 'recentBlockhash')
+    ..oo(0, [3, 4, 5, 6, 7, 8, 9])
+    ..a<$core.List<$core.int>>(1, 'privateKey', $pb.PbFieldType.OY)
+    ..aOS(2, 'recentBlockhash')
+    ..aOM<Transfer>(3, 'transferTransaction', subBuilder: Transfer.create)
+    ..aOM<Stake>(4, 'stakeTransaction', subBuilder: Stake.create)
+    ..aOM<DeactivateStake>(5, 'deactivateStakeTransaction', subBuilder: DeactivateStake.create)
+    ..aOM<WithdrawStake>(6, 'withdrawTransaction', subBuilder: WithdrawStake.create)
+    ..aOM<CreateTokenAccount>(7, 'createTokenAccountTransaction', subBuilder: CreateTokenAccount.create)
+    ..aOM<TokenTransfer>(8, 'tokenTransferTransaction', subBuilder: TokenTransfer.create)
+    ..aOM<CreateAndTransferToken>(9, 'createAndTransferTokenTransaction', subBuilder: CreateAndTransferToken.create)
     ..hasRequiredFields = false
   ;
 
@@ -210,66 +422,99 @@ class SigningInput extends $pb.GeneratedMessage {
   void clearTransactionType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
-  Transfer get transferTransaction => $_getN(0);
+  $core.List<$core.int> get privateKey => $_getN(0);
   @$pb.TagNumber(1)
-  set transferTransaction(Transfer v) { setField(1, v); }
+  set privateKey($core.List<$core.int> v) { $_setBytes(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasTransferTransaction() => $_has(0);
+  $core.bool hasPrivateKey() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTransferTransaction() => clearField(1);
-  @$pb.TagNumber(1)
-  Transfer ensureTransferTransaction() => $_ensure(0);
+  void clearPrivateKey() => clearField(1);
 
   @$pb.TagNumber(2)
-  Stake get stakeTransaction => $_getN(1);
+  $core.String get recentBlockhash => $_getSZ(1);
   @$pb.TagNumber(2)
-  set stakeTransaction(Stake v) { setField(2, v); }
+  set recentBlockhash($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasStakeTransaction() => $_has(1);
+  $core.bool hasRecentBlockhash() => $_has(1);
   @$pb.TagNumber(2)
-  void clearStakeTransaction() => clearField(2);
-  @$pb.TagNumber(2)
-  Stake ensureStakeTransaction() => $_ensure(1);
+  void clearRecentBlockhash() => clearField(2);
 
   @$pb.TagNumber(3)
-  DeactivateStake get deactivateStakeTransaction => $_getN(2);
+  Transfer get transferTransaction => $_getN(2);
   @$pb.TagNumber(3)
-  set deactivateStakeTransaction(DeactivateStake v) { setField(3, v); }
+  set transferTransaction(Transfer v) { setField(3, v); }
   @$pb.TagNumber(3)
-  $core.bool hasDeactivateStakeTransaction() => $_has(2);
+  $core.bool hasTransferTransaction() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDeactivateStakeTransaction() => clearField(3);
+  void clearTransferTransaction() => clearField(3);
   @$pb.TagNumber(3)
-  DeactivateStake ensureDeactivateStakeTransaction() => $_ensure(2);
+  Transfer ensureTransferTransaction() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  WithdrawStake get withdrawTransaction => $_getN(3);
+  Stake get stakeTransaction => $_getN(3);
   @$pb.TagNumber(4)
-  set withdrawTransaction(WithdrawStake v) { setField(4, v); }
+  set stakeTransaction(Stake v) { setField(4, v); }
   @$pb.TagNumber(4)
-  $core.bool hasWithdrawTransaction() => $_has(3);
+  $core.bool hasStakeTransaction() => $_has(3);
   @$pb.TagNumber(4)
-  void clearWithdrawTransaction() => clearField(4);
+  void clearStakeTransaction() => clearField(4);
   @$pb.TagNumber(4)
-  WithdrawStake ensureWithdrawTransaction() => $_ensure(3);
+  Stake ensureStakeTransaction() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $core.List<$core.int> get privateKey => $_getN(4);
+  DeactivateStake get deactivateStakeTransaction => $_getN(4);
   @$pb.TagNumber(5)
-  set privateKey($core.List<$core.int> v) { $_setBytes(4, v); }
+  set deactivateStakeTransaction(DeactivateStake v) { setField(5, v); }
   @$pb.TagNumber(5)
-  $core.bool hasPrivateKey() => $_has(4);
+  $core.bool hasDeactivateStakeTransaction() => $_has(4);
   @$pb.TagNumber(5)
-  void clearPrivateKey() => clearField(5);
+  void clearDeactivateStakeTransaction() => clearField(5);
+  @$pb.TagNumber(5)
+  DeactivateStake ensureDeactivateStakeTransaction() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  $core.String get recentBlockhash => $_getSZ(5);
+  WithdrawStake get withdrawTransaction => $_getN(5);
   @$pb.TagNumber(6)
-  set recentBlockhash($core.String v) { $_setString(5, v); }
+  set withdrawTransaction(WithdrawStake v) { setField(6, v); }
   @$pb.TagNumber(6)
-  $core.bool hasRecentBlockhash() => $_has(5);
+  $core.bool hasWithdrawTransaction() => $_has(5);
   @$pb.TagNumber(6)
-  void clearRecentBlockhash() => clearField(6);
+  void clearWithdrawTransaction() => clearField(6);
+  @$pb.TagNumber(6)
+  WithdrawStake ensureWithdrawTransaction() => $_ensure(5);
+
+  @$pb.TagNumber(7)
+  CreateTokenAccount get createTokenAccountTransaction => $_getN(6);
+  @$pb.TagNumber(7)
+  set createTokenAccountTransaction(CreateTokenAccount v) { setField(7, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasCreateTokenAccountTransaction() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearCreateTokenAccountTransaction() => clearField(7);
+  @$pb.TagNumber(7)
+  CreateTokenAccount ensureCreateTokenAccountTransaction() => $_ensure(6);
+
+  @$pb.TagNumber(8)
+  TokenTransfer get tokenTransferTransaction => $_getN(7);
+  @$pb.TagNumber(8)
+  set tokenTransferTransaction(TokenTransfer v) { setField(8, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasTokenTransferTransaction() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearTokenTransferTransaction() => clearField(8);
+  @$pb.TagNumber(8)
+  TokenTransfer ensureTokenTransferTransaction() => $_ensure(7);
+
+  @$pb.TagNumber(9)
+  CreateAndTransferToken get createAndTransferTokenTransaction => $_getN(8);
+  @$pb.TagNumber(9)
+  set createAndTransferTokenTransaction(CreateAndTransferToken v) { setField(9, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasCreateAndTransferTokenTransaction() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearCreateAndTransferTokenTransaction() => clearField(9);
+  @$pb.TagNumber(9)
+  CreateAndTransferToken ensureCreateAndTransferTokenTransaction() => $_ensure(8);
 }
 
 class SigningOutput extends $pb.GeneratedMessage {

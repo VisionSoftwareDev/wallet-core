@@ -93,37 +93,37 @@ TEST(CardanoAddress, MnemonicToAddressV2) {
             EXPECT_EQ("addr1sna05l45z33zpkm8z44q8f0h57wxvm0c86e34wlmua7gtcrdgrdrzy8ny3walyfjanhe33nsyuh088qr5gepqaen6jsa9r94xvvd7fh6jc3e6x", addr);
         }
         {
-            PrivateKey privKey0 = wallet.getKey(DerivationPath("m/44'/1815'/0'/0/0"));
+            PrivateKey privKey0 = wallet.getKey(TWCoinTypeCardano, DerivationPath("m/44'/1815'/0'/0/0"));
             PublicKey pubKey0 = privKey0.getPublicKey(TWPublicKeyTypeED25519Extended);
             auto addr0 = AddressV2(pubKey0);
             EXPECT_EQ("Ae2tdPwUPEZ6RUCnjGHFqi59k5WZLiv3HoCCNGCW8SYc5H9srdTzn1bec4W", addr0.string());
         }
         {
-            PrivateKey privKey1 = wallet.getKey(DerivationPath("m/44'/1815'/0'/0/1"));
+            PrivateKey privKey1 = wallet.getKey(TWCoinTypeCardano, DerivationPath("m/44'/1815'/0'/0/1"));
             PublicKey pubKey1 = privKey1.getPublicKey(TWPublicKeyTypeED25519Extended);
             auto addr1 = AddressV2(pubKey1);
             EXPECT_EQ("Ae2tdPwUPEZ7dnds6ZyhQdmgkrDFFPSDh8jG9RAhswcXt1bRauNw5jczjpV", addr1.string());
         }
         {
-            PrivateKey privKey1 = wallet.getKey(DerivationPath("m/44'/1815'/0'/0/2"));
+            PrivateKey privKey1 = wallet.getKey(TWCoinTypeCardano, DerivationPath("m/44'/1815'/0'/0/2"));
             PublicKey pubKey1 = privKey1.getPublicKey(TWPublicKeyTypeED25519Extended);
             auto addr1 = AddressV2(pubKey1);
             EXPECT_EQ("Ae2tdPwUPEZ8LAVy21zj4BF97iWxKCmPv12W6a18zLX3V7rZDFFVgqUBkKw", addr1.string());
         }
         {
-            PrivateKey privKey0 = wallet.getKey(DerivationPath("m/1852'/1815'/0'/0/0"));
+            PrivateKey privKey0 = wallet.getKey(TWCoinTypeCardano, DerivationPath("m/1852'/1815'/0'/0/0"));
             PublicKey pubKey0 = privKey0.getPublicKey(TWPublicKeyTypeED25519Extended);
             auto addr0 = AddressV3(pubKey0);
             EXPECT_EQ("addr1sna05l45z33zpkm8z44q8f0h57wxvm0c86e34wlmua7gtcrdgrdrzy8ny3walyfjanhe33nsyuh088qr5gepqaen6jsa9r94xvvd7fh6jc3e6x", addr0.string());
         }
         {
-            PrivateKey privKey1 = wallet.getKey(DerivationPath("m/1852'/1815'/0'/0/1"));
+            PrivateKey privKey1 = wallet.getKey(TWCoinTypeCardano, DerivationPath("m/1852'/1815'/0'/0/1"));
             PublicKey pubKey1 = privKey1.getPublicKey(TWPublicKeyTypeED25519Extended);
             auto addr1 = AddressV3(pubKey1);
             EXPECT_EQ("addr1sjkw630aatyg273m9cpgezvs2unf6xrtw0z7udhguh7ednkhf9p0jduldrg5qsnaz99e3sl4f8t56w0hs0zhql9lacr63mx693ppjw2r5nwehs", addr1.string());
         }
         {
-            PrivateKey privKey1 = wallet.getKey(DerivationPath("m/1852'/1815'/0'/0/2"));
+            PrivateKey privKey1 = wallet.getKey(TWCoinTypeCardano, DerivationPath("m/1852'/1815'/0'/0/2"));
             PublicKey pubKey1 = privKey1.getPublicKey(TWPublicKeyTypeED25519Extended);
             auto addr1 = AddressV3(pubKey1);
             EXPECT_EQ("addr1sng939f9el5mnsj4l30kk2f02ea63rwhny5pa69masam4xtsmp5naq6lks0p7pzkn35z7juyd7hhk3zc8p9dc736pu4nzhyy6fusxapa9v5h5c", addr1.string());
@@ -151,7 +151,7 @@ TEST(CardanoAddress, MnemonicToAddressV2) {
         // V2 Tested against AdaLite
         auto mnemonicPlay1 = "youth away raise north opinion slice dash bus soldier dizzy bitter increase saddle live champion";
         auto wallet = HDWallet(mnemonicPlay1, "");
-        PrivateKey privateKey = wallet.getKey(DerivationPath(TWPurposeBIP44, TWCoinTypeCardano, DerivationPathIndex(0, true).derivationIndex(), 0, 0));
+        PrivateKey privateKey = wallet.getKey(TWCoinTypeCardano, DerivationPath(TWPurposeBIP44, TWCoinTypeCardano, DerivationPathIndex(0, true).derivationIndex(), 0, 0));
         PublicKey publicKey = privateKey.getPublicKey(TWPublicKeyTypeED25519Extended);
         string addr = AddressV2(publicKey).string();
         EXPECT_EQ("Ae2tdPwUPEZJYT9g1JgQWtLveUHavyRxQGi6hVzoQjct7yyCLGgk3pCyx7h", addr);
@@ -160,7 +160,7 @@ TEST(CardanoAddress, MnemonicToAddressV2) {
         // V2 Tested against AdaLite
         auto mnemonicPlay2 = "return custom two home gain guilt kangaroo supply market current curtain tomorrow heavy blue robot";
         auto wallet = HDWallet(mnemonicPlay2, "");
-        PrivateKey privateKey = wallet.getKey(DerivationPath(TWPurposeBIP44, TWCoinTypeCardano, DerivationPathIndex(0, true).derivationIndex(), 0, 0));
+        PrivateKey privateKey = wallet.getKey(TWCoinTypeCardano, DerivationPath(TWPurposeBIP44, TWCoinTypeCardano, DerivationPathIndex(0, true).derivationIndex(), 0, 0));
         PublicKey publicKey = privateKey.getPublicKey(TWPublicKeyTypeED25519Extended);
         string addr = AddressV2(publicKey).string();
         EXPECT_EQ("Ae2tdPwUPEZLtJx7LA2XZ3zzwonH9x9ieX3dMzaTBD3TfXuKczjMSjTecr1", addr);
@@ -170,7 +170,7 @@ TEST(CardanoAddress, MnemonicToAddressV2) {
         // In AdaLite V1 addr0 is DdzFFzCqrht7HGoJ87gznLktJGywK1LbAJT2sbd4txmgS7FcYLMQFhawb18ojS9Hx55mrbsHPr7PTraKh14TSQbGBPJHbDZ9QVh6Z6Di
         auto mnemonicALDemo = "civil void tool perfect avocado sweet immense fluid arrow aerobic boil flash";
         auto wallet = HDWallet(mnemonicALDemo, "");
-        PrivateKey privateKey = wallet.getKey(DerivationPath(TWPurposeBIP44, TWCoinTypeCardano, DerivationPathIndex(0, true).derivationIndex(), 0, 0));
+        PrivateKey privateKey = wallet.getKey(TWCoinTypeCardano, DerivationPath(TWPurposeBIP44, TWCoinTypeCardano, DerivationPathIndex(0, true).derivationIndex(), 0, 0));
         PublicKey publicKey = privateKey.getPublicKey(TWPublicKeyTypeED25519Extended);
         string addr = AddressV2(publicKey).string();
         EXPECT_EQ("Ae2tdPwUPEZJbLcD8iLgN7hVGvq66WdR4zocntRekSP97Ds3MvCfmEDjJYu", addr);
@@ -351,9 +351,27 @@ TEST(CardanoAddress, FromDataV3) {
 
 TEST(CardanoAddress, CopyConstructorLegacy) {
     AddressV3 address1 = AddressV3("Ae2tdPwUPEZ18ZjTLnLVr9CEvUEUX4eW1LBHbxxxJgxdAYHrDeSCSbCxrvx");
-    EXPECT_TRUE(address1.legacyAddressV2 != nullptr);
+    EXPECT_TRUE(address1.legacyAddressV2.has_value());
     AddressV3 address2 = AddressV3(address1);
-    EXPECT_TRUE(address2.legacyAddressV2 != nullptr);
-    EXPECT_TRUE(address2.legacyAddressV2 != address1.legacyAddressV2);
+    EXPECT_TRUE(address2.legacyAddressV2.has_value());
+    EXPECT_TRUE(*(address2.legacyAddressV2) == *(address1.legacyAddressV2));
     // if it was not a deep copy, double freeing would occur
+}
+
+TEST(CardanoAddress, AssignmentOperatorLegacy) {
+    AddressV3 addr1leg = AddressV3("Ae2tdPwUPEZ18ZjTLnLVr9CEvUEUX4eW1LBHbxxxJgxdAYHrDeSCSbCxrvx");
+    EXPECT_TRUE(addr1leg.legacyAddressV2.has_value());
+    AddressV3 addr2nonleg = AddressV3("addr1s3hdtrqgs47l7ue5srga8wmk9dzw279x9e7lxadalt6z0fk64nnn2mgtn87mrny9r77gm09h6ecslh3gmarrvrp9n4yzmdnecfxyu59j5lempe");
+    EXPECT_FALSE(addr2nonleg.legacyAddressV2.has_value());
+    AddressV3 addr3leg = AddressV3("Ae2tdPwUPEZ18ZjTLnLVr9CEvUEUX4eW1LBHbxxxJgxdAYHrDeSCSbCxrvx");
+    EXPECT_TRUE(addr3leg.legacyAddressV2.has_value());
+
+    AddressV3 address = addr1leg;
+    EXPECT_TRUE(address.legacyAddressV2.has_value());
+    EXPECT_TRUE(*address.legacyAddressV2 == *addr1leg.legacyAddressV2);
+    address = addr2nonleg;
+    EXPECT_FALSE(address.legacyAddressV2.has_value());
+    address = addr3leg;
+    EXPECT_TRUE(address.legacyAddressV2.has_value());
+    EXPECT_TRUE(*address.legacyAddressV2 == *addr3leg.legacyAddressV2);
 }

@@ -24,7 +24,7 @@ public:
     ParamSet() = default;
     ParamSet(const std::shared_ptr<ParamBase>& param1) { addParam(param1); }
     ParamSet(const std::vector<std::shared_ptr<ParamBase>>& params) { addParams(params); }
-    ~ParamSet();
+    virtual ~ParamSet();
 
     /// Returns the index of the parameter
     int addParam(const std::shared_ptr<ParamBase>& param);
@@ -36,9 +36,11 @@ public:
     /// Return the function type signature, of the form "baz(int32,uint256)"
     std::string getType() const;
     size_t getSize() const;
-    size_t getHeadSize() const;
     virtual void encode(Data& data) const;
     virtual bool decode(const Data& encoded, size_t& offset_inout);
+
+private:
+    size_t getHeadSize() const;
 };
 
 /// Collection of different parameters, dynamic length, "(<par1>,<par2>,...)".

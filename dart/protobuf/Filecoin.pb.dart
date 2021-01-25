@@ -13,11 +13,12 @@ import 'package:protobuf/protobuf.dart' as $pb;
 class SigningInput extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SigningInput', package: const $pb.PackageName('TW.Filecoin.Proto'), createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'privateKey', $pb.PbFieldType.OY)
-    ..aOS(2, 'toAddress')
+    ..aOS(2, 'to')
     ..a<$fixnum.Int64>(3, 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$core.List<$core.int>>(4, 'value', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(5, 'gasPrice', $pb.PbFieldType.OY)
-    ..a<$fixnum.Int64>(6, 'gasLimit', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aInt64(5, 'gasLimit')
+    ..a<$core.List<$core.int>>(6, 'gasFeeCap', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(7, 'gasPremium', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
@@ -46,13 +47,13 @@ class SigningInput extends $pb.GeneratedMessage {
   void clearPrivateKey() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get toAddress => $_getSZ(1);
+  $core.String get to => $_getSZ(1);
   @$pb.TagNumber(2)
-  set toAddress($core.String v) { $_setString(1, v); }
+  set to($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasToAddress() => $_has(1);
+  $core.bool hasTo() => $_has(1);
   @$pb.TagNumber(2)
-  void clearToAddress() => clearField(2);
+  void clearTo() => clearField(2);
 
   @$pb.TagNumber(3)
   $fixnum.Int64 get nonce => $_getI64(2);
@@ -73,27 +74,36 @@ class SigningInput extends $pb.GeneratedMessage {
   void clearValue() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.List<$core.int> get gasPrice => $_getN(4);
+  $fixnum.Int64 get gasLimit => $_getI64(4);
   @$pb.TagNumber(5)
-  set gasPrice($core.List<$core.int> v) { $_setBytes(4, v); }
+  set gasLimit($fixnum.Int64 v) { $_setInt64(4, v); }
   @$pb.TagNumber(5)
-  $core.bool hasGasPrice() => $_has(4);
+  $core.bool hasGasLimit() => $_has(4);
   @$pb.TagNumber(5)
-  void clearGasPrice() => clearField(5);
+  void clearGasLimit() => clearField(5);
 
   @$pb.TagNumber(6)
-  $fixnum.Int64 get gasLimit => $_getI64(5);
+  $core.List<$core.int> get gasFeeCap => $_getN(5);
   @$pb.TagNumber(6)
-  set gasLimit($fixnum.Int64 v) { $_setInt64(5, v); }
+  set gasFeeCap($core.List<$core.int> v) { $_setBytes(5, v); }
   @$pb.TagNumber(6)
-  $core.bool hasGasLimit() => $_has(5);
+  $core.bool hasGasFeeCap() => $_has(5);
   @$pb.TagNumber(6)
-  void clearGasLimit() => clearField(6);
+  void clearGasFeeCap() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.List<$core.int> get gasPremium => $_getN(6);
+  @$pb.TagNumber(7)
+  set gasPremium($core.List<$core.int> v) { $_setBytes(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasGasPremium() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearGasPremium() => clearField(7);
 }
 
 class SigningOutput extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SigningOutput', package: const $pb.PackageName('TW.Filecoin.Proto'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, 'encoded', $pb.PbFieldType.OY)
+    ..aOS(1, 'json')
     ..hasRequiredFields = false
   ;
 
@@ -113,12 +123,12 @@ class SigningOutput extends $pb.GeneratedMessage {
   static SigningOutput _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$core.int> get encoded => $_getN(0);
+  $core.String get json => $_getSZ(0);
   @$pb.TagNumber(1)
-  set encoded($core.List<$core.int> v) { $_setBytes(0, v); }
+  set json($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasEncoded() => $_has(0);
+  $core.bool hasJson() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEncoded() => clearField(1);
+  void clearJson() => clearField(1);
 }
 

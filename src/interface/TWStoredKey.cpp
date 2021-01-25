@@ -97,7 +97,8 @@ struct TWAccount* _Nullable TWStoredKeyAccount(struct TWStoredKey* _Nonnull key,
 struct TWAccount* _Nullable TWStoredKeyAccountForCoin(struct TWStoredKey* _Nonnull key, enum TWCoinType coin, struct TWHDWallet* _Nullable wallet) {
     try {
         const auto account = key->impl.account(coin, (wallet ? &wallet->impl : nullptr));
-        return (account == nullptr) ? nullptr : new TWAccount{ *account };
+        // Note: std::optional.value() is not available in XCode with target < iOS 12, using *
+        return (!account.has_value()) ? nullptr : new TWAccount{ *account };
     } catch (...) {
         return nullptr;
     }
@@ -107,11 +108,11 @@ void TWStoredKeyRemoveAccountForCoin(struct TWStoredKey* _Nonnull key, enum TWCo
     key->impl.removeAccount(coin);
 }
 
-void TWStoredKeyAddAccount(struct TWStoredKey* _Nonnull key, TWString* _Nonnull address, TWString* _Nonnull derivationPath, TWString* _Nonnull extetndedPublicKey) {
+void TWStoredKeyAddAccount(struct TWStoredKey* _Nonnull key, TWString* _Nonnull address, enum TWCoinType coin, TWString* _Nonnull derivationPath, TWString* _Nonnull extetndedPublicKey) {
     const auto& addressString = *reinterpret_cast<const std::string*>(address);
     const auto& extetndedPublicKeyString = *reinterpret_cast<const std::string*>(extetndedPublicKey);
     const auto dp = TW::DerivationPath(*reinterpret_cast<const std::string*>(derivationPath));
-    key->impl.addAccount(addressString, dp, extetndedPublicKeyString);
+    key->impl.addAccount(addressString, coin, dp, extetndedPublicKeyString);
 }
 
 bool TWStoredKeyStore(struct TWStoredKey* _Nonnull key, TWString* _Nonnull path) {

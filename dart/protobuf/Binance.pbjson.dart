@@ -176,6 +176,76 @@ const RefundHTLTOrder$json = const {
   ],
 };
 
+const TransferOut$json = const {
+  '1': 'TransferOut',
+  '2': const [
+    const {'1': 'from', '3': 1, '4': 1, '5': 12, '10': 'from'},
+    const {'1': 'to', '3': 2, '4': 1, '5': 12, '10': 'to'},
+    const {'1': 'amount', '3': 3, '4': 1, '5': 11, '6': '.TW.Binance.Proto.SendOrder.Token', '10': 'amount'},
+    const {'1': 'expire_time', '3': 4, '4': 1, '5': 3, '10': 'expireTime'},
+  ],
+};
+
+const SideChainDelegate$json = const {
+  '1': 'SideChainDelegate',
+  '2': const [
+    const {'1': 'delegator_addr', '3': 1, '4': 1, '5': 12, '10': 'delegatorAddr'},
+    const {'1': 'validator_addr', '3': 2, '4': 1, '5': 12, '10': 'validatorAddr'},
+    const {'1': 'delegation', '3': 3, '4': 1, '5': 11, '6': '.TW.Binance.Proto.SendOrder.Token', '10': 'delegation'},
+    const {'1': 'chain_id', '3': 4, '4': 1, '5': 9, '10': 'chainId'},
+  ],
+};
+
+const SideChainRedelegate$json = const {
+  '1': 'SideChainRedelegate',
+  '2': const [
+    const {'1': 'delegator_addr', '3': 1, '4': 1, '5': 12, '10': 'delegatorAddr'},
+    const {'1': 'validator_src_addr', '3': 2, '4': 1, '5': 12, '10': 'validatorSrcAddr'},
+    const {'1': 'validator_dst_addr', '3': 3, '4': 1, '5': 12, '10': 'validatorDstAddr'},
+    const {'1': 'amount', '3': 4, '4': 1, '5': 11, '6': '.TW.Binance.Proto.SendOrder.Token', '10': 'amount'},
+    const {'1': 'chain_id', '3': 5, '4': 1, '5': 9, '10': 'chainId'},
+  ],
+};
+
+const SideChainUndelegate$json = const {
+  '1': 'SideChainUndelegate',
+  '2': const [
+    const {'1': 'delegator_addr', '3': 1, '4': 1, '5': 12, '10': 'delegatorAddr'},
+    const {'1': 'validator_addr', '3': 2, '4': 1, '5': 12, '10': 'validatorAddr'},
+    const {'1': 'amount', '3': 3, '4': 1, '5': 11, '6': '.TW.Binance.Proto.SendOrder.Token', '10': 'amount'},
+    const {'1': 'chain_id', '3': 4, '4': 1, '5': 9, '10': 'chainId'},
+  ],
+};
+
+const TimeLockOrder$json = const {
+  '1': 'TimeLockOrder',
+  '2': const [
+    const {'1': 'from_address', '3': 1, '4': 1, '5': 12, '10': 'fromAddress'},
+    const {'1': 'description', '3': 2, '4': 1, '5': 9, '10': 'description'},
+    const {'1': 'amount', '3': 3, '4': 3, '5': 11, '6': '.TW.Binance.Proto.SendOrder.Token', '10': 'amount'},
+    const {'1': 'lock_time', '3': 4, '4': 1, '5': 3, '10': 'lockTime'},
+  ],
+};
+
+const TimeRelockOrder$json = const {
+  '1': 'TimeRelockOrder',
+  '2': const [
+    const {'1': 'from_address', '3': 1, '4': 1, '5': 12, '10': 'fromAddress'},
+    const {'1': 'id', '3': 2, '4': 1, '5': 3, '10': 'id'},
+    const {'1': 'description', '3': 3, '4': 1, '5': 9, '10': 'description'},
+    const {'1': 'amount', '3': 4, '4': 3, '5': 11, '6': '.TW.Binance.Proto.SendOrder.Token', '10': 'amount'},
+    const {'1': 'lock_time', '3': 5, '4': 1, '5': 3, '10': 'lockTime'},
+  ],
+};
+
+const TimeUnlockOrder$json = const {
+  '1': 'TimeUnlockOrder',
+  '2': const [
+    const {'1': 'from_address', '3': 1, '4': 1, '5': 12, '10': 'fromAddress'},
+    const {'1': 'id', '3': 2, '4': 1, '5': 3, '10': 'id'},
+  ],
+};
+
 const SigningInput$json = const {
   '1': 'SigningInput',
   '2': const [
@@ -197,6 +267,13 @@ const SigningInput$json = const {
     const {'1': 'issue_order', '3': 17, '4': 1, '5': 11, '6': '.TW.Binance.Proto.TokenIssueOrder', '9': 0, '10': 'issueOrder'},
     const {'1': 'mint_order', '3': 18, '4': 1, '5': 11, '6': '.TW.Binance.Proto.TokenMintOrder', '9': 0, '10': 'mintOrder'},
     const {'1': 'burn_order', '3': 19, '4': 1, '5': 11, '6': '.TW.Binance.Proto.TokenBurnOrder', '9': 0, '10': 'burnOrder'},
+    const {'1': 'transfer_out_order', '3': 20, '4': 1, '5': 11, '6': '.TW.Binance.Proto.TransferOut', '9': 0, '10': 'transferOutOrder'},
+    const {'1': 'side_delegate_order', '3': 21, '4': 1, '5': 11, '6': '.TW.Binance.Proto.SideChainDelegate', '9': 0, '10': 'sideDelegateOrder'},
+    const {'1': 'side_redelegate_order', '3': 22, '4': 1, '5': 11, '6': '.TW.Binance.Proto.SideChainRedelegate', '9': 0, '10': 'sideRedelegateOrder'},
+    const {'1': 'side_undelegate_order', '3': 23, '4': 1, '5': 11, '6': '.TW.Binance.Proto.SideChainUndelegate', '9': 0, '10': 'sideUndelegateOrder'},
+    const {'1': 'time_lock_order', '3': 24, '4': 1, '5': 11, '6': '.TW.Binance.Proto.TimeLockOrder', '9': 0, '10': 'timeLockOrder'},
+    const {'1': 'time_relock_order', '3': 25, '4': 1, '5': 11, '6': '.TW.Binance.Proto.TimeRelockOrder', '9': 0, '10': 'timeRelockOrder'},
+    const {'1': 'time_unlock_order', '3': 26, '4': 1, '5': 11, '6': '.TW.Binance.Proto.TimeUnlockOrder', '9': 0, '10': 'timeUnlockOrder'},
   ],
   '8': const [
     const {'1': 'order_oneof'},
