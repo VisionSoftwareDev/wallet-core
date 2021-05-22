@@ -2,9 +2,13 @@
 //  Generated code. Do not modify.
 //  source: Zilliqa.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use transactionDescriptor instead')
 const Transaction$json = const {
   '1': 'Transaction',
   '2': const [
@@ -17,6 +21,7 @@ const Transaction$json = const {
   ],
 };
 
+@$core.Deprecated('Use transactionDescriptor instead')
 const Transaction_Transfer$json = const {
   '1': 'Transfer',
   '2': const [
@@ -24,6 +29,7 @@ const Transaction_Transfer$json = const {
   ],
 };
 
+@$core.Deprecated('Use transactionDescriptor instead')
 const Transaction_Raw$json = const {
   '1': 'Raw',
   '2': const [
@@ -33,6 +39,9 @@ const Transaction_Raw$json = const {
   ],
 };
 
+/// Descriptor for `Transaction`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transactionDescriptor = $convert.base64Decode('CgtUcmFuc2FjdGlvbhJECgh0cmFuc2ZlchgBIAEoCzImLlRXLlppbGxpcWEuUHJvdG8uVHJhbnNhY3Rpb24uVHJhbnNmZXJIAFIIdHJhbnNmZXISTAoPcmF3X3RyYW5zYWN0aW9uGAIgASgLMiEuVFcuWmlsbGlxYS5Qcm90by5UcmFuc2FjdGlvbi5SYXdIAFIOcmF3VHJhbnNhY3Rpb24aIgoIVHJhbnNmZXISFgoGYW1vdW50GAEgASgMUgZhbW91bnQaRQoDUmF3EhYKBmFtb3VudBgBIAEoDFIGYW1vdW50EhIKBGNvZGUYAiABKAxSBGNvZGUSEgoEZGF0YRgDIAEoDFIEZGF0YUIPCg1tZXNzYWdlX29uZW9m');
+@$core.Deprecated('Use signingInputDescriptor instead')
 const SigningInput$json = const {
   '1': 'SigningInput',
   '2': const [
@@ -46,6 +55,9 @@ const SigningInput$json = const {
   ],
 };
 
+/// Descriptor for `SigningInput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signingInputDescriptor = $convert.base64Decode('CgxTaWduaW5nSW5wdXQSGAoHdmVyc2lvbhgBIAEoDVIHdmVyc2lvbhIUCgVub25jZRgCIAEoBFIFbm9uY2USDgoCdG8YAyABKAlSAnRvEhsKCWdhc19wcmljZRgEIAEoDFIIZ2FzUHJpY2USGwoJZ2FzX2xpbWl0GAUgASgEUghnYXNMaW1pdBIfCgtwcml2YXRlX2tleRgGIAEoDFIKcHJpdmF0ZUtleRI/Cgt0cmFuc2FjdGlvbhgHIAEoCzIdLlRXLlppbGxpcWEuUHJvdG8uVHJhbnNhY3Rpb25SC3RyYW5zYWN0aW9u');
+@$core.Deprecated('Use signingOutputDescriptor instead')
 const SigningOutput$json = const {
   '1': 'SigningOutput',
   '2': const [
@@ -54,3 +66,5 @@ const SigningOutput$json = const {
   ],
 };
 
+/// Descriptor for `SigningOutput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signingOutputDescriptor = $convert.base64Decode('Cg1TaWduaW5nT3V0cHV0EhwKCXNpZ25hdHVyZRgBIAEoDFIJc2lnbmF0dXJlEhIKBGpzb24YAiABKAlSBGpzb24=');

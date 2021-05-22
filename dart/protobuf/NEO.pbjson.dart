@@ -2,9 +2,13 @@
 //  Generated code. Do not modify.
 //  source: NEO.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use transactionInputDescriptor instead')
 const TransactionInput$json = const {
   '1': 'TransactionInput',
   '2': const [
@@ -15,6 +19,9 @@ const TransactionInput$json = const {
   ],
 };
 
+/// Descriptor for `TransactionInput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transactionInputDescriptor = $convert.base64Decode('ChBUcmFuc2FjdGlvbklucHV0EhsKCXByZXZfaGFzaBgBIAEoDFIIcHJldkhhc2gSHQoKcHJldl9pbmRleBgCIAEoB1IJcHJldkluZGV4EhQKBXZhbHVlGAMgASgDUgV2YWx1ZRIZCghhc3NldF9pZBgEIAEoCVIHYXNzZXRJZA==');
+@$core.Deprecated('Use transactionOutputDescriptor instead')
 const TransactionOutput$json = const {
   '1': 'TransactionOutput',
   '2': const [
@@ -25,6 +32,9 @@ const TransactionOutput$json = const {
   ],
 };
 
+/// Descriptor for `TransactionOutput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transactionOutputDescriptor = $convert.base64Decode('ChFUcmFuc2FjdGlvbk91dHB1dBIZCghhc3NldF9pZBgBIAEoCVIHYXNzZXRJZBIWCgZhbW91bnQYAiABKBJSBmFtb3VudBIdCgp0b19hZGRyZXNzGAMgASgJUgl0b0FkZHJlc3MSJQoOY2hhbmdlX2FkZHJlc3MYBCABKAlSDWNoYW5nZUFkZHJlc3M=');
+@$core.Deprecated('Use signingInputDescriptor instead')
 const SigningInput$json = const {
   '1': 'SigningInput',
   '2': const [
@@ -38,6 +48,9 @@ const SigningInput$json = const {
   ],
 };
 
+/// Descriptor for `SigningInput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signingInputDescriptor = $convert.base64Decode('CgxTaWduaW5nSW5wdXQSNgoGaW5wdXRzGAEgAygLMh4uVFcuTkVPLlByb3RvLlRyYW5zYWN0aW9uSW5wdXRSBmlucHV0cxI5CgdvdXRwdXRzGAIgAygLMh8uVFcuTkVPLlByb3RvLlRyYW5zYWN0aW9uT3V0cHV0UgdvdXRwdXRzEh8KC3ByaXZhdGVfa2V5GAMgASgMUgpwcml2YXRlS2V5EhAKA2ZlZRgEIAEoA1IDZmVlEiAKDGdhc19hc3NldF9pZBgFIAEoCVIKZ2FzQXNzZXRJZBIsChJnYXNfY2hhbmdlX2FkZHJlc3MYBiABKAlSEGdhc0NoYW5nZUFkZHJlc3MSMQoEcGxhbhgHIAEoCzIdLlRXLk5FTy5Qcm90by5UcmFuc2FjdGlvblBsYW5SBHBsYW4=');
+@$core.Deprecated('Use signingOutputDescriptor instead')
 const SigningOutput$json = const {
   '1': 'SigningOutput',
   '2': const [
@@ -46,6 +59,9 @@ const SigningOutput$json = const {
   ],
 };
 
+/// Descriptor for `SigningOutput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signingOutputDescriptor = $convert.base64Decode('Cg1TaWduaW5nT3V0cHV0EhgKB2VuY29kZWQYASABKAxSB2VuY29kZWQSFAoFZXJyb3IYAiABKAlSBWVycm9y');
+@$core.Deprecated('Use transactionOutputPlanDescriptor instead')
 const TransactionOutputPlan$json = const {
   '1': 'TransactionOutputPlan',
   '2': const [
@@ -58,6 +74,9 @@ const TransactionOutputPlan$json = const {
   ],
 };
 
+/// Descriptor for `TransactionOutputPlan`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transactionOutputPlanDescriptor = $convert.base64Decode('ChVUcmFuc2FjdGlvbk91dHB1dFBsYW4SFgoGYW1vdW50GAEgASgDUgZhbW91bnQSKQoQYXZhaWxhYmxlX2Ftb3VudBgCIAEoA1IPYXZhaWxhYmxlQW1vdW50EhYKBmNoYW5nZRgDIAEoA1IGY2hhbmdlEhkKCGFzc2V0X2lkGAQgASgJUgdhc3NldElkEh0KCnRvX2FkZHJlc3MYBSABKAlSCXRvQWRkcmVzcxIlCg5jaGFuZ2VfYWRkcmVzcxgGIAEoCVINY2hhbmdlQWRkcmVzcw==');
+@$core.Deprecated('Use transactionPlanDescriptor instead')
 const TransactionPlan$json = const {
   '1': 'TransactionPlan',
   '2': const [
@@ -68,3 +87,5 @@ const TransactionPlan$json = const {
   ],
 };
 
+/// Descriptor for `TransactionPlan`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transactionPlanDescriptor = $convert.base64Decode('Cg9UcmFuc2FjdGlvblBsYW4SPQoHb3V0cHV0cxgBIAMoCzIjLlRXLk5FTy5Qcm90by5UcmFuc2FjdGlvbk91dHB1dFBsYW5SB291dHB1dHMSNgoGaW5wdXRzGAIgAygLMh4uVFcuTkVPLlByb3RvLlRyYW5zYWN0aW9uSW5wdXRSBmlucHV0cxIQCgNmZWUYAyABKANSA2ZlZRIUCgVlcnJvchgEIAEoCVIFZXJyb3I=');

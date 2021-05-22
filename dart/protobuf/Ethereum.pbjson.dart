@@ -2,9 +2,13 @@
 //  Generated code. Do not modify.
 //  source: Ethereum.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use transactionDescriptor instead')
 const Transaction$json = const {
   '1': 'Transaction',
   '2': const [
@@ -20,6 +24,7 @@ const Transaction$json = const {
   ],
 };
 
+@$core.Deprecated('Use transactionDescriptor instead')
 const Transaction_Transfer$json = const {
   '1': 'Transfer',
   '2': const [
@@ -28,6 +33,7 @@ const Transaction_Transfer$json = const {
   ],
 };
 
+@$core.Deprecated('Use transactionDescriptor instead')
 const Transaction_ERC20Transfer$json = const {
   '1': 'ERC20Transfer',
   '2': const [
@@ -36,6 +42,7 @@ const Transaction_ERC20Transfer$json = const {
   ],
 };
 
+@$core.Deprecated('Use transactionDescriptor instead')
 const Transaction_ERC20Approve$json = const {
   '1': 'ERC20Approve',
   '2': const [
@@ -44,6 +51,7 @@ const Transaction_ERC20Approve$json = const {
   ],
 };
 
+@$core.Deprecated('Use transactionDescriptor instead')
 const Transaction_ERC721Transfer$json = const {
   '1': 'ERC721Transfer',
   '2': const [
@@ -53,6 +61,7 @@ const Transaction_ERC721Transfer$json = const {
   ],
 };
 
+@$core.Deprecated('Use transactionDescriptor instead')
 const Transaction_ContractGeneric$json = const {
   '1': 'ContractGeneric',
   '2': const [
@@ -61,6 +70,9 @@ const Transaction_ContractGeneric$json = const {
   ],
 };
 
+/// Descriptor for `Transaction`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transactionDescriptor = $convert.base64Decode('CgtUcmFuc2FjdGlvbhJFCgh0cmFuc2ZlchgBIAEoCzInLlRXLkV0aGVyZXVtLlByb3RvLlRyYW5zYWN0aW9uLlRyYW5zZmVySABSCHRyYW5zZmVyElUKDmVyYzIwX3RyYW5zZmVyGAIgASgLMiwuVFcuRXRoZXJldW0uUHJvdG8uVHJhbnNhY3Rpb24uRVJDMjBUcmFuc2ZlckgAUg1lcmMyMFRyYW5zZmVyElIKDWVyYzIwX2FwcHJvdmUYAyABKAsyKy5UVy5FdGhlcmV1bS5Qcm90by5UcmFuc2FjdGlvbi5FUkMyMEFwcHJvdmVIAFIMZXJjMjBBcHByb3ZlElgKD2VyYzcyMV90cmFuc2ZlchgEIAEoCzItLlRXLkV0aGVyZXVtLlByb3RvLlRyYW5zYWN0aW9uLkVSQzcyMVRyYW5zZmVySABSDmVyYzcyMVRyYW5zZmVyElsKEGNvbnRyYWN0X2dlbmVyaWMYBSABKAsyLi5UVy5FdGhlcmV1bS5Qcm90by5UcmFuc2FjdGlvbi5Db250cmFjdEdlbmVyaWNIAFIPY29udHJhY3RHZW5lcmljGjYKCFRyYW5zZmVyEhYKBmFtb3VudBgBIAEoDFIGYW1vdW50EhIKBGRhdGEYAiABKAxSBGRhdGEaNwoNRVJDMjBUcmFuc2ZlchIOCgJ0bxgBIAEoCVICdG8SFgoGYW1vdW50GAIgASgMUgZhbW91bnQaQAoMRVJDMjBBcHByb3ZlEhgKB3NwZW5kZXIYASABKAlSB3NwZW5kZXISFgoGYW1vdW50GAIgASgMUgZhbW91bnQaTwoORVJDNzIxVHJhbnNmZXISEgoEZnJvbRgBIAEoCVIEZnJvbRIOCgJ0bxgCIAEoCVICdG8SGQoIdG9rZW5faWQYAyABKAxSB3Rva2VuSWQaPQoPQ29udHJhY3RHZW5lcmljEhYKBmFtb3VudBgBIAEoDFIGYW1vdW50EhIKBGRhdGEYAiABKAxSBGRhdGFCEwoRdHJhbnNhY3Rpb25fb25lb2Y=');
+@$core.Deprecated('Use signingInputDescriptor instead')
 const SigningInput$json = const {
   '1': 'SigningInput',
   '2': const [
@@ -74,6 +86,9 @@ const SigningInput$json = const {
   ],
 };
 
+/// Descriptor for `SigningInput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signingInputDescriptor = $convert.base64Decode('CgxTaWduaW5nSW5wdXQSGQoIY2hhaW5faWQYASABKAxSB2NoYWluSWQSFAoFbm9uY2UYAiABKAxSBW5vbmNlEhsKCWdhc19wcmljZRgDIAEoDFIIZ2FzUHJpY2USGwoJZ2FzX2xpbWl0GAQgASgMUghnYXNMaW1pdBIdCgp0b19hZGRyZXNzGAUgASgJUgl0b0FkZHJlc3MSHwoLcHJpdmF0ZV9rZXkYBiABKAxSCnByaXZhdGVLZXkSQAoLdHJhbnNhY3Rpb24YByABKAsyHi5UVy5FdGhlcmV1bS5Qcm90by5UcmFuc2FjdGlvblILdHJhbnNhY3Rpb24=');
+@$core.Deprecated('Use signingOutputDescriptor instead')
 const SigningOutput$json = const {
   '1': 'SigningOutput',
   '2': const [
@@ -84,3 +99,5 @@ const SigningOutput$json = const {
   ],
 };
 
+/// Descriptor for `SigningOutput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signingOutputDescriptor = $convert.base64Decode('Cg1TaWduaW5nT3V0cHV0EhgKB2VuY29kZWQYASABKAxSB2VuY29kZWQSDAoBdhgCIAEoDFIBdhIMCgFyGAMgASgMUgFyEgwKAXMYBCABKAxSAXM=');

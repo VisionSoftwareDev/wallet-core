@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: Solana.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -11,18 +11,38 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Transfer extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Transfer', package: const $pb.PackageName('TW.Solana.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'recipient')
-    ..a<$fixnum.Int64>(2, 'value', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Transfer', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Solana.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'recipient')
+    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
   Transfer._() : super();
-  factory Transfer() => create();
+  factory Transfer({
+    $core.String? recipient,
+    $fixnum.Int64? value,
+  }) {
+    final _result = create();
+    if (recipient != null) {
+      _result.recipient = recipient;
+    }
+    if (value != null) {
+      _result.value = value;
+    }
+    return _result;
+  }
   factory Transfer.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Transfer.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   Transfer clone() => Transfer()..mergeFromMessage(this);
-  Transfer copyWith(void Function(Transfer) updates) => super.copyWith((message) => updates(message as Transfer));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Transfer copyWith(void Function(Transfer) updates) => super.copyWith((message) => updates(message as Transfer)) as Transfer; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Transfer create() => Transfer._();
@@ -30,7 +50,7 @@ class Transfer extends $pb.GeneratedMessage {
   static $pb.PbList<Transfer> createRepeated() => $pb.PbList<Transfer>();
   @$core.pragma('dart2js:noInline')
   static Transfer getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Transfer>(create);
-  static Transfer _defaultInstance;
+  static Transfer? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get recipient => $_getSZ(0);
@@ -52,18 +72,38 @@ class Transfer extends $pb.GeneratedMessage {
 }
 
 class Stake extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Stake', package: const $pb.PackageName('TW.Solana.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'validatorPubkey')
-    ..a<$fixnum.Int64>(2, 'value', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Stake', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Solana.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'validatorPubkey')
+    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
   Stake._() : super();
-  factory Stake() => create();
+  factory Stake({
+    $core.String? validatorPubkey,
+    $fixnum.Int64? value,
+  }) {
+    final _result = create();
+    if (validatorPubkey != null) {
+      _result.validatorPubkey = validatorPubkey;
+    }
+    if (value != null) {
+      _result.value = value;
+    }
+    return _result;
+  }
   factory Stake.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Stake.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   Stake clone() => Stake()..mergeFromMessage(this);
-  Stake copyWith(void Function(Stake) updates) => super.copyWith((message) => updates(message as Stake));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Stake copyWith(void Function(Stake) updates) => super.copyWith((message) => updates(message as Stake)) as Stake; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Stake create() => Stake._();
@@ -71,7 +111,7 @@ class Stake extends $pb.GeneratedMessage {
   static $pb.PbList<Stake> createRepeated() => $pb.PbList<Stake>();
   @$core.pragma('dart2js:noInline')
   static Stake getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Stake>(create);
-  static Stake _defaultInstance;
+  static Stake? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get validatorPubkey => $_getSZ(0);
@@ -93,17 +133,33 @@ class Stake extends $pb.GeneratedMessage {
 }
 
 class DeactivateStake extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeactivateStake', package: const $pb.PackageName('TW.Solana.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'validatorPubkey')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DeactivateStake', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Solana.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'validatorPubkey')
     ..hasRequiredFields = false
   ;
 
   DeactivateStake._() : super();
-  factory DeactivateStake() => create();
+  factory DeactivateStake({
+    $core.String? validatorPubkey,
+  }) {
+    final _result = create();
+    if (validatorPubkey != null) {
+      _result.validatorPubkey = validatorPubkey;
+    }
+    return _result;
+  }
   factory DeactivateStake.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory DeactivateStake.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   DeactivateStake clone() => DeactivateStake()..mergeFromMessage(this);
-  DeactivateStake copyWith(void Function(DeactivateStake) updates) => super.copyWith((message) => updates(message as DeactivateStake));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  DeactivateStake copyWith(void Function(DeactivateStake) updates) => super.copyWith((message) => updates(message as DeactivateStake)) as DeactivateStake; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static DeactivateStake create() => DeactivateStake._();
@@ -111,7 +167,7 @@ class DeactivateStake extends $pb.GeneratedMessage {
   static $pb.PbList<DeactivateStake> createRepeated() => $pb.PbList<DeactivateStake>();
   @$core.pragma('dart2js:noInline')
   static DeactivateStake getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DeactivateStake>(create);
-  static DeactivateStake _defaultInstance;
+  static DeactivateStake? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get validatorPubkey => $_getSZ(0);
@@ -124,18 +180,38 @@ class DeactivateStake extends $pb.GeneratedMessage {
 }
 
 class WithdrawStake extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('WithdrawStake', package: const $pb.PackageName('TW.Solana.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'validatorPubkey')
-    ..a<$fixnum.Int64>(2, 'value', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'WithdrawStake', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Solana.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'validatorPubkey')
+    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
   WithdrawStake._() : super();
-  factory WithdrawStake() => create();
+  factory WithdrawStake({
+    $core.String? validatorPubkey,
+    $fixnum.Int64? value,
+  }) {
+    final _result = create();
+    if (validatorPubkey != null) {
+      _result.validatorPubkey = validatorPubkey;
+    }
+    if (value != null) {
+      _result.value = value;
+    }
+    return _result;
+  }
   factory WithdrawStake.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory WithdrawStake.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   WithdrawStake clone() => WithdrawStake()..mergeFromMessage(this);
-  WithdrawStake copyWith(void Function(WithdrawStake) updates) => super.copyWith((message) => updates(message as WithdrawStake));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  WithdrawStake copyWith(void Function(WithdrawStake) updates) => super.copyWith((message) => updates(message as WithdrawStake)) as WithdrawStake; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static WithdrawStake create() => WithdrawStake._();
@@ -143,7 +219,7 @@ class WithdrawStake extends $pb.GeneratedMessage {
   static $pb.PbList<WithdrawStake> createRepeated() => $pb.PbList<WithdrawStake>();
   @$core.pragma('dart2js:noInline')
   static WithdrawStake getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<WithdrawStake>(create);
-  static WithdrawStake _defaultInstance;
+  static WithdrawStake? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get validatorPubkey => $_getSZ(0);
@@ -165,19 +241,43 @@ class WithdrawStake extends $pb.GeneratedMessage {
 }
 
 class CreateTokenAccount extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTokenAccount', package: const $pb.PackageName('TW.Solana.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'mainAddress')
-    ..aOS(2, 'tokenMintAddress')
-    ..aOS(3, 'tokenAddress')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CreateTokenAccount', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Solana.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mainAddress')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'tokenMintAddress')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'tokenAddress')
     ..hasRequiredFields = false
   ;
 
   CreateTokenAccount._() : super();
-  factory CreateTokenAccount() => create();
+  factory CreateTokenAccount({
+    $core.String? mainAddress,
+    $core.String? tokenMintAddress,
+    $core.String? tokenAddress,
+  }) {
+    final _result = create();
+    if (mainAddress != null) {
+      _result.mainAddress = mainAddress;
+    }
+    if (tokenMintAddress != null) {
+      _result.tokenMintAddress = tokenMintAddress;
+    }
+    if (tokenAddress != null) {
+      _result.tokenAddress = tokenAddress;
+    }
+    return _result;
+  }
   factory CreateTokenAccount.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CreateTokenAccount.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   CreateTokenAccount clone() => CreateTokenAccount()..mergeFromMessage(this);
-  CreateTokenAccount copyWith(void Function(CreateTokenAccount) updates) => super.copyWith((message) => updates(message as CreateTokenAccount));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateTokenAccount copyWith(void Function(CreateTokenAccount) updates) => super.copyWith((message) => updates(message as CreateTokenAccount)) as CreateTokenAccount; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static CreateTokenAccount create() => CreateTokenAccount._();
@@ -185,7 +285,7 @@ class CreateTokenAccount extends $pb.GeneratedMessage {
   static $pb.PbList<CreateTokenAccount> createRepeated() => $pb.PbList<CreateTokenAccount>();
   @$core.pragma('dart2js:noInline')
   static CreateTokenAccount getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateTokenAccount>(create);
-  static CreateTokenAccount _defaultInstance;
+  static CreateTokenAccount? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get mainAddress => $_getSZ(0);
@@ -216,21 +316,53 @@ class CreateTokenAccount extends $pb.GeneratedMessage {
 }
 
 class TokenTransfer extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TokenTransfer', package: const $pb.PackageName('TW.Solana.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'tokenMintAddress')
-    ..aOS(2, 'senderTokenAddress')
-    ..aOS(3, 'recipientTokenAddress')
-    ..a<$fixnum.Int64>(4, 'amount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$core.int>(5, 'decimals', $pb.PbFieldType.OU3)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TokenTransfer', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Solana.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'tokenMintAddress')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'senderTokenAddress')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'recipientTokenAddress')
+    ..a<$fixnum.Int64>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$core.int>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'decimals', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
   TokenTransfer._() : super();
-  factory TokenTransfer() => create();
+  factory TokenTransfer({
+    $core.String? tokenMintAddress,
+    $core.String? senderTokenAddress,
+    $core.String? recipientTokenAddress,
+    $fixnum.Int64? amount,
+    $core.int? decimals,
+  }) {
+    final _result = create();
+    if (tokenMintAddress != null) {
+      _result.tokenMintAddress = tokenMintAddress;
+    }
+    if (senderTokenAddress != null) {
+      _result.senderTokenAddress = senderTokenAddress;
+    }
+    if (recipientTokenAddress != null) {
+      _result.recipientTokenAddress = recipientTokenAddress;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    if (decimals != null) {
+      _result.decimals = decimals;
+    }
+    return _result;
+  }
   factory TokenTransfer.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TokenTransfer.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   TokenTransfer clone() => TokenTransfer()..mergeFromMessage(this);
-  TokenTransfer copyWith(void Function(TokenTransfer) updates) => super.copyWith((message) => updates(message as TokenTransfer));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TokenTransfer copyWith(void Function(TokenTransfer) updates) => super.copyWith((message) => updates(message as TokenTransfer)) as TokenTransfer; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TokenTransfer create() => TokenTransfer._();
@@ -238,7 +370,7 @@ class TokenTransfer extends $pb.GeneratedMessage {
   static $pb.PbList<TokenTransfer> createRepeated() => $pb.PbList<TokenTransfer>();
   @$core.pragma('dart2js:noInline')
   static TokenTransfer getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TokenTransfer>(create);
-  static TokenTransfer _defaultInstance;
+  static TokenTransfer? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get tokenMintAddress => $_getSZ(0);
@@ -287,22 +419,58 @@ class TokenTransfer extends $pb.GeneratedMessage {
 }
 
 class CreateAndTransferToken extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateAndTransferToken', package: const $pb.PackageName('TW.Solana.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'recipientMainAddress')
-    ..aOS(2, 'tokenMintAddress')
-    ..aOS(3, 'recipientTokenAddress')
-    ..aOS(4, 'senderTokenAddress')
-    ..a<$fixnum.Int64>(5, 'amount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$core.int>(6, 'decimals', $pb.PbFieldType.OU3)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CreateAndTransferToken', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Solana.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'recipientMainAddress')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'tokenMintAddress')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'recipientTokenAddress')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'senderTokenAddress')
+    ..a<$fixnum.Int64>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$core.int>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'decimals', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
   CreateAndTransferToken._() : super();
-  factory CreateAndTransferToken() => create();
+  factory CreateAndTransferToken({
+    $core.String? recipientMainAddress,
+    $core.String? tokenMintAddress,
+    $core.String? recipientTokenAddress,
+    $core.String? senderTokenAddress,
+    $fixnum.Int64? amount,
+    $core.int? decimals,
+  }) {
+    final _result = create();
+    if (recipientMainAddress != null) {
+      _result.recipientMainAddress = recipientMainAddress;
+    }
+    if (tokenMintAddress != null) {
+      _result.tokenMintAddress = tokenMintAddress;
+    }
+    if (recipientTokenAddress != null) {
+      _result.recipientTokenAddress = recipientTokenAddress;
+    }
+    if (senderTokenAddress != null) {
+      _result.senderTokenAddress = senderTokenAddress;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    if (decimals != null) {
+      _result.decimals = decimals;
+    }
+    return _result;
+  }
   factory CreateAndTransferToken.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CreateAndTransferToken.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   CreateAndTransferToken clone() => CreateAndTransferToken()..mergeFromMessage(this);
-  CreateAndTransferToken copyWith(void Function(CreateAndTransferToken) updates) => super.copyWith((message) => updates(message as CreateAndTransferToken));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateAndTransferToken copyWith(void Function(CreateAndTransferToken) updates) => super.copyWith((message) => updates(message as CreateAndTransferToken)) as CreateAndTransferToken; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static CreateAndTransferToken create() => CreateAndTransferToken._();
@@ -310,7 +478,7 @@ class CreateAndTransferToken extends $pb.GeneratedMessage {
   static $pb.PbList<CreateAndTransferToken> createRepeated() => $pb.PbList<CreateAndTransferToken>();
   @$core.pragma('dart2js:noInline')
   static CreateAndTransferToken getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateAndTransferToken>(create);
-  static CreateAndTransferToken _defaultInstance;
+  static CreateAndTransferToken? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get recipientMainAddress => $_getSZ(0);
@@ -389,26 +557,74 @@ class SigningInput extends $pb.GeneratedMessage {
     9 : SigningInput_TransactionType.createAndTransferTokenTransaction,
     0 : SigningInput_TransactionType.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SigningInput', package: const $pb.PackageName('TW.Solana.Proto'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SigningInput', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Solana.Proto'), createEmptyInstance: create)
     ..oo(0, [3, 4, 5, 6, 7, 8, 9])
-    ..a<$core.List<$core.int>>(1, 'privateKey', $pb.PbFieldType.OY)
-    ..aOS(2, 'recentBlockhash')
-    ..aOM<Transfer>(3, 'transferTransaction', subBuilder: Transfer.create)
-    ..aOM<Stake>(4, 'stakeTransaction', subBuilder: Stake.create)
-    ..aOM<DeactivateStake>(5, 'deactivateStakeTransaction', subBuilder: DeactivateStake.create)
-    ..aOM<WithdrawStake>(6, 'withdrawTransaction', subBuilder: WithdrawStake.create)
-    ..aOM<CreateTokenAccount>(7, 'createTokenAccountTransaction', subBuilder: CreateTokenAccount.create)
-    ..aOM<TokenTransfer>(8, 'tokenTransferTransaction', subBuilder: TokenTransfer.create)
-    ..aOM<CreateAndTransferToken>(9, 'createAndTransferTokenTransaction', subBuilder: CreateAndTransferToken.create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'privateKey', $pb.PbFieldType.OY)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'recentBlockhash')
+    ..aOM<Transfer>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transferTransaction', subBuilder: Transfer.create)
+    ..aOM<Stake>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'stakeTransaction', subBuilder: Stake.create)
+    ..aOM<DeactivateStake>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'deactivateStakeTransaction', subBuilder: DeactivateStake.create)
+    ..aOM<WithdrawStake>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'withdrawTransaction', subBuilder: WithdrawStake.create)
+    ..aOM<CreateTokenAccount>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'createTokenAccountTransaction', subBuilder: CreateTokenAccount.create)
+    ..aOM<TokenTransfer>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'tokenTransferTransaction', subBuilder: TokenTransfer.create)
+    ..aOM<CreateAndTransferToken>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'createAndTransferTokenTransaction', subBuilder: CreateAndTransferToken.create)
     ..hasRequiredFields = false
   ;
 
   SigningInput._() : super();
-  factory SigningInput() => create();
+  factory SigningInput({
+    $core.List<$core.int>? privateKey,
+    $core.String? recentBlockhash,
+    Transfer? transferTransaction,
+    Stake? stakeTransaction,
+    DeactivateStake? deactivateStakeTransaction,
+    WithdrawStake? withdrawTransaction,
+    CreateTokenAccount? createTokenAccountTransaction,
+    TokenTransfer? tokenTransferTransaction,
+    CreateAndTransferToken? createAndTransferTokenTransaction,
+  }) {
+    final _result = create();
+    if (privateKey != null) {
+      _result.privateKey = privateKey;
+    }
+    if (recentBlockhash != null) {
+      _result.recentBlockhash = recentBlockhash;
+    }
+    if (transferTransaction != null) {
+      _result.transferTransaction = transferTransaction;
+    }
+    if (stakeTransaction != null) {
+      _result.stakeTransaction = stakeTransaction;
+    }
+    if (deactivateStakeTransaction != null) {
+      _result.deactivateStakeTransaction = deactivateStakeTransaction;
+    }
+    if (withdrawTransaction != null) {
+      _result.withdrawTransaction = withdrawTransaction;
+    }
+    if (createTokenAccountTransaction != null) {
+      _result.createTokenAccountTransaction = createTokenAccountTransaction;
+    }
+    if (tokenTransferTransaction != null) {
+      _result.tokenTransferTransaction = tokenTransferTransaction;
+    }
+    if (createAndTransferTokenTransaction != null) {
+      _result.createAndTransferTokenTransaction = createAndTransferTokenTransaction;
+    }
+    return _result;
+  }
   factory SigningInput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SigningInput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   SigningInput clone() => SigningInput()..mergeFromMessage(this);
-  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput)) as SigningInput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SigningInput create() => SigningInput._();
@@ -416,9 +632,9 @@ class SigningInput extends $pb.GeneratedMessage {
   static $pb.PbList<SigningInput> createRepeated() => $pb.PbList<SigningInput>();
   @$core.pragma('dart2js:noInline')
   static SigningInput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningInput>(create);
-  static SigningInput _defaultInstance;
+  static SigningInput? _defaultInstance;
 
-  SigningInput_TransactionType whichTransactionType() => _SigningInput_TransactionTypeByTag[$_whichOneof(0)];
+  SigningInput_TransactionType whichTransactionType() => _SigningInput_TransactionTypeByTag[$_whichOneof(0)]!;
   void clearTransactionType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -518,17 +734,33 @@ class SigningInput extends $pb.GeneratedMessage {
 }
 
 class SigningOutput extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SigningOutput', package: const $pb.PackageName('TW.Solana.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'encoded')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SigningOutput', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Solana.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'encoded')
     ..hasRequiredFields = false
   ;
 
   SigningOutput._() : super();
-  factory SigningOutput() => create();
+  factory SigningOutput({
+    $core.String? encoded,
+  }) {
+    final _result = create();
+    if (encoded != null) {
+      _result.encoded = encoded;
+    }
+    return _result;
+  }
   factory SigningOutput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SigningOutput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   SigningOutput clone() => SigningOutput()..mergeFromMessage(this);
-  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput)) as SigningOutput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SigningOutput create() => SigningOutput._();
@@ -536,7 +768,7 @@ class SigningOutput extends $pb.GeneratedMessage {
   static $pb.PbList<SigningOutput> createRepeated() => $pb.PbList<SigningOutput>();
   @$core.pragma('dart2js:noInline')
   static SigningOutput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningOutput>(create);
-  static SigningOutput _defaultInstance;
+  static SigningOutput? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get encoded => $_getSZ(0);

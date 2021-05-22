@@ -2,9 +2,13 @@
 //  Generated code. Do not modify.
 //  source: Icon.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use signingInputDescriptor instead')
 const SigningInput$json = const {
   '1': 'SigningInput',
   '2': const [
@@ -19,6 +23,9 @@ const SigningInput$json = const {
   ],
 };
 
+/// Descriptor for `SigningInput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signingInputDescriptor = $convert.base64Decode('CgxTaWduaW5nSW5wdXQSIQoMZnJvbV9hZGRyZXNzGAEgASgJUgtmcm9tQWRkcmVzcxIdCgp0b19hZGRyZXNzGAIgASgJUgl0b0FkZHJlc3MSFAoFdmFsdWUYAyABKAxSBXZhbHVlEh0KCnN0ZXBfbGltaXQYBCABKAxSCXN0ZXBMaW1pdBIcCgl0aW1lc3RhbXAYBSABKANSCXRpbWVzdGFtcBIUCgVub25jZRgGIAEoDFIFbm9uY2USHQoKbmV0d29ya19pZBgHIAEoDFIJbmV0d29ya0lkEh8KC3ByaXZhdGVfa2V5GAggASgMUgpwcml2YXRlS2V5');
+@$core.Deprecated('Use signingOutputDescriptor instead')
 const SigningOutput$json = const {
   '1': 'SigningOutput',
   '2': const [
@@ -27,3 +34,5 @@ const SigningOutput$json = const {
   ],
 };
 
+/// Descriptor for `SigningOutput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signingOutputDescriptor = $convert.base64Decode('Cg1TaWduaW5nT3V0cHV0EhgKB2VuY29kZWQYASABKAlSB2VuY29kZWQSHAoJc2lnbmF0dXJlGAIgASgMUglzaWduYXR1cmU=');

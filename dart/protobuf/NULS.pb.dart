@@ -2,30 +2,66 @@
 //  Generated code. Do not modify.
 //  source: NULS.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class TransactionCoinFrom extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransactionCoinFrom', package: const $pb.PackageName('TW.NULS.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'fromAddress')
-    ..a<$core.int>(2, 'assetsChainid', $pb.PbFieldType.OU3)
-    ..a<$core.int>(3, 'assetsId', $pb.PbFieldType.OU3)
-    ..a<$core.List<$core.int>>(4, 'idAmount', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(5, 'nonce', $pb.PbFieldType.OY)
-    ..a<$core.int>(6, 'locked', $pb.PbFieldType.OU3)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionCoinFrom', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.NULS.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fromAddress')
+    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'assetsChainid', $pb.PbFieldType.OU3)
+    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'assetsId', $pb.PbFieldType.OU3)
+    ..a<$core.List<$core.int>>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'idAmount', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nonce', $pb.PbFieldType.OY)
+    ..a<$core.int>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'locked', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
   TransactionCoinFrom._() : super();
-  factory TransactionCoinFrom() => create();
+  factory TransactionCoinFrom({
+    $core.String? fromAddress,
+    $core.int? assetsChainid,
+    $core.int? assetsId,
+    $core.List<$core.int>? idAmount,
+    $core.List<$core.int>? nonce,
+    $core.int? locked,
+  }) {
+    final _result = create();
+    if (fromAddress != null) {
+      _result.fromAddress = fromAddress;
+    }
+    if (assetsChainid != null) {
+      _result.assetsChainid = assetsChainid;
+    }
+    if (assetsId != null) {
+      _result.assetsId = assetsId;
+    }
+    if (idAmount != null) {
+      _result.idAmount = idAmount;
+    }
+    if (nonce != null) {
+      _result.nonce = nonce;
+    }
+    if (locked != null) {
+      _result.locked = locked;
+    }
+    return _result;
+  }
   factory TransactionCoinFrom.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TransactionCoinFrom.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   TransactionCoinFrom clone() => TransactionCoinFrom()..mergeFromMessage(this);
-  TransactionCoinFrom copyWith(void Function(TransactionCoinFrom) updates) => super.copyWith((message) => updates(message as TransactionCoinFrom));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TransactionCoinFrom copyWith(void Function(TransactionCoinFrom) updates) => super.copyWith((message) => updates(message as TransactionCoinFrom)) as TransactionCoinFrom; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TransactionCoinFrom create() => TransactionCoinFrom._();
@@ -33,7 +69,7 @@ class TransactionCoinFrom extends $pb.GeneratedMessage {
   static $pb.PbList<TransactionCoinFrom> createRepeated() => $pb.PbList<TransactionCoinFrom>();
   @$core.pragma('dart2js:noInline')
   static TransactionCoinFrom getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransactionCoinFrom>(create);
-  static TransactionCoinFrom _defaultInstance;
+  static TransactionCoinFrom? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get fromAddress => $_getSZ(0);
@@ -91,21 +127,53 @@ class TransactionCoinFrom extends $pb.GeneratedMessage {
 }
 
 class TransactionCoinTo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransactionCoinTo', package: const $pb.PackageName('TW.NULS.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'toAddress')
-    ..a<$core.int>(2, 'assetsChainid', $pb.PbFieldType.OU3)
-    ..a<$core.int>(3, 'assetsId', $pb.PbFieldType.OU3)
-    ..a<$core.List<$core.int>>(4, 'idAmount', $pb.PbFieldType.OY)
-    ..a<$core.int>(5, 'lockTime', $pb.PbFieldType.OU3)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionCoinTo', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.NULS.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'toAddress')
+    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'assetsChainid', $pb.PbFieldType.OU3)
+    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'assetsId', $pb.PbFieldType.OU3)
+    ..a<$core.List<$core.int>>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'idAmount', $pb.PbFieldType.OY)
+    ..a<$core.int>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lockTime', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
   TransactionCoinTo._() : super();
-  factory TransactionCoinTo() => create();
+  factory TransactionCoinTo({
+    $core.String? toAddress,
+    $core.int? assetsChainid,
+    $core.int? assetsId,
+    $core.List<$core.int>? idAmount,
+    $core.int? lockTime,
+  }) {
+    final _result = create();
+    if (toAddress != null) {
+      _result.toAddress = toAddress;
+    }
+    if (assetsChainid != null) {
+      _result.assetsChainid = assetsChainid;
+    }
+    if (assetsId != null) {
+      _result.assetsId = assetsId;
+    }
+    if (idAmount != null) {
+      _result.idAmount = idAmount;
+    }
+    if (lockTime != null) {
+      _result.lockTime = lockTime;
+    }
+    return _result;
+  }
   factory TransactionCoinTo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TransactionCoinTo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   TransactionCoinTo clone() => TransactionCoinTo()..mergeFromMessage(this);
-  TransactionCoinTo copyWith(void Function(TransactionCoinTo) updates) => super.copyWith((message) => updates(message as TransactionCoinTo));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TransactionCoinTo copyWith(void Function(TransactionCoinTo) updates) => super.copyWith((message) => updates(message as TransactionCoinTo)) as TransactionCoinTo; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TransactionCoinTo create() => TransactionCoinTo._();
@@ -113,7 +181,7 @@ class TransactionCoinTo extends $pb.GeneratedMessage {
   static $pb.PbList<TransactionCoinTo> createRepeated() => $pb.PbList<TransactionCoinTo>();
   @$core.pragma('dart2js:noInline')
   static TransactionCoinTo getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransactionCoinTo>(create);
-  static TransactionCoinTo _defaultInstance;
+  static TransactionCoinTo? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get toAddress => $_getSZ(0);
@@ -162,20 +230,48 @@ class TransactionCoinTo extends $pb.GeneratedMessage {
 }
 
 class Signature extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Signature', package: const $pb.PackageName('TW.NULS.Proto'), createEmptyInstance: create)
-    ..a<$core.int>(1, 'pkeyLen', $pb.PbFieldType.OU3)
-    ..a<$core.List<$core.int>>(2, 'publicKey', $pb.PbFieldType.OY)
-    ..a<$core.int>(3, 'sigLen', $pb.PbFieldType.OU3)
-    ..a<$core.List<$core.int>>(4, 'signature', $pb.PbFieldType.OY)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Signature', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.NULS.Proto'), createEmptyInstance: create)
+    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pkeyLen', $pb.PbFieldType.OU3)
+    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'publicKey', $pb.PbFieldType.OY)
+    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sigLen', $pb.PbFieldType.OU3)
+    ..a<$core.List<$core.int>>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'signature', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
   Signature._() : super();
-  factory Signature() => create();
+  factory Signature({
+    $core.int? pkeyLen,
+    $core.List<$core.int>? publicKey,
+    $core.int? sigLen,
+    $core.List<$core.int>? signature,
+  }) {
+    final _result = create();
+    if (pkeyLen != null) {
+      _result.pkeyLen = pkeyLen;
+    }
+    if (publicKey != null) {
+      _result.publicKey = publicKey;
+    }
+    if (sigLen != null) {
+      _result.sigLen = sigLen;
+    }
+    if (signature != null) {
+      _result.signature = signature;
+    }
+    return _result;
+  }
   factory Signature.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Signature.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   Signature clone() => Signature()..mergeFromMessage(this);
-  Signature copyWith(void Function(Signature) updates) => super.copyWith((message) => updates(message as Signature));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Signature copyWith(void Function(Signature) updates) => super.copyWith((message) => updates(message as Signature)) as Signature; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Signature create() => Signature._();
@@ -183,7 +279,7 @@ class Signature extends $pb.GeneratedMessage {
   static $pb.PbList<Signature> createRepeated() => $pb.PbList<Signature>();
   @$core.pragma('dart2js:noInline')
   static Signature getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Signature>(create);
-  static Signature _defaultInstance;
+  static Signature? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get pkeyLen => $_getIZ(0);
@@ -223,24 +319,68 @@ class Signature extends $pb.GeneratedMessage {
 }
 
 class Transaction extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Transaction', package: const $pb.PackageName('TW.NULS.Proto'), createEmptyInstance: create)
-    ..a<$core.int>(1, 'type', $pb.PbFieldType.OU3)
-    ..a<$core.int>(2, 'timestamp', $pb.PbFieldType.OU3)
-    ..aOS(3, 'remark')
-    ..a<$core.List<$core.int>>(4, 'txData', $pb.PbFieldType.OY)
-    ..aOM<TransactionCoinFrom>(5, 'input', subBuilder: TransactionCoinFrom.create)
-    ..aOM<TransactionCoinTo>(6, 'output', subBuilder: TransactionCoinTo.create)
-    ..aOM<Signature>(7, 'txSigs', subBuilder: Signature.create)
-    ..a<$core.int>(8, 'hash', $pb.PbFieldType.OU3)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Transaction', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.NULS.Proto'), createEmptyInstance: create)
+    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type', $pb.PbFieldType.OU3)
+    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.OU3)
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'remark')
+    ..a<$core.List<$core.int>>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'txData', $pb.PbFieldType.OY)
+    ..aOM<TransactionCoinFrom>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'input', subBuilder: TransactionCoinFrom.create)
+    ..aOM<TransactionCoinTo>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'output', subBuilder: TransactionCoinTo.create)
+    ..aOM<Signature>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'txSigs', subBuilder: Signature.create)
+    ..a<$core.int>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hash', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
   Transaction._() : super();
-  factory Transaction() => create();
+  factory Transaction({
+    $core.int? type,
+    $core.int? timestamp,
+    $core.String? remark,
+    $core.List<$core.int>? txData,
+    TransactionCoinFrom? input,
+    TransactionCoinTo? output,
+    Signature? txSigs,
+    $core.int? hash,
+  }) {
+    final _result = create();
+    if (type != null) {
+      _result.type = type;
+    }
+    if (timestamp != null) {
+      _result.timestamp = timestamp;
+    }
+    if (remark != null) {
+      _result.remark = remark;
+    }
+    if (txData != null) {
+      _result.txData = txData;
+    }
+    if (input != null) {
+      _result.input = input;
+    }
+    if (output != null) {
+      _result.output = output;
+    }
+    if (txSigs != null) {
+      _result.txSigs = txSigs;
+    }
+    if (hash != null) {
+      _result.hash = hash;
+    }
+    return _result;
+  }
   factory Transaction.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Transaction.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   Transaction clone() => Transaction()..mergeFromMessage(this);
-  Transaction copyWith(void Function(Transaction) updates) => super.copyWith((message) => updates(message as Transaction));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Transaction copyWith(void Function(Transaction) updates) => super.copyWith((message) => updates(message as Transaction)) as Transaction; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Transaction create() => Transaction._();
@@ -248,7 +388,7 @@ class Transaction extends $pb.GeneratedMessage {
   static $pb.PbList<Transaction> createRepeated() => $pb.PbList<Transaction>();
   @$core.pragma('dart2js:noInline')
   static Transaction getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Transaction>(create);
-  static Transaction _defaultInstance;
+  static Transaction? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get type => $_getIZ(0);
@@ -330,26 +470,78 @@ class Transaction extends $pb.GeneratedMessage {
 }
 
 class SigningInput extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SigningInput', package: const $pb.PackageName('TW.NULS.Proto'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, 'privateKey', $pb.PbFieldType.OY)
-    ..aOS(2, 'from')
-    ..aOS(3, 'to')
-    ..a<$core.List<$core.int>>(4, 'amount', $pb.PbFieldType.OY)
-    ..a<$core.int>(5, 'chainId', $pb.PbFieldType.OU3)
-    ..a<$core.int>(6, 'idassetsId', $pb.PbFieldType.OU3)
-    ..a<$core.List<$core.int>>(7, 'nonce', $pb.PbFieldType.OY)
-    ..aOS(8, 'remark')
-    ..a<$core.List<$core.int>>(9, 'balance', $pb.PbFieldType.OY)
-    ..a<$core.int>(10, 'timestamp', $pb.PbFieldType.OU3)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SigningInput', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.NULS.Proto'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'privateKey', $pb.PbFieldType.OY)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'from')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'to')
+    ..a<$core.List<$core.int>>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount', $pb.PbFieldType.OY)
+    ..a<$core.int>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'chainId', $pb.PbFieldType.OU3)
+    ..a<$core.int>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'idassetsId', $pb.PbFieldType.OU3)
+    ..a<$core.List<$core.int>>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nonce', $pb.PbFieldType.OY)
+    ..aOS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'remark')
+    ..a<$core.List<$core.int>>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'balance', $pb.PbFieldType.OY)
+    ..a<$core.int>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
   SigningInput._() : super();
-  factory SigningInput() => create();
+  factory SigningInput({
+    $core.List<$core.int>? privateKey,
+    $core.String? from,
+    $core.String? to,
+    $core.List<$core.int>? amount,
+    $core.int? chainId,
+    $core.int? idassetsId,
+    $core.List<$core.int>? nonce,
+    $core.String? remark,
+    $core.List<$core.int>? balance,
+    $core.int? timestamp,
+  }) {
+    final _result = create();
+    if (privateKey != null) {
+      _result.privateKey = privateKey;
+    }
+    if (from != null) {
+      _result.from = from;
+    }
+    if (to != null) {
+      _result.to = to;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    if (chainId != null) {
+      _result.chainId = chainId;
+    }
+    if (idassetsId != null) {
+      _result.idassetsId = idassetsId;
+    }
+    if (nonce != null) {
+      _result.nonce = nonce;
+    }
+    if (remark != null) {
+      _result.remark = remark;
+    }
+    if (balance != null) {
+      _result.balance = balance;
+    }
+    if (timestamp != null) {
+      _result.timestamp = timestamp;
+    }
+    return _result;
+  }
   factory SigningInput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SigningInput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   SigningInput clone() => SigningInput()..mergeFromMessage(this);
-  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput)) as SigningInput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SigningInput create() => SigningInput._();
@@ -357,7 +549,7 @@ class SigningInput extends $pb.GeneratedMessage {
   static $pb.PbList<SigningInput> createRepeated() => $pb.PbList<SigningInput>();
   @$core.pragma('dart2js:noInline')
   static SigningInput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningInput>(create);
-  static SigningInput _defaultInstance;
+  static SigningInput? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get privateKey => $_getN(0);
@@ -451,17 +643,33 @@ class SigningInput extends $pb.GeneratedMessage {
 }
 
 class SigningOutput extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SigningOutput', package: const $pb.PackageName('TW.NULS.Proto'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, 'encoded', $pb.PbFieldType.OY)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SigningOutput', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.NULS.Proto'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'encoded', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
   SigningOutput._() : super();
-  factory SigningOutput() => create();
+  factory SigningOutput({
+    $core.List<$core.int>? encoded,
+  }) {
+    final _result = create();
+    if (encoded != null) {
+      _result.encoded = encoded;
+    }
+    return _result;
+  }
   factory SigningOutput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SigningOutput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   SigningOutput clone() => SigningOutput()..mergeFromMessage(this);
-  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput)) as SigningOutput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SigningOutput create() => SigningOutput._();
@@ -469,7 +677,7 @@ class SigningOutput extends $pb.GeneratedMessage {
   static $pb.PbList<SigningOutput> createRepeated() => $pb.PbList<SigningOutput>();
   @$core.pragma('dart2js:noInline')
   static SigningOutput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningOutput>(create);
-  static SigningOutput _defaultInstance;
+  static SigningOutput? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get encoded => $_getN(0);

@@ -2,9 +2,13 @@
 //  Generated code. Do not modify.
 //  source: VeChain.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use clauseDescriptor instead')
 const Clause$json = const {
   '1': 'Clause',
   '2': const [
@@ -14,6 +18,9 @@ const Clause$json = const {
   ],
 };
 
+/// Descriptor for `Clause`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List clauseDescriptor = $convert.base64Decode('CgZDbGF1c2USDgoCdG8YASABKAlSAnRvEhQKBXZhbHVlGAIgASgMUgV2YWx1ZRISCgRkYXRhGAMgASgMUgRkYXRh');
+@$core.Deprecated('Use signingInputDescriptor instead')
 const SigningInput$json = const {
   '1': 'SigningInput',
   '2': const [
@@ -29,6 +36,9 @@ const SigningInput$json = const {
   ],
 };
 
+/// Descriptor for `SigningInput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signingInputDescriptor = $convert.base64Decode('CgxTaWduaW5nSW5wdXQSGwoJY2hhaW5fdGFnGAEgASgNUghjaGFpblRhZxIbCglibG9ja19yZWYYAiABKARSCGJsb2NrUmVmEh4KCmV4cGlyYXRpb24YAyABKA1SCmV4cGlyYXRpb24SMgoHY2xhdXNlcxgEIAMoCzIYLlRXLlZlQ2hhaW4uUHJvdG8uQ2xhdXNlUgdjbGF1c2VzEiQKDmdhc19wcmljZV9jb2VmGAUgASgNUgxnYXNQcmljZUNvZWYSEAoDZ2FzGAYgASgEUgNnYXMSHQoKZGVwZW5kc19vbhgHIAEoDFIJZGVwZW5kc09uEhQKBW5vbmNlGAggASgEUgVub25jZRIfCgtwcml2YXRlX2tleRgJIAEoDFIKcHJpdmF0ZUtleQ==');
+@$core.Deprecated('Use signingOutputDescriptor instead')
 const SigningOutput$json = const {
   '1': 'SigningOutput',
   '2': const [
@@ -37,3 +47,5 @@ const SigningOutput$json = const {
   ],
 };
 
+/// Descriptor for `SigningOutput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signingOutputDescriptor = $convert.base64Decode('Cg1TaWduaW5nT3V0cHV0EhgKB2VuY29kZWQYASABKAxSB2VuY29kZWQSHAoJc2lnbmF0dXJlGAIgASgMUglzaWduYXR1cmU=');

@@ -2,9 +2,13 @@
 //  Generated code. Do not modify.
 //  source: Ontology.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use signingInputDescriptor instead')
 const SigningInput$json = const {
   '1': 'SigningInput',
   '2': const [
@@ -21,6 +25,9 @@ const SigningInput$json = const {
   ],
 };
 
+/// Descriptor for `SigningInput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signingInputDescriptor = $convert.base64Decode('CgxTaWduaW5nSW5wdXQSGgoIY29udHJhY3QYASABKAlSCGNvbnRyYWN0EhYKBm1ldGhvZBgCIAEoCVIGbWV0aG9kEioKEW93bmVyX3ByaXZhdGVfa2V5GAMgASgMUg9vd25lclByaXZhdGVLZXkSHQoKdG9fYWRkcmVzcxgEIAEoCVIJdG9BZGRyZXNzEhYKBmFtb3VudBgFIAEoBFIGYW1vdW50EioKEXBheWVyX3ByaXZhdGVfa2V5GAYgASgMUg9wYXllclByaXZhdGVLZXkSGwoJZ2FzX3ByaWNlGAcgASgEUghnYXNQcmljZRIbCglnYXNfbGltaXQYCCABKARSCGdhc0xpbWl0EiMKDXF1ZXJ5X2FkZHJlc3MYCSABKAlSDHF1ZXJ5QWRkcmVzcxIUCgVub25jZRgKIAEoDVIFbm9uY2U=');
+@$core.Deprecated('Use signingOutputDescriptor instead')
 const SigningOutput$json = const {
   '1': 'SigningOutput',
   '2': const [
@@ -28,3 +35,5 @@ const SigningOutput$json = const {
   ],
 };
 
+/// Descriptor for `SigningOutput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signingOutputDescriptor = $convert.base64Decode('Cg1TaWduaW5nT3V0cHV0EhgKB2VuY29kZWQYASABKAxSB2VuY29kZWQ=');

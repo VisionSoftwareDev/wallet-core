@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: Tron.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -11,19 +11,43 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class TransferContract extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransferContract', package: const $pb.PackageName('TW.Tron.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'ownerAddress')
-    ..aOS(2, 'toAddress')
-    ..aInt64(3, 'amount')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransferContract', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tron.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ownerAddress')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'toAddress')
+    ..aInt64(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount')
     ..hasRequiredFields = false
   ;
 
   TransferContract._() : super();
-  factory TransferContract() => create();
+  factory TransferContract({
+    $core.String? ownerAddress,
+    $core.String? toAddress,
+    $fixnum.Int64? amount,
+  }) {
+    final _result = create();
+    if (ownerAddress != null) {
+      _result.ownerAddress = ownerAddress;
+    }
+    if (toAddress != null) {
+      _result.toAddress = toAddress;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    return _result;
+  }
   factory TransferContract.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TransferContract.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   TransferContract clone() => TransferContract()..mergeFromMessage(this);
-  TransferContract copyWith(void Function(TransferContract) updates) => super.copyWith((message) => updates(message as TransferContract));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TransferContract copyWith(void Function(TransferContract) updates) => super.copyWith((message) => updates(message as TransferContract)) as TransferContract; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TransferContract create() => TransferContract._();
@@ -31,7 +55,7 @@ class TransferContract extends $pb.GeneratedMessage {
   static $pb.PbList<TransferContract> createRepeated() => $pb.PbList<TransferContract>();
   @$core.pragma('dart2js:noInline')
   static TransferContract getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransferContract>(create);
-  static TransferContract _defaultInstance;
+  static TransferContract? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get ownerAddress => $_getSZ(0);
@@ -62,20 +86,48 @@ class TransferContract extends $pb.GeneratedMessage {
 }
 
 class TransferAssetContract extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransferAssetContract', package: const $pb.PackageName('TW.Tron.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'assetName')
-    ..aOS(2, 'ownerAddress')
-    ..aOS(3, 'toAddress')
-    ..aInt64(4, 'amount')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransferAssetContract', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tron.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'assetName')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ownerAddress')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'toAddress')
+    ..aInt64(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount')
     ..hasRequiredFields = false
   ;
 
   TransferAssetContract._() : super();
-  factory TransferAssetContract() => create();
+  factory TransferAssetContract({
+    $core.String? assetName,
+    $core.String? ownerAddress,
+    $core.String? toAddress,
+    $fixnum.Int64? amount,
+  }) {
+    final _result = create();
+    if (assetName != null) {
+      _result.assetName = assetName;
+    }
+    if (ownerAddress != null) {
+      _result.ownerAddress = ownerAddress;
+    }
+    if (toAddress != null) {
+      _result.toAddress = toAddress;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    return _result;
+  }
   factory TransferAssetContract.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TransferAssetContract.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   TransferAssetContract clone() => TransferAssetContract()..mergeFromMessage(this);
-  TransferAssetContract copyWith(void Function(TransferAssetContract) updates) => super.copyWith((message) => updates(message as TransferAssetContract));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TransferAssetContract copyWith(void Function(TransferAssetContract) updates) => super.copyWith((message) => updates(message as TransferAssetContract)) as TransferAssetContract; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TransferAssetContract create() => TransferAssetContract._();
@@ -83,7 +135,7 @@ class TransferAssetContract extends $pb.GeneratedMessage {
   static $pb.PbList<TransferAssetContract> createRepeated() => $pb.PbList<TransferAssetContract>();
   @$core.pragma('dart2js:noInline')
   static TransferAssetContract getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransferAssetContract>(create);
-  static TransferAssetContract _defaultInstance;
+  static TransferAssetContract? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get assetName => $_getSZ(0);
@@ -123,20 +175,48 @@ class TransferAssetContract extends $pb.GeneratedMessage {
 }
 
 class TransferTRC20Contract extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransferTRC20Contract', package: const $pb.PackageName('TW.Tron.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'contractAddress')
-    ..aOS(2, 'ownerAddress')
-    ..aOS(3, 'toAddress')
-    ..a<$core.List<$core.int>>(4, 'amount', $pb.PbFieldType.OY)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransferTRC20Contract', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tron.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'contractAddress')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ownerAddress')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'toAddress')
+    ..a<$core.List<$core.int>>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
   TransferTRC20Contract._() : super();
-  factory TransferTRC20Contract() => create();
+  factory TransferTRC20Contract({
+    $core.String? contractAddress,
+    $core.String? ownerAddress,
+    $core.String? toAddress,
+    $core.List<$core.int>? amount,
+  }) {
+    final _result = create();
+    if (contractAddress != null) {
+      _result.contractAddress = contractAddress;
+    }
+    if (ownerAddress != null) {
+      _result.ownerAddress = ownerAddress;
+    }
+    if (toAddress != null) {
+      _result.toAddress = toAddress;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    return _result;
+  }
   factory TransferTRC20Contract.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TransferTRC20Contract.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   TransferTRC20Contract clone() => TransferTRC20Contract()..mergeFromMessage(this);
-  TransferTRC20Contract copyWith(void Function(TransferTRC20Contract) updates) => super.copyWith((message) => updates(message as TransferTRC20Contract));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TransferTRC20Contract copyWith(void Function(TransferTRC20Contract) updates) => super.copyWith((message) => updates(message as TransferTRC20Contract)) as TransferTRC20Contract; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TransferTRC20Contract create() => TransferTRC20Contract._();
@@ -144,7 +224,7 @@ class TransferTRC20Contract extends $pb.GeneratedMessage {
   static $pb.PbList<TransferTRC20Contract> createRepeated() => $pb.PbList<TransferTRC20Contract>();
   @$core.pragma('dart2js:noInline')
   static TransferTRC20Contract getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransferTRC20Contract>(create);
-  static TransferTRC20Contract _defaultInstance;
+  static TransferTRC20Contract? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get contractAddress => $_getSZ(0);
@@ -184,21 +264,53 @@ class TransferTRC20Contract extends $pb.GeneratedMessage {
 }
 
 class FreezeBalanceContract extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FreezeBalanceContract', package: const $pb.PackageName('TW.Tron.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'ownerAddress')
-    ..aInt64(2, 'frozenBalance')
-    ..aInt64(3, 'frozenDuration')
-    ..aOS(10, 'resource')
-    ..aOS(15, 'receiverAddress')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FreezeBalanceContract', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tron.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ownerAddress')
+    ..aInt64(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'frozenBalance')
+    ..aInt64(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'frozenDuration')
+    ..aOS(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'resource')
+    ..aOS(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'receiverAddress')
     ..hasRequiredFields = false
   ;
 
   FreezeBalanceContract._() : super();
-  factory FreezeBalanceContract() => create();
+  factory FreezeBalanceContract({
+    $core.String? ownerAddress,
+    $fixnum.Int64? frozenBalance,
+    $fixnum.Int64? frozenDuration,
+    $core.String? resource,
+    $core.String? receiverAddress,
+  }) {
+    final _result = create();
+    if (ownerAddress != null) {
+      _result.ownerAddress = ownerAddress;
+    }
+    if (frozenBalance != null) {
+      _result.frozenBalance = frozenBalance;
+    }
+    if (frozenDuration != null) {
+      _result.frozenDuration = frozenDuration;
+    }
+    if (resource != null) {
+      _result.resource = resource;
+    }
+    if (receiverAddress != null) {
+      _result.receiverAddress = receiverAddress;
+    }
+    return _result;
+  }
   factory FreezeBalanceContract.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory FreezeBalanceContract.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   FreezeBalanceContract clone() => FreezeBalanceContract()..mergeFromMessage(this);
-  FreezeBalanceContract copyWith(void Function(FreezeBalanceContract) updates) => super.copyWith((message) => updates(message as FreezeBalanceContract));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  FreezeBalanceContract copyWith(void Function(FreezeBalanceContract) updates) => super.copyWith((message) => updates(message as FreezeBalanceContract)) as FreezeBalanceContract; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static FreezeBalanceContract create() => FreezeBalanceContract._();
@@ -206,7 +318,7 @@ class FreezeBalanceContract extends $pb.GeneratedMessage {
   static $pb.PbList<FreezeBalanceContract> createRepeated() => $pb.PbList<FreezeBalanceContract>();
   @$core.pragma('dart2js:noInline')
   static FreezeBalanceContract getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FreezeBalanceContract>(create);
-  static FreezeBalanceContract _defaultInstance;
+  static FreezeBalanceContract? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get ownerAddress => $_getSZ(0);
@@ -255,19 +367,43 @@ class FreezeBalanceContract extends $pb.GeneratedMessage {
 }
 
 class UnfreezeBalanceContract extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UnfreezeBalanceContract', package: const $pb.PackageName('TW.Tron.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'ownerAddress')
-    ..aOS(10, 'resource')
-    ..aOS(15, 'receiverAddress')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UnfreezeBalanceContract', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tron.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ownerAddress')
+    ..aOS(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'resource')
+    ..aOS(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'receiverAddress')
     ..hasRequiredFields = false
   ;
 
   UnfreezeBalanceContract._() : super();
-  factory UnfreezeBalanceContract() => create();
+  factory UnfreezeBalanceContract({
+    $core.String? ownerAddress,
+    $core.String? resource,
+    $core.String? receiverAddress,
+  }) {
+    final _result = create();
+    if (ownerAddress != null) {
+      _result.ownerAddress = ownerAddress;
+    }
+    if (resource != null) {
+      _result.resource = resource;
+    }
+    if (receiverAddress != null) {
+      _result.receiverAddress = receiverAddress;
+    }
+    return _result;
+  }
   factory UnfreezeBalanceContract.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory UnfreezeBalanceContract.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   UnfreezeBalanceContract clone() => UnfreezeBalanceContract()..mergeFromMessage(this);
-  UnfreezeBalanceContract copyWith(void Function(UnfreezeBalanceContract) updates) => super.copyWith((message) => updates(message as UnfreezeBalanceContract));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UnfreezeBalanceContract copyWith(void Function(UnfreezeBalanceContract) updates) => super.copyWith((message) => updates(message as UnfreezeBalanceContract)) as UnfreezeBalanceContract; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static UnfreezeBalanceContract create() => UnfreezeBalanceContract._();
@@ -275,7 +411,7 @@ class UnfreezeBalanceContract extends $pb.GeneratedMessage {
   static $pb.PbList<UnfreezeBalanceContract> createRepeated() => $pb.PbList<UnfreezeBalanceContract>();
   @$core.pragma('dart2js:noInline')
   static UnfreezeBalanceContract getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UnfreezeBalanceContract>(create);
-  static UnfreezeBalanceContract _defaultInstance;
+  static UnfreezeBalanceContract? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get ownerAddress => $_getSZ(0);
@@ -306,17 +442,33 @@ class UnfreezeBalanceContract extends $pb.GeneratedMessage {
 }
 
 class UnfreezeAssetContract extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UnfreezeAssetContract', package: const $pb.PackageName('TW.Tron.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'ownerAddress')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UnfreezeAssetContract', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tron.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ownerAddress')
     ..hasRequiredFields = false
   ;
 
   UnfreezeAssetContract._() : super();
-  factory UnfreezeAssetContract() => create();
+  factory UnfreezeAssetContract({
+    $core.String? ownerAddress,
+  }) {
+    final _result = create();
+    if (ownerAddress != null) {
+      _result.ownerAddress = ownerAddress;
+    }
+    return _result;
+  }
   factory UnfreezeAssetContract.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory UnfreezeAssetContract.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   UnfreezeAssetContract clone() => UnfreezeAssetContract()..mergeFromMessage(this);
-  UnfreezeAssetContract copyWith(void Function(UnfreezeAssetContract) updates) => super.copyWith((message) => updates(message as UnfreezeAssetContract));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UnfreezeAssetContract copyWith(void Function(UnfreezeAssetContract) updates) => super.copyWith((message) => updates(message as UnfreezeAssetContract)) as UnfreezeAssetContract; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static UnfreezeAssetContract create() => UnfreezeAssetContract._();
@@ -324,7 +476,7 @@ class UnfreezeAssetContract extends $pb.GeneratedMessage {
   static $pb.PbList<UnfreezeAssetContract> createRepeated() => $pb.PbList<UnfreezeAssetContract>();
   @$core.pragma('dart2js:noInline')
   static UnfreezeAssetContract getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UnfreezeAssetContract>(create);
-  static UnfreezeAssetContract _defaultInstance;
+  static UnfreezeAssetContract? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get ownerAddress => $_getSZ(0);
@@ -337,20 +489,48 @@ class UnfreezeAssetContract extends $pb.GeneratedMessage {
 }
 
 class VoteAssetContract extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('VoteAssetContract', package: const $pb.PackageName('TW.Tron.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'ownerAddress')
-    ..pPS(2, 'voteAddress')
-    ..aOB(3, 'support')
-    ..a<$core.int>(5, 'count', $pb.PbFieldType.O3)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VoteAssetContract', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tron.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ownerAddress')
+    ..pPS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'voteAddress')
+    ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'support')
+    ..a<$core.int>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'count', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
   VoteAssetContract._() : super();
-  factory VoteAssetContract() => create();
+  factory VoteAssetContract({
+    $core.String? ownerAddress,
+    $core.Iterable<$core.String>? voteAddress,
+    $core.bool? support,
+    $core.int? count,
+  }) {
+    final _result = create();
+    if (ownerAddress != null) {
+      _result.ownerAddress = ownerAddress;
+    }
+    if (voteAddress != null) {
+      _result.voteAddress.addAll(voteAddress);
+    }
+    if (support != null) {
+      _result.support = support;
+    }
+    if (count != null) {
+      _result.count = count;
+    }
+    return _result;
+  }
   factory VoteAssetContract.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory VoteAssetContract.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   VoteAssetContract clone() => VoteAssetContract()..mergeFromMessage(this);
-  VoteAssetContract copyWith(void Function(VoteAssetContract) updates) => super.copyWith((message) => updates(message as VoteAssetContract));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  VoteAssetContract copyWith(void Function(VoteAssetContract) updates) => super.copyWith((message) => updates(message as VoteAssetContract)) as VoteAssetContract; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static VoteAssetContract create() => VoteAssetContract._();
@@ -358,7 +538,7 @@ class VoteAssetContract extends $pb.GeneratedMessage {
   static $pb.PbList<VoteAssetContract> createRepeated() => $pb.PbList<VoteAssetContract>();
   @$core.pragma('dart2js:noInline')
   static VoteAssetContract getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VoteAssetContract>(create);
-  static VoteAssetContract _defaultInstance;
+  static VoteAssetContract? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get ownerAddress => $_getSZ(0);
@@ -392,18 +572,38 @@ class VoteAssetContract extends $pb.GeneratedMessage {
 }
 
 class VoteWitnessContract_Vote extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('VoteWitnessContract.Vote', package: const $pb.PackageName('TW.Tron.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'voteAddress')
-    ..aInt64(2, 'voteCount')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VoteWitnessContract.Vote', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tron.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'voteAddress')
+    ..aInt64(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'voteCount')
     ..hasRequiredFields = false
   ;
 
   VoteWitnessContract_Vote._() : super();
-  factory VoteWitnessContract_Vote() => create();
+  factory VoteWitnessContract_Vote({
+    $core.String? voteAddress,
+    $fixnum.Int64? voteCount,
+  }) {
+    final _result = create();
+    if (voteAddress != null) {
+      _result.voteAddress = voteAddress;
+    }
+    if (voteCount != null) {
+      _result.voteCount = voteCount;
+    }
+    return _result;
+  }
   factory VoteWitnessContract_Vote.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory VoteWitnessContract_Vote.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   VoteWitnessContract_Vote clone() => VoteWitnessContract_Vote()..mergeFromMessage(this);
-  VoteWitnessContract_Vote copyWith(void Function(VoteWitnessContract_Vote) updates) => super.copyWith((message) => updates(message as VoteWitnessContract_Vote));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  VoteWitnessContract_Vote copyWith(void Function(VoteWitnessContract_Vote) updates) => super.copyWith((message) => updates(message as VoteWitnessContract_Vote)) as VoteWitnessContract_Vote; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static VoteWitnessContract_Vote create() => VoteWitnessContract_Vote._();
@@ -411,7 +611,7 @@ class VoteWitnessContract_Vote extends $pb.GeneratedMessage {
   static $pb.PbList<VoteWitnessContract_Vote> createRepeated() => $pb.PbList<VoteWitnessContract_Vote>();
   @$core.pragma('dart2js:noInline')
   static VoteWitnessContract_Vote getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VoteWitnessContract_Vote>(create);
-  static VoteWitnessContract_Vote _defaultInstance;
+  static VoteWitnessContract_Vote? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get voteAddress => $_getSZ(0);
@@ -433,19 +633,43 @@ class VoteWitnessContract_Vote extends $pb.GeneratedMessage {
 }
 
 class VoteWitnessContract extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('VoteWitnessContract', package: const $pb.PackageName('TW.Tron.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'ownerAddress')
-    ..pc<VoteWitnessContract_Vote>(2, 'votes', $pb.PbFieldType.PM, subBuilder: VoteWitnessContract_Vote.create)
-    ..aOB(3, 'support')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VoteWitnessContract', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tron.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ownerAddress')
+    ..pc<VoteWitnessContract_Vote>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'votes', $pb.PbFieldType.PM, subBuilder: VoteWitnessContract_Vote.create)
+    ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'support')
     ..hasRequiredFields = false
   ;
 
   VoteWitnessContract._() : super();
-  factory VoteWitnessContract() => create();
+  factory VoteWitnessContract({
+    $core.String? ownerAddress,
+    $core.Iterable<VoteWitnessContract_Vote>? votes,
+    $core.bool? support,
+  }) {
+    final _result = create();
+    if (ownerAddress != null) {
+      _result.ownerAddress = ownerAddress;
+    }
+    if (votes != null) {
+      _result.votes.addAll(votes);
+    }
+    if (support != null) {
+      _result.support = support;
+    }
+    return _result;
+  }
   factory VoteWitnessContract.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory VoteWitnessContract.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   VoteWitnessContract clone() => VoteWitnessContract()..mergeFromMessage(this);
-  VoteWitnessContract copyWith(void Function(VoteWitnessContract) updates) => super.copyWith((message) => updates(message as VoteWitnessContract));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  VoteWitnessContract copyWith(void Function(VoteWitnessContract) updates) => super.copyWith((message) => updates(message as VoteWitnessContract)) as VoteWitnessContract; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static VoteWitnessContract create() => VoteWitnessContract._();
@@ -453,7 +677,7 @@ class VoteWitnessContract extends $pb.GeneratedMessage {
   static $pb.PbList<VoteWitnessContract> createRepeated() => $pb.PbList<VoteWitnessContract>();
   @$core.pragma('dart2js:noInline')
   static VoteWitnessContract getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VoteWitnessContract>(create);
-  static VoteWitnessContract _defaultInstance;
+  static VoteWitnessContract? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get ownerAddress => $_getSZ(0);
@@ -478,17 +702,33 @@ class VoteWitnessContract extends $pb.GeneratedMessage {
 }
 
 class WithdrawBalanceContract extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('WithdrawBalanceContract', package: const $pb.PackageName('TW.Tron.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'ownerAddress')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'WithdrawBalanceContract', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tron.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ownerAddress')
     ..hasRequiredFields = false
   ;
 
   WithdrawBalanceContract._() : super();
-  factory WithdrawBalanceContract() => create();
+  factory WithdrawBalanceContract({
+    $core.String? ownerAddress,
+  }) {
+    final _result = create();
+    if (ownerAddress != null) {
+      _result.ownerAddress = ownerAddress;
+    }
+    return _result;
+  }
   factory WithdrawBalanceContract.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory WithdrawBalanceContract.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   WithdrawBalanceContract clone() => WithdrawBalanceContract()..mergeFromMessage(this);
-  WithdrawBalanceContract copyWith(void Function(WithdrawBalanceContract) updates) => super.copyWith((message) => updates(message as WithdrawBalanceContract));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  WithdrawBalanceContract copyWith(void Function(WithdrawBalanceContract) updates) => super.copyWith((message) => updates(message as WithdrawBalanceContract)) as WithdrawBalanceContract; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static WithdrawBalanceContract create() => WithdrawBalanceContract._();
@@ -496,7 +736,7 @@ class WithdrawBalanceContract extends $pb.GeneratedMessage {
   static $pb.PbList<WithdrawBalanceContract> createRepeated() => $pb.PbList<WithdrawBalanceContract>();
   @$core.pragma('dart2js:noInline')
   static WithdrawBalanceContract getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<WithdrawBalanceContract>(create);
-  static WithdrawBalanceContract _defaultInstance;
+  static WithdrawBalanceContract? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get ownerAddress => $_getSZ(0);
@@ -509,22 +749,58 @@ class WithdrawBalanceContract extends $pb.GeneratedMessage {
 }
 
 class TriggerSmartContract extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TriggerSmartContract', package: const $pb.PackageName('TW.Tron.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'ownerAddress')
-    ..aOS(2, 'contractAddress')
-    ..aInt64(3, 'callValue')
-    ..a<$core.List<$core.int>>(4, 'data', $pb.PbFieldType.OY)
-    ..aInt64(5, 'callTokenValue')
-    ..aInt64(6, 'tokenId')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TriggerSmartContract', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tron.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ownerAddress')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'contractAddress')
+    ..aInt64(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'callValue')
+    ..a<$core.List<$core.int>>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'data', $pb.PbFieldType.OY)
+    ..aInt64(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'callTokenValue')
+    ..aInt64(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'tokenId')
     ..hasRequiredFields = false
   ;
 
   TriggerSmartContract._() : super();
-  factory TriggerSmartContract() => create();
+  factory TriggerSmartContract({
+    $core.String? ownerAddress,
+    $core.String? contractAddress,
+    $fixnum.Int64? callValue,
+    $core.List<$core.int>? data,
+    $fixnum.Int64? callTokenValue,
+    $fixnum.Int64? tokenId,
+  }) {
+    final _result = create();
+    if (ownerAddress != null) {
+      _result.ownerAddress = ownerAddress;
+    }
+    if (contractAddress != null) {
+      _result.contractAddress = contractAddress;
+    }
+    if (callValue != null) {
+      _result.callValue = callValue;
+    }
+    if (data != null) {
+      _result.data = data;
+    }
+    if (callTokenValue != null) {
+      _result.callTokenValue = callTokenValue;
+    }
+    if (tokenId != null) {
+      _result.tokenId = tokenId;
+    }
+    return _result;
+  }
   factory TriggerSmartContract.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TriggerSmartContract.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   TriggerSmartContract clone() => TriggerSmartContract()..mergeFromMessage(this);
-  TriggerSmartContract copyWith(void Function(TriggerSmartContract) updates) => super.copyWith((message) => updates(message as TriggerSmartContract));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TriggerSmartContract copyWith(void Function(TriggerSmartContract) updates) => super.copyWith((message) => updates(message as TriggerSmartContract)) as TriggerSmartContract; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TriggerSmartContract create() => TriggerSmartContract._();
@@ -532,7 +808,7 @@ class TriggerSmartContract extends $pb.GeneratedMessage {
   static $pb.PbList<TriggerSmartContract> createRepeated() => $pb.PbList<TriggerSmartContract>();
   @$core.pragma('dart2js:noInline')
   static TriggerSmartContract getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TriggerSmartContract>(create);
-  static TriggerSmartContract _defaultInstance;
+  static TriggerSmartContract? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get ownerAddress => $_getSZ(0);
@@ -590,22 +866,58 @@ class TriggerSmartContract extends $pb.GeneratedMessage {
 }
 
 class BlockHeader extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BlockHeader', package: const $pb.PackageName('TW.Tron.Proto'), createEmptyInstance: create)
-    ..aInt64(1, 'timestamp')
-    ..a<$core.List<$core.int>>(2, 'txTrieRoot', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(3, 'parentHash', $pb.PbFieldType.OY)
-    ..aInt64(7, 'number')
-    ..a<$core.List<$core.int>>(9, 'witnessAddress', $pb.PbFieldType.OY)
-    ..a<$core.int>(10, 'version', $pb.PbFieldType.O3)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BlockHeader', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tron.Proto'), createEmptyInstance: create)
+    ..aInt64(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp')
+    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'txTrieRoot', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'parentHash', $pb.PbFieldType.OY)
+    ..aInt64(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'number')
+    ..a<$core.List<$core.int>>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'witnessAddress', $pb.PbFieldType.OY)
+    ..a<$core.int>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'version', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
   BlockHeader._() : super();
-  factory BlockHeader() => create();
+  factory BlockHeader({
+    $fixnum.Int64? timestamp,
+    $core.List<$core.int>? txTrieRoot,
+    $core.List<$core.int>? parentHash,
+    $fixnum.Int64? number,
+    $core.List<$core.int>? witnessAddress,
+    $core.int? version,
+  }) {
+    final _result = create();
+    if (timestamp != null) {
+      _result.timestamp = timestamp;
+    }
+    if (txTrieRoot != null) {
+      _result.txTrieRoot = txTrieRoot;
+    }
+    if (parentHash != null) {
+      _result.parentHash = parentHash;
+    }
+    if (number != null) {
+      _result.number = number;
+    }
+    if (witnessAddress != null) {
+      _result.witnessAddress = witnessAddress;
+    }
+    if (version != null) {
+      _result.version = version;
+    }
+    return _result;
+  }
   factory BlockHeader.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory BlockHeader.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   BlockHeader clone() => BlockHeader()..mergeFromMessage(this);
-  BlockHeader copyWith(void Function(BlockHeader) updates) => super.copyWith((message) => updates(message as BlockHeader));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  BlockHeader copyWith(void Function(BlockHeader) updates) => super.copyWith((message) => updates(message as BlockHeader)) as BlockHeader; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static BlockHeader create() => BlockHeader._();
@@ -613,7 +925,7 @@ class BlockHeader extends $pb.GeneratedMessage {
   static $pb.PbList<BlockHeader> createRepeated() => $pb.PbList<BlockHeader>();
   @$core.pragma('dart2js:noInline')
   static BlockHeader getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BlockHeader>(create);
-  static BlockHeader _defaultInstance;
+  static BlockHeader? _defaultInstance;
 
   @$pb.TagNumber(1)
   $fixnum.Int64 get timestamp => $_getI64(0);
@@ -698,31 +1010,99 @@ class Transaction extends $pb.GeneratedMessage {
     19 : Transaction_ContractOneof.transferTrc20Contract,
     0 : Transaction_ContractOneof.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Transaction', package: const $pb.PackageName('TW.Tron.Proto'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Transaction', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tron.Proto'), createEmptyInstance: create)
     ..oo(0, [10, 11, 12, 13, 14, 15, 16, 17, 18, 19])
-    ..aInt64(1, 'timestamp')
-    ..aInt64(2, 'expiration')
-    ..aOM<BlockHeader>(3, 'blockHeader', subBuilder: BlockHeader.create)
-    ..aInt64(4, 'feeLimit')
-    ..aOM<TransferContract>(10, 'transfer', subBuilder: TransferContract.create)
-    ..aOM<TransferAssetContract>(11, 'transferAsset', subBuilder: TransferAssetContract.create)
-    ..aOM<FreezeBalanceContract>(12, 'freezeBalance', subBuilder: FreezeBalanceContract.create)
-    ..aOM<UnfreezeBalanceContract>(13, 'unfreezeBalance', subBuilder: UnfreezeBalanceContract.create)
-    ..aOM<UnfreezeAssetContract>(14, 'unfreezeAsset', subBuilder: UnfreezeAssetContract.create)
-    ..aOM<WithdrawBalanceContract>(15, 'withdrawBalance', subBuilder: WithdrawBalanceContract.create)
-    ..aOM<VoteAssetContract>(16, 'voteAsset', subBuilder: VoteAssetContract.create)
-    ..aOM<VoteWitnessContract>(17, 'voteWitness', subBuilder: VoteWitnessContract.create)
-    ..aOM<TriggerSmartContract>(18, 'triggerSmartContract', subBuilder: TriggerSmartContract.create)
-    ..aOM<TransferTRC20Contract>(19, 'transferTrc20Contract', subBuilder: TransferTRC20Contract.create)
+    ..aInt64(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp')
+    ..aInt64(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'expiration')
+    ..aOM<BlockHeader>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'blockHeader', subBuilder: BlockHeader.create)
+    ..aInt64(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'feeLimit')
+    ..aOM<TransferContract>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transfer', subBuilder: TransferContract.create)
+    ..aOM<TransferAssetContract>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transferAsset', subBuilder: TransferAssetContract.create)
+    ..aOM<FreezeBalanceContract>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'freezeBalance', subBuilder: FreezeBalanceContract.create)
+    ..aOM<UnfreezeBalanceContract>(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unfreezeBalance', subBuilder: UnfreezeBalanceContract.create)
+    ..aOM<UnfreezeAssetContract>(14, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unfreezeAsset', subBuilder: UnfreezeAssetContract.create)
+    ..aOM<WithdrawBalanceContract>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'withdrawBalance', subBuilder: WithdrawBalanceContract.create)
+    ..aOM<VoteAssetContract>(16, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'voteAsset', subBuilder: VoteAssetContract.create)
+    ..aOM<VoteWitnessContract>(17, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'voteWitness', subBuilder: VoteWitnessContract.create)
+    ..aOM<TriggerSmartContract>(18, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'triggerSmartContract', subBuilder: TriggerSmartContract.create)
+    ..aOM<TransferTRC20Contract>(19, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transferTrc20Contract', subBuilder: TransferTRC20Contract.create)
     ..hasRequiredFields = false
   ;
 
   Transaction._() : super();
-  factory Transaction() => create();
+  factory Transaction({
+    $fixnum.Int64? timestamp,
+    $fixnum.Int64? expiration,
+    BlockHeader? blockHeader,
+    $fixnum.Int64? feeLimit,
+    TransferContract? transfer,
+    TransferAssetContract? transferAsset,
+    FreezeBalanceContract? freezeBalance,
+    UnfreezeBalanceContract? unfreezeBalance,
+    UnfreezeAssetContract? unfreezeAsset,
+    WithdrawBalanceContract? withdrawBalance,
+    VoteAssetContract? voteAsset,
+    VoteWitnessContract? voteWitness,
+    TriggerSmartContract? triggerSmartContract,
+    TransferTRC20Contract? transferTrc20Contract,
+  }) {
+    final _result = create();
+    if (timestamp != null) {
+      _result.timestamp = timestamp;
+    }
+    if (expiration != null) {
+      _result.expiration = expiration;
+    }
+    if (blockHeader != null) {
+      _result.blockHeader = blockHeader;
+    }
+    if (feeLimit != null) {
+      _result.feeLimit = feeLimit;
+    }
+    if (transfer != null) {
+      _result.transfer = transfer;
+    }
+    if (transferAsset != null) {
+      _result.transferAsset = transferAsset;
+    }
+    if (freezeBalance != null) {
+      _result.freezeBalance = freezeBalance;
+    }
+    if (unfreezeBalance != null) {
+      _result.unfreezeBalance = unfreezeBalance;
+    }
+    if (unfreezeAsset != null) {
+      _result.unfreezeAsset = unfreezeAsset;
+    }
+    if (withdrawBalance != null) {
+      _result.withdrawBalance = withdrawBalance;
+    }
+    if (voteAsset != null) {
+      _result.voteAsset = voteAsset;
+    }
+    if (voteWitness != null) {
+      _result.voteWitness = voteWitness;
+    }
+    if (triggerSmartContract != null) {
+      _result.triggerSmartContract = triggerSmartContract;
+    }
+    if (transferTrc20Contract != null) {
+      _result.transferTrc20Contract = transferTrc20Contract;
+    }
+    return _result;
+  }
   factory Transaction.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Transaction.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   Transaction clone() => Transaction()..mergeFromMessage(this);
-  Transaction copyWith(void Function(Transaction) updates) => super.copyWith((message) => updates(message as Transaction));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Transaction copyWith(void Function(Transaction) updates) => super.copyWith((message) => updates(message as Transaction)) as Transaction; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Transaction create() => Transaction._();
@@ -730,9 +1110,9 @@ class Transaction extends $pb.GeneratedMessage {
   static $pb.PbList<Transaction> createRepeated() => $pb.PbList<Transaction>();
   @$core.pragma('dart2js:noInline')
   static Transaction getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Transaction>(create);
-  static Transaction _defaultInstance;
+  static Transaction? _defaultInstance;
 
-  Transaction_ContractOneof whichContractOneof() => _Transaction_ContractOneofByTag[$_whichOneof(0)];
+  Transaction_ContractOneof whichContractOneof() => _Transaction_ContractOneofByTag[$_whichOneof(0)]!;
   void clearContractOneof() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -885,18 +1265,38 @@ class Transaction extends $pb.GeneratedMessage {
 }
 
 class SigningInput extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SigningInput', package: const $pb.PackageName('TW.Tron.Proto'), createEmptyInstance: create)
-    ..aOM<Transaction>(1, 'transaction', subBuilder: Transaction.create)
-    ..a<$core.List<$core.int>>(2, 'privateKey', $pb.PbFieldType.OY)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SigningInput', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tron.Proto'), createEmptyInstance: create)
+    ..aOM<Transaction>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transaction', subBuilder: Transaction.create)
+    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'privateKey', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
   SigningInput._() : super();
-  factory SigningInput() => create();
+  factory SigningInput({
+    Transaction? transaction,
+    $core.List<$core.int>? privateKey,
+  }) {
+    final _result = create();
+    if (transaction != null) {
+      _result.transaction = transaction;
+    }
+    if (privateKey != null) {
+      _result.privateKey = privateKey;
+    }
+    return _result;
+  }
   factory SigningInput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SigningInput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   SigningInput clone() => SigningInput()..mergeFromMessage(this);
-  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput)) as SigningInput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SigningInput create() => SigningInput._();
@@ -904,7 +1304,7 @@ class SigningInput extends $pb.GeneratedMessage {
   static $pb.PbList<SigningInput> createRepeated() => $pb.PbList<SigningInput>();
   @$core.pragma('dart2js:noInline')
   static SigningInput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningInput>(create);
-  static SigningInput _defaultInstance;
+  static SigningInput? _defaultInstance;
 
   @$pb.TagNumber(1)
   Transaction get transaction => $_getN(0);
@@ -928,21 +1328,53 @@ class SigningInput extends $pb.GeneratedMessage {
 }
 
 class SigningOutput extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SigningOutput', package: const $pb.PackageName('TW.Tron.Proto'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, 'id', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(2, 'signature', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(3, 'refBlockBytes', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(4, 'refBlockHash', $pb.PbFieldType.OY)
-    ..aOS(5, 'json')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SigningOutput', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tron.Proto'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'signature', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'refBlockBytes', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'refBlockHash', $pb.PbFieldType.OY)
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'json')
     ..hasRequiredFields = false
   ;
 
   SigningOutput._() : super();
-  factory SigningOutput() => create();
+  factory SigningOutput({
+    $core.List<$core.int>? id,
+    $core.List<$core.int>? signature,
+    $core.List<$core.int>? refBlockBytes,
+    $core.List<$core.int>? refBlockHash,
+    $core.String? json,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (signature != null) {
+      _result.signature = signature;
+    }
+    if (refBlockBytes != null) {
+      _result.refBlockBytes = refBlockBytes;
+    }
+    if (refBlockHash != null) {
+      _result.refBlockHash = refBlockHash;
+    }
+    if (json != null) {
+      _result.json = json;
+    }
+    return _result;
+  }
   factory SigningOutput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SigningOutput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   SigningOutput clone() => SigningOutput()..mergeFromMessage(this);
-  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput)) as SigningOutput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SigningOutput create() => SigningOutput._();
@@ -950,7 +1382,7 @@ class SigningOutput extends $pb.GeneratedMessage {
   static $pb.PbList<SigningOutput> createRepeated() => $pb.PbList<SigningOutput>();
   @$core.pragma('dart2js:noInline')
   static SigningOutput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningOutput>(create);
-  static SigningOutput _defaultInstance;
+  static SigningOutput? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get id => $_getN(0);

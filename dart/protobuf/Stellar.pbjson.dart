@@ -2,13 +2,20 @@
 //  Generated code. Do not modify.
 //  source: Stellar.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use memoVoidDescriptor instead')
 const MemoVoid$json = const {
   '1': 'MemoVoid',
 };
 
+/// Descriptor for `MemoVoid`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List memoVoidDescriptor = $convert.base64Decode('CghNZW1vVm9pZA==');
+@$core.Deprecated('Use memoTextDescriptor instead')
 const MemoText$json = const {
   '1': 'MemoText',
   '2': const [
@@ -16,6 +23,9 @@ const MemoText$json = const {
   ],
 };
 
+/// Descriptor for `MemoText`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List memoTextDescriptor = $convert.base64Decode('CghNZW1vVGV4dBISCgR0ZXh0GAEgASgJUgR0ZXh0');
+@$core.Deprecated('Use memoIdDescriptor instead')
 const MemoId$json = const {
   '1': 'MemoId',
   '2': const [
@@ -23,6 +33,9 @@ const MemoId$json = const {
   ],
 };
 
+/// Descriptor for `MemoId`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List memoIdDescriptor = $convert.base64Decode('CgZNZW1vSWQSDgoCaWQYASABKANSAmlk');
+@$core.Deprecated('Use memoHashDescriptor instead')
 const MemoHash$json = const {
   '1': 'MemoHash',
   '2': const [
@@ -30,6 +43,9 @@ const MemoHash$json = const {
   ],
 };
 
+/// Descriptor for `MemoHash`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List memoHashDescriptor = $convert.base64Decode('CghNZW1vSGFzaBISCgRoYXNoGAEgASgMUgRoYXNo');
+@$core.Deprecated('Use signingInputDescriptor instead')
 const SigningInput$json = const {
   '1': 'SigningInput',
   '2': const [
@@ -53,6 +69,7 @@ const SigningInput$json = const {
   ],
 };
 
+@$core.Deprecated('Use signingInputDescriptor instead')
 const SigningInput_OperationType$json = const {
   '1': 'OperationType',
   '2': const [
@@ -61,6 +78,9 @@ const SigningInput_OperationType$json = const {
   ],
 };
 
+/// Descriptor for `SigningInput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signingInputDescriptor = $convert.base64Decode('CgxTaWduaW5nSW5wdXQSFgoGYW1vdW50GAEgASgDUgZhbW91bnQSEAoDZmVlGAIgASgFUgNmZWUSGgoIc2VxdWVuY2UYAyABKANSCHNlcXVlbmNlEhgKB2FjY291bnQYBCABKAlSB2FjY291bnQSIAoLZGVzdGluYXRpb24YBSABKAlSC2Rlc3RpbmF0aW9uEh8KC3ByaXZhdGVfa2V5GAYgASgMUgpwcml2YXRlS2V5EjkKCW1lbW9fdm9pZBgHIAEoCzIaLlRXLlN0ZWxsYXIuUHJvdG8uTWVtb1ZvaWRIAFIIbWVtb1ZvaWQSOQoJbWVtb190ZXh0GAggASgLMhouVFcuU3RlbGxhci5Qcm90by5NZW1vVGV4dEgAUghtZW1vVGV4dBIzCgdtZW1vX2lkGAkgASgLMhguVFcuU3RlbGxhci5Qcm90by5NZW1vSWRIAFIGbWVtb0lkEjkKCW1lbW9faGFzaBgKIAEoCzIaLlRXLlN0ZWxsYXIuUHJvdG8uTWVtb0hhc2hIAFIIbWVtb0hhc2gSRgoQbWVtb19yZXR1cm5faGFzaBgLIAEoCzIaLlRXLlN0ZWxsYXIuUHJvdG8uTWVtb0hhc2hIAFIObWVtb1JldHVybkhhc2gSUwoOb3BlcmF0aW9uX3R5cGUYDCABKA4yLC5UVy5TdGVsbGFyLlByb3RvLlNpZ25pbmdJbnB1dC5PcGVyYXRpb25UeXBlUg1vcGVyYXRpb25UeXBlEh4KCnBhc3NwaHJhc2UYDSABKAlSCnBhc3NwaHJhc2UiMAoNT3BlcmF0aW9uVHlwZRISCg5DUkVBVEVfQUNDT1VOVBAAEgsKB1BBWU1FTlQQAUIRCg9tZW1vX3R5cGVfb25lb2Y=');
+@$core.Deprecated('Use signingOutputDescriptor instead')
 const SigningOutput$json = const {
   '1': 'SigningOutput',
   '2': const [
@@ -68,3 +88,5 @@ const SigningOutput$json = const {
   ],
 };
 
+/// Descriptor for `SigningOutput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signingOutputDescriptor = $convert.base64Decode('Cg1TaWduaW5nT3V0cHV0EhwKCXNpZ25hdHVyZRgBIAEoCVIJc2lnbmF0dXJl');

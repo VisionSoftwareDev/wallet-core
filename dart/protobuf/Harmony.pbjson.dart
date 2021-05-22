@@ -2,9 +2,13 @@
 //  Generated code. Do not modify.
 //  source: Harmony.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use signingInputDescriptor instead')
 const SigningInput$json = const {
   '1': 'SigningInput',
   '2': const [
@@ -18,6 +22,9 @@ const SigningInput$json = const {
   ],
 };
 
+/// Descriptor for `SigningInput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signingInputDescriptor = $convert.base64Decode('CgxTaWduaW5nSW5wdXQSGQoIY2hhaW5faWQYASABKAxSB2NoYWluSWQSHwoLcHJpdmF0ZV9rZXkYAiABKAxSCnByaXZhdGVLZXkSVwoTdHJhbnNhY3Rpb25fbWVzc2FnZRgDIAEoCzIkLlRXLkhhcm1vbnkuUHJvdG8uVHJhbnNhY3Rpb25NZXNzYWdlSABSEnRyYW5zYWN0aW9uTWVzc2FnZRJLCg9zdGFraW5nX21lc3NhZ2UYBCABKAsyIC5UVy5IYXJtb255LlByb3RvLlN0YWtpbmdNZXNzYWdlSABSDnN0YWtpbmdNZXNzYWdlQg8KDW1lc3NhZ2Vfb25lb2Y=');
+@$core.Deprecated('Use signingOutputDescriptor instead')
 const SigningOutput$json = const {
   '1': 'SigningOutput',
   '2': const [
@@ -28,6 +35,9 @@ const SigningOutput$json = const {
   ],
 };
 
+/// Descriptor for `SigningOutput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signingOutputDescriptor = $convert.base64Decode('Cg1TaWduaW5nT3V0cHV0EhgKB2VuY29kZWQYASABKAxSB2VuY29kZWQSDAoBdhgCIAEoDFIBdhIMCgFyGAMgASgMUgFyEgwKAXMYBCABKAxSAXM=');
+@$core.Deprecated('Use transactionMessageDescriptor instead')
 const TransactionMessage$json = const {
   '1': 'TransactionMessage',
   '2': const [
@@ -42,6 +52,9 @@ const TransactionMessage$json = const {
   ],
 };
 
+/// Descriptor for `TransactionMessage`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transactionMessageDescriptor = $convert.base64Decode('ChJUcmFuc2FjdGlvbk1lc3NhZ2USFAoFbm9uY2UYASABKAxSBW5vbmNlEhsKCWdhc19wcmljZRgCIAEoDFIIZ2FzUHJpY2USGwoJZ2FzX2xpbWl0GAMgASgMUghnYXNMaW1pdBIdCgp0b19hZGRyZXNzGAQgASgJUgl0b0FkZHJlc3MSFgoGYW1vdW50GAUgASgMUgZhbW91bnQSGAoHcGF5bG9hZBgGIAEoDFIHcGF5bG9hZBIiCg1mcm9tX3NoYXJkX2lkGAcgASgMUgtmcm9tU2hhcmRJZBIeCgt0b19zaGFyZF9pZBgIIAEoDFIJdG9TaGFyZElk');
+@$core.Deprecated('Use stakingMessageDescriptor instead')
 const StakingMessage$json = const {
   '1': 'StakingMessage',
   '2': const [
@@ -59,6 +72,9 @@ const StakingMessage$json = const {
   ],
 };
 
+/// Descriptor for `StakingMessage`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List stakingMessageDescriptor = $convert.base64Decode('Cg5TdGFraW5nTWVzc2FnZRJmChhjcmVhdGVfdmFsaWRhdG9yX21lc3NhZ2UYASABKAsyKi5UVy5IYXJtb255LlByb3RvLkRpcmVjdGl2ZUNyZWF0ZVZhbGlkYXRvckgAUhZjcmVhdGVWYWxpZGF0b3JNZXNzYWdlEmAKFmVkaXRfdmFsaWRhdG9yX21lc3NhZ2UYAiABKAsyKC5UVy5IYXJtb255LlByb3RvLkRpcmVjdGl2ZUVkaXRWYWxpZGF0b3JIAFIUZWRpdFZhbGlkYXRvck1lc3NhZ2USUAoQZGVsZWdhdGVfbWVzc2FnZRgDIAEoCzIjLlRXLkhhcm1vbnkuUHJvdG8uRGlyZWN0aXZlRGVsZWdhdGVIAFIPZGVsZWdhdGVNZXNzYWdlElYKEnVuZGVsZWdhdGVfbWVzc2FnZRgEIAEoCzIlLlRXLkhhcm1vbnkuUHJvdG8uRGlyZWN0aXZlVW5kZWxlZ2F0ZUgAUhF1bmRlbGVnYXRlTWVzc2FnZRJUCg9jb2xsZWN0X3Jld2FyZHMYBSABKAsyKS5UVy5IYXJtb255LlByb3RvLkRpcmVjdGl2ZUNvbGxlY3RSZXdhcmRzSABSDmNvbGxlY3RSZXdhcmRzEhQKBW5vbmNlGAYgASgMUgVub25jZRIbCglnYXNfcHJpY2UYByABKAxSCGdhc1ByaWNlEhsKCWdhc19saW1pdBgIIAEoDFIIZ2FzTGltaXRCCwoJc3Rha2VfbXNn');
+@$core.Deprecated('Use descriptionDescriptor instead')
 const Description$json = const {
   '1': 'Description',
   '2': const [
@@ -70,6 +86,9 @@ const Description$json = const {
   ],
 };
 
+/// Descriptor for `Description`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List descriptionDescriptor = $convert.base64Decode('CgtEZXNjcmlwdGlvbhISCgRuYW1lGAEgASgJUgRuYW1lEhoKCGlkZW50aXR5GAIgASgJUghpZGVudGl0eRIYCgd3ZWJzaXRlGAMgASgJUgd3ZWJzaXRlEikKEHNlY3VyaXR5X2NvbnRhY3QYBCABKAlSD3NlY3VyaXR5Q29udGFjdBIYCgdkZXRhaWxzGAUgASgJUgdkZXRhaWxz');
+@$core.Deprecated('Use decimalDescriptor instead')
 const Decimal$json = const {
   '1': 'Decimal',
   '2': const [
@@ -78,6 +97,9 @@ const Decimal$json = const {
   ],
 };
 
+/// Descriptor for `Decimal`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List decimalDescriptor = $convert.base64Decode('CgdEZWNpbWFsEhQKBXZhbHVlGAEgASgMUgV2YWx1ZRIcCglwcmVjaXNpb24YAiABKAxSCXByZWNpc2lvbg==');
+@$core.Deprecated('Use commissionRateDescriptor instead')
 const CommissionRate$json = const {
   '1': 'CommissionRate',
   '2': const [
@@ -87,6 +109,9 @@ const CommissionRate$json = const {
   ],
 };
 
+/// Descriptor for `CommissionRate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List commissionRateDescriptor = $convert.base64Decode('Cg5Db21taXNzaW9uUmF0ZRItCgRyYXRlGAEgASgLMhkuVFcuSGFybW9ueS5Qcm90by5EZWNpbWFsUgRyYXRlEjQKCG1heF9yYXRlGAIgASgLMhkuVFcuSGFybW9ueS5Qcm90by5EZWNpbWFsUgdtYXhSYXRlEkEKD21heF9jaGFuZ2VfcmF0ZRgDIAEoCzIZLlRXLkhhcm1vbnkuUHJvdG8uRGVjaW1hbFINbWF4Q2hhbmdlUmF0ZQ==');
+@$core.Deprecated('Use directiveCreateValidatorDescriptor instead')
 const DirectiveCreateValidator$json = const {
   '1': 'DirectiveCreateValidator',
   '2': const [
@@ -101,6 +126,9 @@ const DirectiveCreateValidator$json = const {
   ],
 };
 
+/// Descriptor for `DirectiveCreateValidator`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List directiveCreateValidatorDescriptor = $convert.base64Decode('ChhEaXJlY3RpdmVDcmVhdGVWYWxpZGF0b3ISKwoRdmFsaWRhdG9yX2FkZHJlc3MYASABKAlSEHZhbGlkYXRvckFkZHJlc3MSPwoLZGVzY3JpcHRpb24YAiABKAsyHS5UVy5IYXJtb255LlByb3RvLkRlc2NyaXB0aW9uUgtkZXNjcmlwdGlvbhJLChBjb21taXNzaW9uX3JhdGVzGAMgASgLMiAuVFcuSGFybW9ueS5Qcm90by5Db21taXNzaW9uUmF0ZVIPY29tbWlzc2lvblJhdGVzEi4KE21pbl9zZWxmX2RlbGVnYXRpb24YBCABKAxSEW1pblNlbGZEZWxlZ2F0aW9uEjAKFG1heF90b3RhbF9kZWxlZ2F0aW9uGAUgASgMUhJtYXhUb3RhbERlbGVnYXRpb24SIgoNc2xvdF9wdWJfa2V5cxgGIAMoDFILc2xvdFB1YktleXMSIgoNc2xvdF9rZXlfc2lncxgHIAMoDFILc2xvdEtleVNpZ3MSFgoGYW1vdW50GAggASgMUgZhbW91bnQ=');
+@$core.Deprecated('Use directiveEditValidatorDescriptor instead')
 const DirectiveEditValidator$json = const {
   '1': 'DirectiveEditValidator',
   '2': const [
@@ -116,6 +144,9 @@ const DirectiveEditValidator$json = const {
   ],
 };
 
+/// Descriptor for `DirectiveEditValidator`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List directiveEditValidatorDescriptor = $convert.base64Decode('ChZEaXJlY3RpdmVFZGl0VmFsaWRhdG9yEisKEXZhbGlkYXRvcl9hZGRyZXNzGAEgASgJUhB2YWxpZGF0b3JBZGRyZXNzEj8KC2Rlc2NyaXB0aW9uGAIgASgLMh0uVFcuSGFybW9ueS5Qcm90by5EZXNjcmlwdGlvblILZGVzY3JpcHRpb24SQgoPY29tbWlzc2lvbl9yYXRlGAMgASgLMhkuVFcuSGFybW9ueS5Qcm90by5EZWNpbWFsUg5jb21taXNzaW9uUmF0ZRIuChNtaW5fc2VsZl9kZWxlZ2F0aW9uGAQgASgMUhFtaW5TZWxmRGVsZWdhdGlvbhIwChRtYXhfdG90YWxfZGVsZWdhdGlvbhgFIAEoDFISbWF4VG90YWxEZWxlZ2F0aW9uEisKEnNsb3Rfa2V5X3RvX3JlbW92ZRgGIAEoDFIPc2xvdEtleVRvUmVtb3ZlEiUKD3Nsb3Rfa2V5X3RvX2FkZBgHIAEoDFIMc2xvdEtleVRvQWRkEiwKE3Nsb3Rfa2V5X3RvX2FkZF9zaWcYCCABKAxSD3Nsb3RLZXlUb0FkZFNpZxIWCgZhY3RpdmUYCSABKAxSBmFjdGl2ZQ==');
+@$core.Deprecated('Use directiveDelegateDescriptor instead')
 const DirectiveDelegate$json = const {
   '1': 'DirectiveDelegate',
   '2': const [
@@ -125,6 +156,9 @@ const DirectiveDelegate$json = const {
   ],
 };
 
+/// Descriptor for `DirectiveDelegate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List directiveDelegateDescriptor = $convert.base64Decode('ChFEaXJlY3RpdmVEZWxlZ2F0ZRIrChFkZWxlZ2F0b3JfYWRkcmVzcxgBIAEoCVIQZGVsZWdhdG9yQWRkcmVzcxIrChF2YWxpZGF0b3JfYWRkcmVzcxgCIAEoCVIQdmFsaWRhdG9yQWRkcmVzcxIWCgZhbW91bnQYAyABKAxSBmFtb3VudA==');
+@$core.Deprecated('Use directiveUndelegateDescriptor instead')
 const DirectiveUndelegate$json = const {
   '1': 'DirectiveUndelegate',
   '2': const [
@@ -134,6 +168,9 @@ const DirectiveUndelegate$json = const {
   ],
 };
 
+/// Descriptor for `DirectiveUndelegate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List directiveUndelegateDescriptor = $convert.base64Decode('ChNEaXJlY3RpdmVVbmRlbGVnYXRlEisKEWRlbGVnYXRvcl9hZGRyZXNzGAEgASgJUhBkZWxlZ2F0b3JBZGRyZXNzEisKEXZhbGlkYXRvcl9hZGRyZXNzGAIgASgJUhB2YWxpZGF0b3JBZGRyZXNzEhYKBmFtb3VudBgDIAEoDFIGYW1vdW50');
+@$core.Deprecated('Use directiveCollectRewardsDescriptor instead')
 const DirectiveCollectRewards$json = const {
   '1': 'DirectiveCollectRewards',
   '2': const [
@@ -141,3 +178,5 @@ const DirectiveCollectRewards$json = const {
   ],
 };
 
+/// Descriptor for `DirectiveCollectRewards`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List directiveCollectRewardsDescriptor = $convert.base64Decode('ChdEaXJlY3RpdmVDb2xsZWN0UmV3YXJkcxIrChFkZWxlZ2F0b3JfYWRkcmVzcxgBIAEoCVIQZGVsZWdhdG9yQWRkcmVzcw==');

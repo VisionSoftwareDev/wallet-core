@@ -2,9 +2,13 @@
 //  Generated code. Do not modify.
 //  source: Nebulas.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use signingInputDescriptor instead')
 const SigningInput$json = const {
   '1': 'SigningInput',
   '2': const [
@@ -21,6 +25,9 @@ const SigningInput$json = const {
   ],
 };
 
+/// Descriptor for `SigningInput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signingInputDescriptor = $convert.base64Decode('CgxTaWduaW5nSW5wdXQSIQoMZnJvbV9hZGRyZXNzGAEgASgJUgtmcm9tQWRkcmVzcxIZCghjaGFpbl9pZBgCIAEoDFIHY2hhaW5JZBIUCgVub25jZRgDIAEoDFIFbm9uY2USGwoJZ2FzX3ByaWNlGAQgASgMUghnYXNQcmljZRIbCglnYXNfbGltaXQYBSABKAxSCGdhc0xpbWl0Eh0KCnRvX2FkZHJlc3MYBiABKAlSCXRvQWRkcmVzcxIWCgZhbW91bnQYByABKAxSBmFtb3VudBIcCgl0aW1lc3RhbXAYCCABKAxSCXRpbWVzdGFtcBIYCgdwYXlsb2FkGAkgASgJUgdwYXlsb2FkEh8KC3ByaXZhdGVfa2V5GAogASgMUgpwcml2YXRlS2V5');
+@$core.Deprecated('Use signingOutputDescriptor instead')
 const SigningOutput$json = const {
   '1': 'SigningOutput',
   '2': const [
@@ -30,6 +37,9 @@ const SigningOutput$json = const {
   ],
 };
 
+/// Descriptor for `SigningOutput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signingOutputDescriptor = $convert.base64Decode('Cg1TaWduaW5nT3V0cHV0EhwKCWFsZ29yaXRobRgBIAEoDVIJYWxnb3JpdGhtEhwKCXNpZ25hdHVyZRgCIAEoDFIJc2lnbmF0dXJlEhAKA3JhdxgDIAEoCVIDcmF3');
+@$core.Deprecated('Use dataDescriptor instead')
 const Data$json = const {
   '1': 'Data',
   '2': const [
@@ -38,6 +48,9 @@ const Data$json = const {
   ],
 };
 
+/// Descriptor for `Data`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List dataDescriptor = $convert.base64Decode('CgREYXRhEhIKBHR5cGUYASABKAlSBHR5cGUSGAoHcGF5bG9hZBgCIAEoDFIHcGF5bG9hZA==');
+@$core.Deprecated('Use rawTransactionDescriptor instead')
 const RawTransaction$json = const {
   '1': 'RawTransaction',
   '2': const [
@@ -56,3 +69,5 @@ const RawTransaction$json = const {
   ],
 };
 
+/// Descriptor for `RawTransaction`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List rawTransactionDescriptor = $convert.base64Decode('Cg5SYXdUcmFuc2FjdGlvbhISCgRoYXNoGAEgASgMUgRoYXNoEhIKBGZyb20YAiABKAxSBGZyb20SDgoCdG8YAyABKAxSAnRvEhQKBXZhbHVlGAQgASgMUgV2YWx1ZRIUCgVub25jZRgFIAEoBFIFbm9uY2USHAoJdGltZXN0YW1wGAYgASgDUgl0aW1lc3RhbXASKgoEZGF0YRgHIAEoCzIWLlRXLk5lYnVsYXMuUHJvdG8uRGF0YVIEZGF0YRIZCghjaGFpbl9pZBgIIAEoDVIHY2hhaW5JZBIbCglnYXNfcHJpY2UYCSABKAxSCGdhc1ByaWNlEhsKCWdhc19saW1pdBgKIAEoDFIIZ2FzTGltaXQSEAoDYWxnGAsgASgNUgNhbGcSEgoEc2lnbhgMIAEoDFIEc2lnbg==');

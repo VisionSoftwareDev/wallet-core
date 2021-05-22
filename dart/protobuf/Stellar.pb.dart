@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: Stellar.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -15,7 +15,7 @@ import 'Stellar.pbenum.dart';
 export 'Stellar.pbenum.dart';
 
 class MemoVoid extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MemoVoid', package: const $pb.PackageName('TW.Stellar.Proto'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MemoVoid', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Stellar.Proto'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
@@ -23,8 +23,16 @@ class MemoVoid extends $pb.GeneratedMessage {
   factory MemoVoid() => create();
   factory MemoVoid.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory MemoVoid.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   MemoVoid clone() => MemoVoid()..mergeFromMessage(this);
-  MemoVoid copyWith(void Function(MemoVoid) updates) => super.copyWith((message) => updates(message as MemoVoid));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  MemoVoid copyWith(void Function(MemoVoid) updates) => super.copyWith((message) => updates(message as MemoVoid)) as MemoVoid; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static MemoVoid create() => MemoVoid._();
@@ -32,21 +40,37 @@ class MemoVoid extends $pb.GeneratedMessage {
   static $pb.PbList<MemoVoid> createRepeated() => $pb.PbList<MemoVoid>();
   @$core.pragma('dart2js:noInline')
   static MemoVoid getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MemoVoid>(create);
-  static MemoVoid _defaultInstance;
+  static MemoVoid? _defaultInstance;
 }
 
 class MemoText extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MemoText', package: const $pb.PackageName('TW.Stellar.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'text')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MemoText', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Stellar.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'text')
     ..hasRequiredFields = false
   ;
 
   MemoText._() : super();
-  factory MemoText() => create();
+  factory MemoText({
+    $core.String? text,
+  }) {
+    final _result = create();
+    if (text != null) {
+      _result.text = text;
+    }
+    return _result;
+  }
   factory MemoText.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory MemoText.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   MemoText clone() => MemoText()..mergeFromMessage(this);
-  MemoText copyWith(void Function(MemoText) updates) => super.copyWith((message) => updates(message as MemoText));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  MemoText copyWith(void Function(MemoText) updates) => super.copyWith((message) => updates(message as MemoText)) as MemoText; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static MemoText create() => MemoText._();
@@ -54,7 +78,7 @@ class MemoText extends $pb.GeneratedMessage {
   static $pb.PbList<MemoText> createRepeated() => $pb.PbList<MemoText>();
   @$core.pragma('dart2js:noInline')
   static MemoText getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MemoText>(create);
-  static MemoText _defaultInstance;
+  static MemoText? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get text => $_getSZ(0);
@@ -67,17 +91,33 @@ class MemoText extends $pb.GeneratedMessage {
 }
 
 class MemoId extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MemoId', package: const $pb.PackageName('TW.Stellar.Proto'), createEmptyInstance: create)
-    ..aInt64(1, 'id')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MemoId', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Stellar.Proto'), createEmptyInstance: create)
+    ..aInt64(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..hasRequiredFields = false
   ;
 
   MemoId._() : super();
-  factory MemoId() => create();
+  factory MemoId({
+    $fixnum.Int64? id,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    return _result;
+  }
   factory MemoId.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory MemoId.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   MemoId clone() => MemoId()..mergeFromMessage(this);
-  MemoId copyWith(void Function(MemoId) updates) => super.copyWith((message) => updates(message as MemoId));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  MemoId copyWith(void Function(MemoId) updates) => super.copyWith((message) => updates(message as MemoId)) as MemoId; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static MemoId create() => MemoId._();
@@ -85,7 +125,7 @@ class MemoId extends $pb.GeneratedMessage {
   static $pb.PbList<MemoId> createRepeated() => $pb.PbList<MemoId>();
   @$core.pragma('dart2js:noInline')
   static MemoId getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MemoId>(create);
-  static MemoId _defaultInstance;
+  static MemoId? _defaultInstance;
 
   @$pb.TagNumber(1)
   $fixnum.Int64 get id => $_getI64(0);
@@ -98,17 +138,33 @@ class MemoId extends $pb.GeneratedMessage {
 }
 
 class MemoHash extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MemoHash', package: const $pb.PackageName('TW.Stellar.Proto'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, 'hash', $pb.PbFieldType.OY)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MemoHash', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Stellar.Proto'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hash', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
   MemoHash._() : super();
-  factory MemoHash() => create();
+  factory MemoHash({
+    $core.List<$core.int>? hash,
+  }) {
+    final _result = create();
+    if (hash != null) {
+      _result.hash = hash;
+    }
+    return _result;
+  }
   factory MemoHash.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory MemoHash.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   MemoHash clone() => MemoHash()..mergeFromMessage(this);
-  MemoHash copyWith(void Function(MemoHash) updates) => super.copyWith((message) => updates(message as MemoHash));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  MemoHash copyWith(void Function(MemoHash) updates) => super.copyWith((message) => updates(message as MemoHash)) as MemoHash; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static MemoHash create() => MemoHash._();
@@ -116,7 +172,7 @@ class MemoHash extends $pb.GeneratedMessage {
   static $pb.PbList<MemoHash> createRepeated() => $pb.PbList<MemoHash>();
   @$core.pragma('dart2js:noInline')
   static MemoHash getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MemoHash>(create);
-  static MemoHash _defaultInstance;
+  static MemoHash? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get hash => $_getN(0);
@@ -146,30 +202,94 @@ class SigningInput extends $pb.GeneratedMessage {
     11 : SigningInput_MemoTypeOneof.memoReturnHash,
     0 : SigningInput_MemoTypeOneof.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SigningInput', package: const $pb.PackageName('TW.Stellar.Proto'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SigningInput', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Stellar.Proto'), createEmptyInstance: create)
     ..oo(0, [7, 8, 9, 10, 11])
-    ..aInt64(1, 'amount')
-    ..a<$core.int>(2, 'fee', $pb.PbFieldType.O3)
-    ..aInt64(3, 'sequence')
-    ..aOS(4, 'account')
-    ..aOS(5, 'destination')
-    ..a<$core.List<$core.int>>(6, 'privateKey', $pb.PbFieldType.OY)
-    ..aOM<MemoVoid>(7, 'memoVoid', subBuilder: MemoVoid.create)
-    ..aOM<MemoText>(8, 'memoText', subBuilder: MemoText.create)
-    ..aOM<MemoId>(9, 'memoId', subBuilder: MemoId.create)
-    ..aOM<MemoHash>(10, 'memoHash', subBuilder: MemoHash.create)
-    ..aOM<MemoHash>(11, 'memoReturnHash', subBuilder: MemoHash.create)
-    ..e<SigningInput_OperationType>(12, 'operationType', $pb.PbFieldType.OE, defaultOrMaker: SigningInput_OperationType.CREATE_ACCOUNT, valueOf: SigningInput_OperationType.valueOf, enumValues: SigningInput_OperationType.values)
-    ..aOS(13, 'passphrase')
+    ..aInt64(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount')
+    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fee', $pb.PbFieldType.O3)
+    ..aInt64(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sequence')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'account')
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'destination')
+    ..a<$core.List<$core.int>>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'privateKey', $pb.PbFieldType.OY)
+    ..aOM<MemoVoid>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'memoVoid', subBuilder: MemoVoid.create)
+    ..aOM<MemoText>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'memoText', subBuilder: MemoText.create)
+    ..aOM<MemoId>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'memoId', subBuilder: MemoId.create)
+    ..aOM<MemoHash>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'memoHash', subBuilder: MemoHash.create)
+    ..aOM<MemoHash>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'memoReturnHash', subBuilder: MemoHash.create)
+    ..e<SigningInput_OperationType>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'operationType', $pb.PbFieldType.OE, defaultOrMaker: SigningInput_OperationType.CREATE_ACCOUNT, valueOf: SigningInput_OperationType.valueOf, enumValues: SigningInput_OperationType.values)
+    ..aOS(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'passphrase')
     ..hasRequiredFields = false
   ;
 
   SigningInput._() : super();
-  factory SigningInput() => create();
+  factory SigningInput({
+    $fixnum.Int64? amount,
+    $core.int? fee,
+    $fixnum.Int64? sequence,
+    $core.String? account,
+    $core.String? destination,
+    $core.List<$core.int>? privateKey,
+    MemoVoid? memoVoid,
+    MemoText? memoText,
+    MemoId? memoId,
+    MemoHash? memoHash,
+    MemoHash? memoReturnHash,
+    SigningInput_OperationType? operationType,
+    $core.String? passphrase,
+  }) {
+    final _result = create();
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    if (fee != null) {
+      _result.fee = fee;
+    }
+    if (sequence != null) {
+      _result.sequence = sequence;
+    }
+    if (account != null) {
+      _result.account = account;
+    }
+    if (destination != null) {
+      _result.destination = destination;
+    }
+    if (privateKey != null) {
+      _result.privateKey = privateKey;
+    }
+    if (memoVoid != null) {
+      _result.memoVoid = memoVoid;
+    }
+    if (memoText != null) {
+      _result.memoText = memoText;
+    }
+    if (memoId != null) {
+      _result.memoId = memoId;
+    }
+    if (memoHash != null) {
+      _result.memoHash = memoHash;
+    }
+    if (memoReturnHash != null) {
+      _result.memoReturnHash = memoReturnHash;
+    }
+    if (operationType != null) {
+      _result.operationType = operationType;
+    }
+    if (passphrase != null) {
+      _result.passphrase = passphrase;
+    }
+    return _result;
+  }
   factory SigningInput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SigningInput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   SigningInput clone() => SigningInput()..mergeFromMessage(this);
-  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput)) as SigningInput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SigningInput create() => SigningInput._();
@@ -177,9 +297,9 @@ class SigningInput extends $pb.GeneratedMessage {
   static $pb.PbList<SigningInput> createRepeated() => $pb.PbList<SigningInput>();
   @$core.pragma('dart2js:noInline')
   static SigningInput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningInput>(create);
-  static SigningInput _defaultInstance;
+  static SigningInput? _defaultInstance;
 
-  SigningInput_MemoTypeOneof whichMemoTypeOneof() => _SigningInput_MemoTypeOneofByTag[$_whichOneof(0)];
+  SigningInput_MemoTypeOneof whichMemoTypeOneof() => _SigningInput_MemoTypeOneofByTag[$_whichOneof(0)]!;
   void clearMemoTypeOneof() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -311,17 +431,33 @@ class SigningInput extends $pb.GeneratedMessage {
 }
 
 class SigningOutput extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SigningOutput', package: const $pb.PackageName('TW.Stellar.Proto'), createEmptyInstance: create)
-    ..aOS(1, 'signature')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SigningOutput', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Stellar.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'signature')
     ..hasRequiredFields = false
   ;
 
   SigningOutput._() : super();
-  factory SigningOutput() => create();
+  factory SigningOutput({
+    $core.String? signature,
+  }) {
+    final _result = create();
+    if (signature != null) {
+      _result.signature = signature;
+    }
+    return _result;
+  }
   factory SigningOutput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SigningOutput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   SigningOutput clone() => SigningOutput()..mergeFromMessage(this);
-  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput)) as SigningOutput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SigningOutput create() => SigningOutput._();
@@ -329,7 +465,7 @@ class SigningOutput extends $pb.GeneratedMessage {
   static $pb.PbList<SigningOutput> createRepeated() => $pb.PbList<SigningOutput>();
   @$core.pragma('dart2js:noInline')
   static SigningOutput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningOutput>(create);
-  static SigningOutput _defaultInstance;
+  static SigningOutput? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get signature => $_getSZ(0);

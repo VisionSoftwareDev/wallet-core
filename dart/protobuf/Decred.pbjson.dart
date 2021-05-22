@@ -2,9 +2,13 @@
 //  Generated code. Do not modify.
 //  source: Decred.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use transactionDescriptor instead')
 const Transaction$json = const {
   '1': 'Transaction',
   '2': const [
@@ -17,6 +21,9 @@ const Transaction$json = const {
   ],
 };
 
+/// Descriptor for `Transaction`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transactionDescriptor = $convert.base64Decode('CgtUcmFuc2FjdGlvbhIkCg1zZXJpYWxpemVUeXBlGAEgASgNUg1zZXJpYWxpemVUeXBlEhgKB3ZlcnNpb24YAiABKA1SB3ZlcnNpb24SOQoGaW5wdXRzGAMgAygLMiEuVFcuRGVjcmVkLlByb3RvLlRyYW5zYWN0aW9uSW5wdXRSBmlucHV0cxI8CgdvdXRwdXRzGAQgAygLMiIuVFcuRGVjcmVkLlByb3RvLlRyYW5zYWN0aW9uT3V0cHV0UgdvdXRwdXRzEhoKCGxvY2tUaW1lGAUgASgNUghsb2NrVGltZRIWCgZleHBpcnkYBiABKA1SBmV4cGlyeQ==');
+@$core.Deprecated('Use transactionInputDescriptor instead')
 const TransactionInput$json = const {
   '1': 'TransactionInput',
   '2': const [
@@ -29,6 +36,9 @@ const TransactionInput$json = const {
   ],
 };
 
+/// Descriptor for `TransactionInput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transactionInputDescriptor = $convert.base64Decode('ChBUcmFuc2FjdGlvbklucHV0EkIKDnByZXZpb3VzT3V0cHV0GAEgASgLMhouVFcuQml0Y29pbi5Qcm90by5PdXRQb2ludFIOcHJldmlvdXNPdXRwdXQSGgoIc2VxdWVuY2UYAiABKA1SCHNlcXVlbmNlEhgKB3ZhbHVlSW4YAyABKANSB3ZhbHVlSW4SIAoLYmxvY2tIZWlnaHQYBCABKA1SC2Jsb2NrSGVpZ2h0Eh4KCmJsb2NrSW5kZXgYBSABKA1SCmJsb2NrSW5kZXgSFgoGc2NyaXB0GAYgASgMUgZzY3JpcHQ=');
+@$core.Deprecated('Use transactionOutputDescriptor instead')
 const TransactionOutput$json = const {
   '1': 'TransactionOutput',
   '2': const [
@@ -38,6 +48,9 @@ const TransactionOutput$json = const {
   ],
 };
 
+/// Descriptor for `TransactionOutput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transactionOutputDescriptor = $convert.base64Decode('ChFUcmFuc2FjdGlvbk91dHB1dBIUCgV2YWx1ZRgBIAEoA1IFdmFsdWUSGAoHdmVyc2lvbhgCIAEoDVIHdmVyc2lvbhIWCgZzY3JpcHQYAyABKAxSBnNjcmlwdA==');
+@$core.Deprecated('Use signingOutputDescriptor instead')
 const SigningOutput$json = const {
   '1': 'SigningOutput',
   '2': const [
@@ -48,3 +61,5 @@ const SigningOutput$json = const {
   ],
 };
 
+/// Descriptor for `SigningOutput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signingOutputDescriptor = $convert.base64Decode('Cg1TaWduaW5nT3V0cHV0Ej4KC3RyYW5zYWN0aW9uGAEgASgLMhwuVFcuRGVjcmVkLlByb3RvLlRyYW5zYWN0aW9uUgt0cmFuc2FjdGlvbhIYCgdlbmNvZGVkGAIgASgMUgdlbmNvZGVkEiUKDnRyYW5zYWN0aW9uX2lkGAMgASgJUg10cmFuc2FjdGlvbklkEhQKBWVycm9yGAQgASgJUgVlcnJvcg==');
